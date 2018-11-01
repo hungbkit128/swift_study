@@ -1,0 +1,3 @@
+target "FirebaseNotificationDemo" do
+   pod 'Firebase/Core'
+end
