@@ -1,0 +1,64 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - CRNetworkButton (1.0.2)
+  - DKImagePickerController (3.8.1):
+    - DKImagePickerController/Camera (= 3.8.1)
+    - DKImagePickerController/ImageManager (= 3.8.1)
+  - DKImagePickerController/Camera (3.8.1)
+  - DKImagePickerController/ImageManager (3.8.1)
+  - ExpandingMenu (0.3.1)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
+  - PasswordTextField (1.1.0)
+  - PullToRefreshKit (0.8.6)
+  - SkyFloatingLabelTextField (3.5.1)
+  - SwiftCop (1.1.0)
+  - XLPagerTabStrip (8.0.1)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - Charts
+  - CRNetworkButton
+  - DKImagePickerController
+  - ExpandingMenu (~> 0.3)
+  - NVActivityIndicatorView
+  - PasswordTextField
+  - PullToRefreshKit
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SwiftCop
+  - XLPagerTabStrip (~> 8.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
+    - Charts
+    - CRNetworkButton
+    - DKImagePickerController
+    - ExpandingMenu
+    - NVActivityIndicatorView
+    - PasswordTextField
+    - PullToRefreshKit
+    - SkyFloatingLabelTextField
+    - SwiftCop
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  CRNetworkButton: 2bfe150c64a46506ade962745a3364f21bef3115
+  DKImagePickerController: 51ad6ee2ba05414bb741db54a72cd7f4fb178e34
+  ExpandingMenu: 107548f3cb8c04b28a8b6b436983f506849484cc
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  PasswordTextField: 35ee7f34448c3de061136cf2556a967f1a287476
+  PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
+  SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
+  SwiftCop: 52c1c097f0549f605b986832c1661f3275b82df2
+  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
+
+PODFILE CHECKSUM: 8894b9243ad703099363a042a1c3d6cf085a3ec2
+
+COCOAPODS: 1.5.3

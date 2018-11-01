@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="ReportTBVCell" customModule="BusinessAbSoft" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_description_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="DSE-cI-a5u">
+                        <rect key="frame" x="8" y="23" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="PJz-lg-f58"/>
+                            <constraint firstAttribute="height" constant="40" id="lcC-Cc-gww"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-wb-gWi">
+                        <rect key="frame" x="56" y="33" width="216" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_right_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-D9-tuc">
+                        <rect key="frame" x="280" y="27" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="6km-7i-rUd"/>
+                            <constraint firstAttribute="height" constant="32" id="bO1-Ds-BZ6"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DSE-cI-a5u" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Bxd-O1-uzE"/>
+                    <constraint firstItem="Ssh-wb-gWi" firstAttribute="leading" secondItem="DSE-cI-a5u" secondAttribute="trailing" constant="8" id="dPv-AE-TUo"/>
+                    <constraint firstAttribute="trailing" secondItem="Q0q-D9-tuc" secondAttribute="trailing" constant="8" id="ejD-rt-ER9"/>
+                    <constraint firstItem="Q0q-D9-tuc" firstAttribute="leading" secondItem="Ssh-wb-gWi" secondAttribute="trailing" constant="8" id="gPs-Ow-qab"/>
+                    <constraint firstItem="DSE-cI-a5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lsJ-r5-cBE"/>
+                    <constraint firstItem="Q0q-D9-tuc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pzl-7S-QWR"/>
+                    <constraint firstItem="Ssh-wb-gWi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yA8-cL-Gez"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="iconIMV" destination="DSE-cI-a5u" id="uaN-dg-TYi"/>
+                <outlet property="iconRightIMV" destination="Q0q-D9-tuc" id="rcp-7U-lJH"/>
+                <outlet property="nameLB" destination="Ssh-wb-gWi" id="lw1-Pc-r8i"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="127"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_description_48pt" width="48" height="48"/>
+        <image name="ic_keyboard_arrow_right_48pt" width="48" height="48"/>
+    </resources>
+</document>

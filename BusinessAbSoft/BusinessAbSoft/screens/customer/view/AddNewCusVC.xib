@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewCusVC" customModule="BusinessAbSoft" customModuleProvider="target">
+            <connections>
+                <outlet property="addCusBT" destination="Kwp-54-b14" id="6Cp-R2-mTf"/>
+                <outlet property="cusAddressTF" destination="mrQ-iz-t3a" id="ojG-bj-aAB"/>
+                <outlet property="cusMailTF" destination="epw-2C-4u2" id="Tb4-fO-LI1"/>
+                <outlet property="cusNameTF" destination="7I4-4z-eyl" id="Roa-t8-zlS"/>
+                <outlet property="cusPhoneTF" destination="x35-hV-QCb" id="k2R-IB-99Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtL-ML-jmt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiG-8y-o6r">
+                            <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ZHk-mV-jro"/>
+                            </constraints>
+                            <color key="barTintColor" red="0.19911819696426392" green="0.55144143104553223" blue="0.77735430002212524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <items>
+                                <navigationItem title="Thêm mới khách hàng" id="g82-sf-5wF">
+                                    <barButtonItem key="leftBarButtonItem" image="ic_back" id="9VM-g5-uJ7">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="-1" id="xGV-ZZ-6rF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.19911819696426392" green="0.55144143104553223" blue="0.77735430002212524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="OiG-8y-o6r" firstAttribute="leading" secondItem="WtL-ML-jmt" secondAttribute="leading" id="UEM-Dn-TUZ"/>
+                        <constraint firstAttribute="bottom" secondItem="OiG-8y-o6r" secondAttribute="bottom" id="bbX-QN-CD3"/>
+                        <constraint firstAttribute="trailing" secondItem="OiG-8y-o6r" secondAttribute="trailing" id="saI-A2-9fR"/>
+                        <constraint firstAttribute="height" constant="64" id="vOk-66-4kg"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7I4-4z-eyl" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="16" y="80" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="MdD-Qe-KKc"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Tên khách hàng"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cusInfoChanged:" destination="-1" eventType="editingChanged" id="lBf-wC-DOw"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epw-2C-4u2" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="16" y="212" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="q3N-c8-4ok"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cusInfoChanged:" destination="-1" eventType="editingChanged" id="pXm-ew-DPl"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x35-hV-QCb" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="16" y="146" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="V15-yt-b5Q"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Số điện thoại"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cusInfoChanged:" destination="-1" eventType="editingChanged" id="RlC-3m-hyk"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-iz-t3a" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                    <rect key="frame" x="16" y="278" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cAz-qi-Kw2"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Địa chỉ"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cusInfoChanged:" destination="-1" eventType="editingChanged" id="0h3-D6-D2Z"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwp-54-b14" customClass="CRNetworkButton" customModule="CRNetworkButton">
+                    <rect key="frame" x="62.5" y="360" width="250" height="50"/>
+                    <color key="backgroundColor" red="0.19911819696426392" green="0.55144143104553223" blue="0.77735430002212524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="B50-ni-oM9"/>
+                        <constraint firstAttribute="height" constant="50" id="qme-8l-tlj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="THÊM MỚI">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="startText" value="THÊM MỚI"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="endText" value="THÊM MỚI THÀNH CÔNG"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="errorText" value="THÊM MỚI THẤT BẠI"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addCusBTTapped:" destination="-1" eventType="touchUpInside" id="Seo-fu-3JQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mrQ-iz-t3a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0vr-vW-cmB"/>
+                <constraint firstItem="WtL-ML-jmt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3lA-BP-yaw"/>
+                <constraint firstItem="Kwp-54-b14" firstAttribute="top" secondItem="mrQ-iz-t3a" secondAttribute="bottom" constant="32" id="9Ms-HA-6F8"/>
+                <constraint firstItem="7I4-4z-eyl" firstAttribute="top" secondItem="WtL-ML-jmt" secondAttribute="bottom" constant="16" id="FsN-PI-zWl"/>
+                <constraint firstItem="x35-hV-QCb" firstAttribute="top" secondItem="7I4-4z-eyl" secondAttribute="bottom" constant="16" id="P1r-XH-ZAt"/>
+                <constraint firstItem="epw-2C-4u2" firstAttribute="top" secondItem="x35-hV-QCb" secondAttribute="bottom" constant="16" id="Qoa-Km-QfL"/>
+                <constraint firstItem="mrQ-iz-t3a" firstAttribute="top" secondItem="epw-2C-4u2" secondAttribute="bottom" constant="16" id="RqE-yf-HoW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mrQ-iz-t3a" secondAttribute="trailing" constant="16" id="S3q-yx-87B"/>
+                <constraint firstItem="WtL-ML-jmt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="agj-2Y-i44"/>
+                <constraint firstItem="WtL-ML-jmt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="asM-fn-HUc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="epw-2C-4u2" secondAttribute="trailing" constant="16" id="cWm-bQ-B57"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7I4-4z-eyl" secondAttribute="trailing" constant="16" id="cyk-fT-FBj"/>
+                <constraint firstItem="7I4-4z-eyl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fYx-sq-fgN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x35-hV-QCb" secondAttribute="trailing" constant="16" id="hMP-p4-J51"/>
+                <constraint firstItem="Kwp-54-b14" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tG9-53-EoB"/>
+                <constraint firstItem="x35-hV-QCb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wqy-Sq-e7S"/>
+                <constraint firstItem="epw-2C-4u2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zgS-NU-oc2"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="13" height="21"/>
+    </resources>
+</document>

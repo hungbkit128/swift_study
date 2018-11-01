@@ -1,0 +1,20 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target 'BusinessAbSoft' do
+    pod 'NVActivityIndicatorView'
+    pod 'ExpandingMenu', '~> 0.3'
+    pod 'XLPagerTabStrip', '~> 8.0'
+    pod 'Charts'
+    pod 'SwiftCop'
+    
+    pod 'PasswordTextField'
+    pod 'SkyFloatingLabelTextField', '~> 3.0'
+    pod 'PullToRefreshKit'
+    pod 'CRNetworkButton'
+    
+    pod 'ActionSheetPicker-3.0'
+    pod 'DKImagePickerController'
+end
+
