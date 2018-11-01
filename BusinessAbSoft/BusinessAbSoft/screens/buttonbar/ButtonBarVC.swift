@@ -39,7 +39,7 @@ class ButtonBarVC: BaseButtonBarPagerTabStripViewController<ButtonCell> {
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
         
-        changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonCell?, newCell: ButtonCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+        changeCurrentIndexProgressive = { (oldCell: ButtonCell?, newCell: ButtonCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.iconImage.tintColor = ColorManager.barTintColor
             newCell?.iconImage.tintColor = .white

@@ -80,7 +80,7 @@ class SignupVC: UIViewController, ServiceManagerProtocol, NVActivityIndicatorVie
         self.companyMessLB.text = swiftCop.isGuilty(companyNameTF)?.verdict()
         
         let allGuiltiesMessage = swiftCop.allGuilties().map{ return $0.sentence}.joined(separator: "\n")
-        if allGuiltiesMessage.characters.count > 0 {
+        if allGuiltiesMessage.count > 0 {
             UiUtils.showAlert(title: allGuiltiesMessage, viewController: self)
             return false
         }
