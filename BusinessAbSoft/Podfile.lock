@@ -1,5 +1,6 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
+  - Alamofire (4.7.0)
   - Charts (3.1.1):
     - Charts/Core (= 3.1.1)
   - Charts/Core (3.1.1)
@@ -17,10 +18,12 @@ PODS:
   - PullToRefreshKit (0.8.6)
   - SkyFloatingLabelTextField (3.5.1)
   - SwiftCop (1.1.0)
+  - SwiftyJSON (4.0.0)
   - XLPagerTabStrip (8.0.1)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
+  - Alamofire (<= 4.7)
   - Charts
   - CRNetworkButton
   - DKImagePickerController
@@ -30,11 +33,13 @@ DEPENDENCIES:
   - PullToRefreshKit
   - SkyFloatingLabelTextField (~> 3.0)
   - SwiftCop
+  - SwiftyJSON (<= 4.0)
   - XLPagerTabStrip (~> 8.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ActionSheetPicker-3.0
+    - Alamofire
     - Charts
     - CRNetworkButton
     - DKImagePickerController
@@ -44,10 +49,12 @@ SPEC REPOS:
     - PullToRefreshKit
     - SkyFloatingLabelTextField
     - SwiftCop
+    - SwiftyJSON
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   CRNetworkButton: 2bfe150c64a46506ade962745a3364f21bef3115
   DKImagePickerController: 51ad6ee2ba05414bb741db54a72cd7f4fb178e34
@@ -57,8 +64,9 @@ SPEC CHECKSUMS:
   PullToRefreshKit: 172df52ab9c6cb2c1d4b1872b49f448d6291523f
   SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
   SwiftCop: 52c1c097f0549f605b986832c1661f3275b82df2
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: 8894b9243ad703099363a042a1c3d6cf085a3ec2
+PODFILE CHECKSUM: fc1c3513a57f973926f7a37776c7026bbe037685
 
 COCOAPODS: 1.5.3

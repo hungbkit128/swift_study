@@ -16,5 +16,7 @@ target 'BusinessAbSoft' do
     
     pod 'ActionSheetPicker-3.0'
     pod 'DKImagePickerController'
+    pod 'Alamofire', '<= 4.7'
+    pod 'SwiftyJSON', '<= 4.0'
 end
 

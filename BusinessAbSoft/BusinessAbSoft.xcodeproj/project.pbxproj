@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */; };
+		499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */; };
+		499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F53218BF2C100B2E2E0 /* URLExtension.swift */; };
+		499E2F56218BF8F400B2E2E0 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */; };
 		4BE6E98A89B81A8FFF9C7B9D /* Pods_BusinessAbSoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7D911E1FF1E66C8CE293CB /* Pods_BusinessAbSoft.framework */; };
 		C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1B51F8E584100FB80D9 /* LoginVC.swift */; };
 		C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004C1B61F8E584100FB80D9 /* LoginVC.xib */; };
@@ -115,6 +119,10 @@
 
 /* Begin PBXFileReference section */
 		2D139F1BA88957AEE43C4530 /* Pods-BusinessAbSoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessAbSoft.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessAbSoft/Pods-BusinessAbSoft.release.xcconfig"; sourceTree = "<group>"; };
+		499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
+		499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
+		499E2F53218BF2C100B2E2E0 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
 		C004C1B51F8E584100FB80D9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C004C1B61F8E584100FB80D9 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		C004C1BA1F8E5A9700FB80D9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
@@ -238,6 +246,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499E2F4D218BEE0600B2E2E0 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */,
+				499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		499E2F52218BF28700B2E2E0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				499E2F53218BF2C100B2E2E0 /* URLExtension.swift */,
+				499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C004C1B41F8E4F1800FB80D9 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +434,8 @@
 		C0BCA2741F899E0600F62316 /* BusinessAbSoft */ = {
 			isa = PBXGroup;
 			children = (
+				499E2F52218BF28700B2E2E0 /* Extension */,
+				499E2F4D218BEE0600B2E2E0 /* APIService */,
 				C0C15C1A1F91FF1700588A9F /* service */,
 				C004C1B91F8E5A5300FB80D9 /* utils */,
 				C0BCA2B51F8BD71500F62316 /* menu */,
@@ -714,6 +742,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BusinessAbSoft/Pods-BusinessAbSoft-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CRNetworkButton/CRNetworkButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
@@ -723,11 +752,13 @@
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCop/SwiftCop.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRNetworkButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKImagePickerController.framework",
@@ -737,6 +768,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCop.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +788,7 @@
 				C0E6BF351FBA047500F7E3D9 /* HistDealVC.swift in Sources */,
 				C02F85C41FB34F8B0042F07B /* JobWarningData.swift in Sources */,
 				C004C1C11F8E5E9B00FB80D9 /* DateTimeUtils.swift in Sources */,
+				499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */,
 				C0DC562F1FBF891200787FBF /* ReportTypeDetailVC.swift in Sources */,
 				C0DC562C1FBF7DB900787FBF /* GroupReportData.swift in Sources */,
 				C0C15C601F95059700588A9F /* ChartTestVC.swift in Sources */,
@@ -764,6 +797,7 @@
 				C004C1F21F8FD32F00FB80D9 /* ChildExampleViewController.swift in Sources */,
 				C0BCA2781F899E0600F62316 /* ViewController.swift in Sources */,
 				C0DC3A921FA21B7800DCFBE7 /* ColorManager.swift in Sources */,
+				499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */,
 				C0E6BF5F1FBB87E000F7E3D9 /* HistDealTBVCell.swift in Sources */,
 				C04D8BC11FC4E5690091334A /* ViewDetailResponseData.swift in Sources */,
 				C0DC561C1FBBBDEC00787FBF /* SearchHistRequestData.swift in Sources */,
@@ -788,6 +822,7 @@
 				C076438C1FA2AF2500C57B1C /* ABSoftERPVC.swift in Sources */,
 				C0BCA2761F899E0600F62316 /* AppDelegate.swift in Sources */,
 				C0884C441FA8F0A70012A2D0 /* Strings.swift in Sources */,
+				499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */,
 				C02F85CB1FB372DF0042F07B /* CustomerTBCell.swift in Sources */,
 				C0C15C571F92FDC000588A9F /* RegisterRequestData.swift in Sources */,
 				C0C15C181F9037DB00588A9F /* PostCell.swift in Sources */,
@@ -800,6 +835,7 @@
 				C02F85B51FAE897D0042F07B /* ERPChartVC.swift in Sources */,
 				C0BCA2B41F8BCD9000F62316 /* SWRevealViewController.m in Sources */,
 				C07862481F951AA000F6A619 /* RegisterResponseData.swift in Sources */,
+				499E2F56218BF8F400B2E2E0 /* NSErrorExtension.swift in Sources */,
 				C04D8BBD1FC127660091334A /* ReportTypeResponseData.swift in Sources */,
 				C0884C461FA8F2570012A2D0 /* NSURLError.swift in Sources */,
 				C0C15C5D1F9501B100588A9F /* LoginRequestData.swift in Sources */,
@@ -960,6 +996,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA5AE0FF315AD1026BDF9FB3 /* Pods-BusinessAbSoft.debug.xcconfig */;
 			buildSettings = {
+				APP_SERVICE_ENDPOINT_URL = "http://10.60.129.68:8068/vBIServices";
+				APP_SERVICE_ENDPOINT_VERSION = 1.0;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -984,6 +1022,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D139F1BA88957AEE43C4530 /* Pods-BusinessAbSoft.release.xcconfig */;
 			buildSettings = {
+				APP_SERVICE_ENDPOINT_URL = "http://10.60.129.69:8068/vBIServices";
+				APP_SERVICE_ENDPOINT_VERSION = 1.0;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
