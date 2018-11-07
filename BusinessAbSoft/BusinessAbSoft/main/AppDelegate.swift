@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().shadowImage = UIImage(named: "shadow")
         
         // init window
-        let initialViewController:UIViewController = LoginVC(nibName:"LoginVC",bundle:nil)
+        let initialViewController:UIViewController = LoginMainVC(nibName:"LoginMainVC",bundle:nil)
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
         window!.rootViewController = initialViewController

@@ -11,6 +11,12 @@
 		499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */; };
 		499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F53218BF2C100B2E2E0 /* URLExtension.swift */; };
 		499E2F56218BF8F400B2E2E0 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */; };
+		499E2F59218C2A6F00B2E2E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F57218C2A6F00B2E2E0 /* LoginViewController.swift */; };
+		499E2F5A218C2A6F00B2E2E0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499E2F58218C2A6F00B2E2E0 /* LoginViewController.xib */; };
+		499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F5C218C2FA700B2E2E0 /* LoginMainVC.swift */; };
+		499E2F5F218C2FA700B2E2E0 /* LoginMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */; };
+		499E2F62218C2FC200B2E2E0 /* LoginContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */; };
+		499E2F63218C2FC200B2E2E0 /* LoginContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499E2F61218C2FC200B2E2E0 /* LoginContentVC.xib */; };
 		4BE6E98A89B81A8FFF9C7B9D /* Pods_BusinessAbSoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7D911E1FF1E66C8CE293CB /* Pods_BusinessAbSoft.framework */; };
 		C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1B51F8E584100FB80D9 /* LoginVC.swift */; };
 		C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004C1B61F8E584100FB80D9 /* LoginVC.xib */; };
@@ -123,6 +129,12 @@
 		499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
 		499E2F53218BF2C100B2E2E0 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
+		499E2F57218C2A6F00B2E2E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		499E2F58218C2A6F00B2E2E0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		499E2F5C218C2FA700B2E2E0 /* LoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainVC.swift; sourceTree = "<group>"; };
+		499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginMainVC.xib; sourceTree = "<group>"; };
+		499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentVC.swift; sourceTree = "<group>"; };
+		499E2F61218C2FC200B2E2E0 /* LoginContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginContentVC.xib; sourceTree = "<group>"; };
 		C004C1B51F8E584100FB80D9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C004C1B61F8E584100FB80D9 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		C004C1BA1F8E5A9700FB80D9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
@@ -262,6 +274,17 @@
 				499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		499E2F5B218C2F7700B2E2E0 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				499E2F5C218C2FA700B2E2E0 /* LoginMainVC.swift */,
+				499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */,
+				499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */,
+				499E2F61218C2FC200B2E2E0 /* LoginContentVC.xib */,
+			);
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 		C004C1B41F8E4F1800FB80D9 /* login */ = {
@@ -434,6 +457,7 @@
 		C0BCA2741F899E0600F62316 /* BusinessAbSoft */ = {
 			isa = PBXGroup;
 			children = (
+				499E2F5B218C2F7700B2E2E0 /* LoginScreen */,
 				499E2F52218BF28700B2E2E0 /* Extension */,
 				499E2F4D218BEE0600B2E2E0 /* APIService */,
 				C0C15C1A1F91FF1700588A9F /* service */,
@@ -485,6 +509,8 @@
 			children = (
 				C0BCA2BB1F8BD84800F62316 /* TestVC.swift */,
 				C0BCA2BC1F8BD84800F62316 /* TestVC.xib */,
+				499E2F57218C2A6F00B2E2E0 /* LoginViewController.swift */,
+				499E2F58218C2A6F00B2E2E0 /* LoginViewController.xib */,
 			);
 			path = testscreen;
 			sourceTree = "<group>";
@@ -679,8 +705,11 @@
 				C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */,
 				C02F85D61FB3998F0042F07B /* AddNewCusVC.xib in Resources */,
 				C0E6BF321FBA045600F7E3D9 /* DealVC.xib in Resources */,
+				499E2F5F218C2FA700B2E2E0 /* LoginMainVC.xib in Resources */,
+				499E2F63218C2FC200B2E2E0 /* LoginContentVC.xib in Resources */,
 				C0DC56241FBF770B00787FBF /* ReportMainVC.xib in Resources */,
 				C076438D1FA2AF2500C57B1C /* ABSoftERPVC.xib in Resources */,
+				499E2F5A218C2A6F00B2E2E0 /* LoginViewController.xib in Resources */,
 				C02F85BE1FAF62870042F07B /* IndayViewCell.xib in Resources */,
 				C0BCA2BE1F8BD84800F62316 /* TestVC.xib in Resources */,
 				C0BCA2801F899E0600F62316 /* LaunchScreen.storyboard in Resources */,
@@ -799,6 +828,7 @@
 				C0DC3A921FA21B7800DCFBE7 /* ColorManager.swift in Sources */,
 				499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */,
 				C0E6BF5F1FBB87E000F7E3D9 /* HistDealTBVCell.swift in Sources */,
+				499E2F62218C2FC200B2E2E0 /* LoginContentVC.swift in Sources */,
 				C04D8BC11FC4E5690091334A /* ViewDetailResponseData.swift in Sources */,
 				C0DC561C1FBBBDEC00787FBF /* SearchHistRequestData.swift in Sources */,
 				C05511251FD1AA4A0093275D /* SettingVC.swift in Sources */,
@@ -807,6 +837,7 @@
 				C04D8BBB1FC125110091334A /* InitReportTypeRequest.swift in Sources */,
 				C004C1BF1F8E5E6E00FB80D9 /* FileUtils.swift in Sources */,
 				C0DC56271FBF786200787FBF /* ReportTBVCell.swift in Sources */,
+				499E2F59218C2A6F00B2E2E0 /* LoginViewController.swift in Sources */,
 				C07643941FA2AFC200C57B1C /* OutOfDateVC.swift in Sources */,
 				C07643881FA2603000C57B1C /* DeviceModel.swift in Sources */,
 				C0C15C171F9037DB00588A9F /* DataProvider.swift in Sources */,
@@ -820,6 +851,7 @@
 				C0DC56201FBBBFFE00787FBF /* TransData.swift in Sources */,
 				C004C1ED1F8FD12400FB80D9 /* ButtonCell.swift in Sources */,
 				C076438C1FA2AF2500C57B1C /* ABSoftERPVC.swift in Sources */,
+				499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */,
 				C0BCA2761F899E0600F62316 /* AppDelegate.swift in Sources */,
 				C0884C441FA8F0A70012A2D0 /* Strings.swift in Sources */,
 				499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */,
