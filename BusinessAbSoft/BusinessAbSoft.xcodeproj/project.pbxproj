@@ -30,6 +30,10 @@
 		C004C1ED1F8FD12400FB80D9 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1EB1F8FD12400FB80D9 /* ButtonCell.swift */; };
 		C004C1EE1F8FD12400FB80D9 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004C1EC1F8FD12400FB80D9 /* ButtonCell.xib */; };
 		C004C1F21F8FD32F00FB80D9 /* ChildExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1F01F8FD32F00FB80D9 /* ChildExampleViewController.swift */; };
+		C013D2AD21939D4600021DF3 /* ScreenLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013D2AB21939D4600021DF3 /* ScreenLoginVC.swift */; };
+		C013D2AE21939D4600021DF3 /* ScreenLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C013D2AC21939D4600021DF3 /* ScreenLoginVC.xib */; };
+		C013D2B121939D6300021DF3 /* ScreenRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013D2AF21939D6300021DF3 /* ScreenRegisterVC.swift */; };
+		C013D2B221939D6300021DF3 /* ScreenRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C013D2B021939D6300021DF3 /* ScreenRegisterVC.xib */; };
 		C02F85B51FAE897D0042F07B /* ERPChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85B31FAE897D0042F07B /* ERPChartVC.swift */; };
 		C02F85B61FAE897D0042F07B /* ERPChartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85B41FAE897D0042F07B /* ERPChartVC.xib */; };
 		C02F85B91FAE99430042F07B /* ERPMainContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85B71FAE99430042F07B /* ERPMainContentVC.swift */; };
@@ -147,6 +151,10 @@
 		C004C1EB1F8FD12400FB80D9 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		C004C1EC1F8FD12400FB80D9 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C004C1F01F8FD32F00FB80D9 /* ChildExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildExampleViewController.swift; sourceTree = "<group>"; };
+		C013D2AB21939D4600021DF3 /* ScreenLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLoginVC.swift; sourceTree = "<group>"; };
+		C013D2AC21939D4600021DF3 /* ScreenLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenLoginVC.xib; sourceTree = "<group>"; };
+		C013D2AF21939D6300021DF3 /* ScreenRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRegisterVC.swift; sourceTree = "<group>"; };
+		C013D2B021939D6300021DF3 /* ScreenRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenRegisterVC.xib; sourceTree = "<group>"; };
 		C02F85B31FAE897D0042F07B /* ERPChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERPChartVC.swift; sourceTree = "<group>"; };
 		C02F85B41FAE897D0042F07B /* ERPChartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ERPChartVC.xib; sourceTree = "<group>"; };
 		C02F85B71FAE99430042F07B /* ERPMainContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERPMainContentVC.swift; sourceTree = "<group>"; };
@@ -283,6 +291,10 @@
 				499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */,
 				499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */,
 				499E2F61218C2FC200B2E2E0 /* LoginContentVC.xib */,
+				C013D2AB21939D4600021DF3 /* ScreenLoginVC.swift */,
+				C013D2AC21939D4600021DF3 /* ScreenLoginVC.xib */,
+				C013D2AF21939D6300021DF3 /* ScreenRegisterVC.swift */,
+				C013D2B021939D6300021DF3 /* ScreenRegisterVC.xib */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -704,6 +716,7 @@
 			files = (
 				C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */,
 				C02F85D61FB3998F0042F07B /* AddNewCusVC.xib in Resources */,
+				C013D2AE21939D4600021DF3 /* ScreenLoginVC.xib in Resources */,
 				C0E6BF321FBA045600F7E3D9 /* DealVC.xib in Resources */,
 				499E2F5F218C2FA700B2E2E0 /* LoginMainVC.xib in Resources */,
 				499E2F63218C2FC200B2E2E0 /* LoginContentVC.xib in Resources */,
@@ -732,6 +745,7 @@
 				C02F85CC1FB372DF0042F07B /* CustomerTBCell.xib in Resources */,
 				C0E6BF431FBB7B3D00F7E3D9 /* ContentDealVC.xib in Resources */,
 				C0E6BF2E1FBA043E00F7E3D9 /* MainDealVC.xib in Resources */,
+				C013D2B221939D6300021DF3 /* ScreenRegisterVC.xib in Resources */,
 				C0E6BF541FBB828F00F7E3D9 /* ContentShowPriceVC.xib in Resources */,
 				C0E6BF601FBB87E000F7E3D9 /* HistDealTBVCell.xib in Resources */,
 				C0E6BF281FB8577000F7E3D9 /* FontAwesome.otf in Resources */,
@@ -849,6 +863,7 @@
 				C0BCA2B91F8BD76300F62316 /* MenuViewController.swift in Sources */,
 				C0DC561E1FBBBF5900787FBF /* ReportModelData.swift in Sources */,
 				C0DC56201FBBBFFE00787FBF /* TransData.swift in Sources */,
+				C013D2B121939D6300021DF3 /* ScreenRegisterVC.swift in Sources */,
 				C004C1ED1F8FD12400FB80D9 /* ButtonCell.swift in Sources */,
 				C076438C1FA2AF2500C57B1C /* ABSoftERPVC.swift in Sources */,
 				499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */,
@@ -877,6 +892,7 @@
 				C07643901FA2AF7000C57B1C /* InDayVC.swift in Sources */,
 				C0E6BF311FBA045600F7E3D9 /* DealVC.swift in Sources */,
 				C02F85B91FAE99430042F07B /* ERPMainContentVC.swift in Sources */,
+				C013D2AD21939D4600021DF3 /* ScreenLoginVC.swift in Sources */,
 				C02F85C01FB121810042F07B /* LoginResponseData.swift in Sources */,
 				C0E6BF3E1FBB7ADA00F7E3D9 /* DetailDealMainVC.swift in Sources */,
 				C0C15C131F90370800588A9F /* TableChildExampleViewController.swift in Sources */,

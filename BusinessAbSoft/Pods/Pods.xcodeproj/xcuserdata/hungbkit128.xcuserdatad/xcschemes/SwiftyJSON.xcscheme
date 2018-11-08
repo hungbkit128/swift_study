@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FABF47D60EC5A6C83B5B7BFDBE6324D"
-               BuildableName = "PullToRefreshKit.framework"
-               BlueprintName = "PullToRefreshKit"
+               BlueprintIdentifier = "AB4C70D9EA0634FEF03D6B69E4C0AF8C"
+               BuildableName = "SwiftyJSON.framework"
+               BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9FABF47D60EC5A6C83B5B7BFDBE6324D"
-            BuildableName = "PullToRefreshKit.framework"
-            BlueprintName = "PullToRefreshKit"
+            BlueprintIdentifier = "AB4C70D9EA0634FEF03D6B69E4C0AF8C"
+            BuildableName = "SwiftyJSON.framework"
+            BlueprintName = "SwiftyJSON"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
