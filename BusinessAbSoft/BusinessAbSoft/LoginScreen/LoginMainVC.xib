@@ -24,14 +24,14 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-login" translatesAutoresizingMaskIntoConstraints="NO" id="5W7-i1-b42">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-0x-T4c" customClass="TPKeyboardAvoidingScrollView">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-0x-T4c" customClass="TPKeyboardAvoidingScrollView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-PF-cLE">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8q-DF-A52">
-                                    <rect key="frame" x="0.0" y="210" width="375" height="458"/>
+                                    <rect key="frame" x="16" y="210" width="343" height="458"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-gi-tmj">
@@ -75,13 +75,13 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="u8q-DF-A52" firstAttribute="top" secondItem="vRW-gi-tmj" secondAttribute="bottom" id="2uL-58-Cwt"/>
                                 <constraint firstItem="vRW-gi-tmj" firstAttribute="leading" secondItem="Ixq-PF-cLE" secondAttribute="leading" id="BHC-7p-fd8"/>
-                                <constraint firstAttribute="trailing" secondItem="u8q-DF-A52" secondAttribute="trailing" id="Cme-g0-oMK"/>
+                                <constraint firstAttribute="trailing" secondItem="u8q-DF-A52" secondAttribute="trailing" constant="16" id="Cme-g0-oMK"/>
                                 <constraint firstItem="vRW-gi-tmj" firstAttribute="top" secondItem="Ixq-PF-cLE" secondAttribute="top" id="Qa4-yH-VPy"/>
-                                <constraint firstItem="u8q-DF-A52" firstAttribute="leading" secondItem="Ixq-PF-cLE" secondAttribute="leading" id="XYz-GG-6T4"/>
+                                <constraint firstItem="u8q-DF-A52" firstAttribute="leading" secondItem="Ixq-PF-cLE" secondAttribute="leading" constant="16" id="XYz-GG-6T4"/>
                                 <constraint firstAttribute="bottom" secondItem="u8q-DF-A52" secondAttribute="bottom" id="qlG-20-lXy"/>
                                 <constraint firstAttribute="trailing" secondItem="vRW-gi-tmj" secondAttribute="trailing" id="wyJ-sb-TzK"/>
                             </constraints>

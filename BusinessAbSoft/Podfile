@@ -19,5 +19,9 @@ target 'BusinessAbSoft' do
     pod 'Alamofire', '<= 4.7'
     pod 'SwiftyJSON', '<= 4.0'
     pod 'TPKeyboardAvoiding'
+    
+#    pod 'SDWebImage', '~> 4.0'
+#    pod 'SCLAlertView'
+#    pod 'SwiftMessages'
 end
 

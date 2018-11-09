@@ -19,11 +19,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-gz-53R" customClass="TPKeyboardAvoidingScrollView">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-gz-53R">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="375-S4-6rs">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQc-KM-v4h" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                     <rect key="frame" x="0.0" y="16" width="375" height="50"/>
@@ -126,7 +126,7 @@
                         <constraint firstAttribute="trailing" secondItem="375-S4-6rs" secondAttribute="trailing" id="4Bt-PM-8Cx"/>
                         <constraint firstItem="375-S4-6rs" firstAttribute="top" secondItem="TK2-gz-53R" secondAttribute="top" id="FhT-ra-ikF"/>
                         <constraint firstItem="375-S4-6rs" firstAttribute="centerX" secondItem="TK2-gz-53R" secondAttribute="centerX" id="eKN-EK-CQT"/>
-                        <constraint firstItem="375-S4-6rs" firstAttribute="height" secondItem="TK2-gz-53R" secondAttribute="height" constant="1" id="uCq-y4-6GQ"/>
+                        <constraint firstItem="375-S4-6rs" firstAttribute="height" secondItem="TK2-gz-53R" secondAttribute="height" id="uCq-y4-6GQ"/>
                         <constraint firstAttribute="bottom" secondItem="375-S4-6rs" secondAttribute="bottom" id="vMi-mN-X64"/>
                     </constraints>
                 </scrollView>
