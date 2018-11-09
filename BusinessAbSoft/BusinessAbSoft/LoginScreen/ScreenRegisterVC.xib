@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenRegisterVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenRegisterVC" customModule="BusinessAbSoft" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,8 +18,128 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-gz-53R" customClass="TPKeyboardAvoidingScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="375-S4-6rs">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQc-KM-v4h" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                    <rect key="frame" x="0.0" y="16" width="375" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="0AI-LL-e9T"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYb-Sc-9tq" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                    <rect key="frame" x="0.0" y="82" width="375" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="CWw-hH-td5"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-8G-l71" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                    <rect key="frame" x="0.0" y="148" width="375" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="oFd-Bo-rsV"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-40-Xab" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                    <rect key="frame" x="0.0" y="214" width="375" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="ZQg-FJ-rFu"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Tên đăng nhập"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4k-yJ-QZV">
+                                    <rect key="frame" x="0.0" y="296" width="375" height="50"/>
+                                    <color key="backgroundColor" red="0.37536525729999998" green="0.61512672899999998" blue="0.79986172909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="67W-q6-uTO"/>
+                                        <constraint firstAttribute="height" constant="50" id="Miu-RK-dZk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="ĐĂNG KÝ">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="3e4-8G-l71" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="2jX-Bu-cyQ"/>
+                                <constraint firstAttribute="trailing" secondItem="bQc-KM-v4h" secondAttribute="trailing" id="6pF-Wy-gvg"/>
+                                <constraint firstItem="OFx-40-Xab" firstAttribute="top" secondItem="3e4-8G-l71" secondAttribute="bottom" constant="16" id="9Cd-Ks-M7C"/>
+                                <constraint firstItem="OFx-40-Xab" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="FCE-cP-DPv"/>
+                                <constraint firstItem="bQc-KM-v4h" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="GmV-kq-o7G"/>
+                                <constraint firstAttribute="trailing" secondItem="KYb-Sc-9tq" secondAttribute="trailing" id="ILW-RF-wNS"/>
+                                <constraint firstAttribute="trailing" secondItem="OFx-40-Xab" secondAttribute="trailing" id="Lcm-Sv-TQo"/>
+                                <constraint firstItem="KYb-Sc-9tq" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="Lg9-Qw-gH9"/>
+                                <constraint firstItem="bQc-KM-v4h" firstAttribute="top" secondItem="375-S4-6rs" secondAttribute="top" constant="16" id="Mck-pr-LWv"/>
+                                <constraint firstItem="d4k-yJ-QZV" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="PDx-pg-174"/>
+                                <constraint firstItem="bQc-KM-v4h" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="Qix-x4-Jes"/>
+                                <constraint firstAttribute="trailing" secondItem="3e4-8G-l71" secondAttribute="trailing" id="SSO-rx-gIB"/>
+                                <constraint firstAttribute="trailing" secondItem="d4k-yJ-QZV" secondAttribute="trailing" id="TvB-Bf-Rte"/>
+                                <constraint firstItem="d4k-yJ-QZV" firstAttribute="top" secondItem="OFx-40-Xab" secondAttribute="bottom" constant="32" id="goA-u4-RhB"/>
+                                <constraint firstAttribute="trailing" secondItem="bQc-KM-v4h" secondAttribute="trailing" id="prf-NU-iBW"/>
+                                <constraint firstItem="KYb-Sc-9tq" firstAttribute="top" secondItem="bQc-KM-v4h" secondAttribute="bottom" constant="16" id="rPp-eF-rXu"/>
+                                <constraint firstItem="3e4-8G-l71" firstAttribute="top" secondItem="KYb-Sc-9tq" secondAttribute="bottom" constant="16" id="rUu-RU-0wu"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="375-S4-6rs" firstAttribute="leading" secondItem="TK2-gz-53R" secondAttribute="leading" id="05s-4A-CRl"/>
+                        <constraint firstAttribute="trailing" secondItem="375-S4-6rs" secondAttribute="trailing" id="4Bt-PM-8Cx"/>
+                        <constraint firstItem="375-S4-6rs" firstAttribute="top" secondItem="TK2-gz-53R" secondAttribute="top" id="FhT-ra-ikF"/>
+                        <constraint firstItem="375-S4-6rs" firstAttribute="centerX" secondItem="TK2-gz-53R" secondAttribute="centerX" id="eKN-EK-CQT"/>
+                        <constraint firstItem="375-S4-6rs" firstAttribute="height" secondItem="TK2-gz-53R" secondAttribute="height" constant="1" id="uCq-y4-6GQ"/>
+                        <constraint firstAttribute="bottom" secondItem="375-S4-6rs" secondAttribute="bottom" id="vMi-mN-X64"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TK2-gz-53R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GXT-a2-Bbo"/>
+                <constraint firstAttribute="trailing" secondItem="TK2-gz-53R" secondAttribute="trailing" id="Mhm-KQ-YyS"/>
+                <constraint firstAttribute="bottom" secondItem="TK2-gz-53R" secondAttribute="bottom" id="ahF-0O-frg"/>
+                <constraint firstItem="TK2-gz-53R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lUW-qa-gtk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

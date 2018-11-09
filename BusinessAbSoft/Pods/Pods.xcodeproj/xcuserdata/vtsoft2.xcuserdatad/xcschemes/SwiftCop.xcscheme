@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "354069BB4E00544D0A856AE016ED08A8"
+               BlueprintIdentifier = "1AE30DDB41D8A5FB84EF018CA46ED3ED"
                BlueprintName = "SwiftCop"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "SwiftCop.framework">
