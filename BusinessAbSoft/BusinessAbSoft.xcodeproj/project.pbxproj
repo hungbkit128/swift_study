@@ -50,6 +50,7 @@
 		C02F85D21FB37F2E0042F07B /* RequestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85D11FB37F2E0042F07B /* RequestCommon.swift */; };
 		C02F85D51FB3998F0042F07B /* AddNewCusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85D31FB3998F0042F07B /* AddNewCusVC.swift */; };
 		C02F85D61FB3998F0042F07B /* AddNewCusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85D41FB3998F0042F07B /* AddNewCusVC.xib */; };
+		C0338B77219B204800BE620B /* AuthenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0338B76219B204800BE620B /* AuthenService.swift */; };
 		C0446C2D1FC8F7D30027F996 /* LoadDataResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446C2C1FC8F7D30027F996 /* LoadDataResponseData.swift */; };
 		C04D8BBB1FC125110091334A /* InitReportTypeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BBA1FC125110091334A /* InitReportTypeRequest.swift */; };
 		C04D8BBD1FC127660091334A /* ReportTypeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BBC1FC127660091334A /* ReportTypeResponseData.swift */; };
@@ -171,6 +172,7 @@
 		C02F85D11FB37F2E0042F07B /* RequestCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommon.swift; sourceTree = "<group>"; };
 		C02F85D31FB3998F0042F07B /* AddNewCusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCusVC.swift; sourceTree = "<group>"; };
 		C02F85D41FB3998F0042F07B /* AddNewCusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewCusVC.xib; sourceTree = "<group>"; };
+		C0338B76219B204800BE620B /* AuthenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenService.swift; sourceTree = "<group>"; };
 		C0446C2C1FC8F7D30027F996 /* LoadDataResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataResponseData.swift; sourceTree = "<group>"; };
 		C04D8BBA1FC125110091334A /* InitReportTypeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitReportTypeRequest.swift; sourceTree = "<group>"; };
 		C04D8BBC1FC127660091334A /* ReportTypeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTypeResponseData.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		499E2F5B218C2F7700B2E2E0 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C0338B76219B204800BE620B /* AuthenService.swift */,
 				499E2F5C218C2FA700B2E2E0 /* LoginMainVC.swift */,
 				499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */,
 				499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */,
@@ -861,6 +864,7 @@
 				C02F85C71FB3717D0042F07B /* CustomerVC.swift in Sources */,
 				C0E6BF4F1FBB826400F7E3D9 /* ShowPriceMainVC.swift in Sources */,
 				C004C1CF1F8E894D00FB80D9 /* SignupVC.swift in Sources */,
+				C0338B77219B204800BE620B /* AuthenService.swift in Sources */,
 				C0446C2D1FC8F7D30027F996 /* LoadDataResponseData.swift in Sources */,
 				C0BCA2B91F8BD76300F62316 /* MenuViewController.swift in Sources */,
 				C0DC561E1FBBBF5900787FBF /* ReportModelData.swift in Sources */,

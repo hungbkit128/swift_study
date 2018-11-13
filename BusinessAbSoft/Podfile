@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'BusinessAbSoft' do
     pod 'NVActivityIndicatorView'
-    pod 'ExpandingMenu', '~> 0.3'
+    pod 'ExpandingMenu', '~> 0.4'
     pod 'XLPagerTabStrip', '~> 8.0'
     pod 'Charts'
     pod 'SwiftCop'
@@ -16,12 +16,12 @@ target 'BusinessAbSoft' do
     
     pod 'ActionSheetPicker-3.0'
     pod 'DKImagePickerController'
-    pod 'Alamofire', '<= 4.7'
-    pod 'SwiftyJSON', '<= 4.0'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
     pod 'TPKeyboardAvoiding'
     
-#    pod 'SDWebImage', '~> 4.0'
-#    pod 'SCLAlertView'
-#    pod 'SwiftMessages'
+    #    pod 'SDWebImage', '~> 4.0'
+    #    pod 'SCLAlertView'
+    #    pod 'SwiftMessages'
 end
 

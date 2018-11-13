@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SkyFloatingLabelTextField
 
 class UiUtils {
     
@@ -23,5 +24,25 @@ class UiUtils {
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
         viewController.present(alertController, animated: true, completion: nil)
+    }
+    
+    static func applySkyscannerThemeWithIcon(textField: SkyFloatingLabelTextFieldWithIcon) {
+        self.applySkyscannerTheme(textField: textField)
+        textField.iconColor = ColorManager.lightGreyColor
+        textField.selectedIconColor = ColorManager.mainColor
+        textField.iconFont = UIFont(name: "FontAwesome", size: 14.0)
+    }
+    
+    static func applySkyscannerTheme(textField: SkyFloatingLabelTextField) {
+        textField.tintColor = ColorManager.mainColor
+        textField.textColor = ColorManager.darkGreyColor
+        textField.lineColor = ColorManager.lightGreyColor
+        textField.selectedTitleColor = ColorManager.mainColor
+        textField.selectedLineColor = ColorManager.mainColor
+        
+        // Set custom fonts for the title, placeholder and textfield labels
+        textField.titleLabel.font = UIFont.systemFont(ofSize: 14.0)
+        textField.placeholderFont = UIFont.systemFont(ofSize: 14.0)
+        textField.font = UIFont.systemFont(ofSize: 14.0)
     }
 }

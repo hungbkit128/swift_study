@@ -9,52 +9,77 @@
 import UIKit
 import XLPagerTabStrip
 import SkyFloatingLabelTextField
+import NVActivityIndicatorView
 
-class ScreenLoginVC: UIViewController, IndicatorInfoProvider {
+class ScreenLoginVC: UIViewController, IndicatorInfoProvider, ServiceManagerProtocol, NVActivityIndicatorViewable {
     
+    @IBOutlet weak var loginBT: UIButton!
     @IBOutlet weak var pwdTF: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var userNameTF: SkyFloatingLabelTextFieldWithIcon!
-    var itemInfo = IndicatorInfo(title: "View")
     
+    private var authenService:AuthenService
+    
+    var itemInfo = IndicatorInfo(title: "View")
     init(itemInfo: IndicatorInfo) {
         self.itemInfo = itemInfo
+        self.authenService = AuthenService()
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //userNameTF.becomeFirstResponder()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applySkyscannerThemeWithIcon(textField: pwdTF)
-        applySkyscannerThemeWithIcon(textField: userNameTF)
-
+        loginBT.layer.cornerRadius = 10
+        
+        UiUtils.applySkyscannerThemeWithIcon(textField: pwdTF)
+        UiUtils.applySkyscannerThemeWithIcon(textField: userNameTF)
         pwdTF.iconText = "\u{f13e}"
         userNameTF.iconText = "\u{f007}"
     }
-    
-    func applySkyscannerThemeWithIcon(textField: SkyFloatingLabelTextFieldWithIcon) {
-        self.applySkyscannerTheme(textField: textField)
-        textField.iconColor = ColorManager.lightGreyColor
-        textField.selectedIconColor = ColorManager.barTintColor
-        textField.iconFont = UIFont(name: "FontAwesome", size: 14)
-    }
-    
-    func applySkyscannerTheme(textField: SkyFloatingLabelTextField) {
-        textField.tintColor = ColorManager.barTintColor
-        textField.textColor = ColorManager.darkGreyColor
-        textField.lineColor = ColorManager.lightGreyColor
-        textField.selectedTitleColor = ColorManager.barTintColor
-        textField.selectedLineColor = ColorManager.barTintColor
-        
-        // Set custom fonts for the title, placeholder and textfield labels
-        textField.titleLabel.font = UIFont.systemFont(ofSize: 12.0)
-        textField.placeholderFont = UIFont.systemFont(ofSize: 18.0)
-        textField.font = UIFont.systemFont(ofSize: 18.0)
-    }
 
+    @IBAction func loginBTAction(_ sender: Any) {
+        
+        view.endEditing(true)
+        
+        authenService.loginRequest(username: userNameTF.text ?? "",
+                                   password: pwdTF.text ?? "",
+                                   captchaId: "test",
+                                   captchaString: "test") { (error: NSError?) in
+                                    
+                                    
+                            
+        }
+        
+        let logObject = LoginRequestData()
+        logObject.UserName = userNameTF.text
+        logObject.PassWord = pwdTF.text
+        //logObject.Model = UIDevice.current.modelName
+        //logObject.Imei = UIDevice.current.identifierForVendor?.uuidString ?? ""
+        
+        logObject.Model = "test"
+        logObject.Imei = "D83A295E-E598-4F6E-BFE4-5C25DEFE7D8F"
+        
+        let jsonData = logObject.toDictionary()
+        print(jsonData)
+        
+        let size = CGSize(width: 32, height: 32)
+        self.startAnimating(size, message: "Đang xác thực...", type: NVActivityIndicatorType(rawValue: 2)!)
+        
+        ServiceManager.delegate = self
+        ServiceManager.httpPost(urlString: Constants.LOGIN_URL, jsonData: jsonData)
+        
+        
+        //UiUtils.showConfirm(title:"Bạn có đồng ý đăng nhập không?", viewController:self, handlerOk:okLogin)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,4 +91,37 @@ class ScreenLoginVC: UIViewController, IndicatorInfoProvider {
         return itemInfo
     }
 
+    // delegate ServiceManagerProtocol
+    func didFinishService(data: Any, funcName: String) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            NVActivityIndicatorPresenter.sharedInstance.setMessage("Đăng nhập thành công")
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+            self.stopAnimating()
+            self.dismiss(animated: true, completion: nil)
+            
+            let secondSB:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let secondVC = secondSB.instantiateInitialViewController()
+            self.present(secondVC!, animated: true, completion: nil)
+        }
+        
+        do {
+            let loginResponseData = try JSONDecoder().decode(LoginResponseData.self, from: data as! Data)
+            ServiceManager.token = loginResponseData.UserLogin?.Token
+            ServiceManager.userData = loginResponseData.UserLogin
+        } catch {
+            print(error)
+        }
+    }
+    
+    func didErrorService(errString: String, funcName: String) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            NVActivityIndicatorPresenter.sharedInstance.setMessage("Đăng nhập thất bại")
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+            self.stopAnimating()
+            UiUtils.showAlert(title:errString, viewController:self)
+        }
+    }
 }

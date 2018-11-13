@@ -37,40 +37,18 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRW-gi-tmj">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtm-xz-K6K">
-                                            <rect key="frame" x="0.0" y="50" width="375" height="110"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-png" translatesAutoresizingMaskIntoConstraints="NO" id="XJS-26-3nu">
-                                                    <rect key="frame" x="155" y="0.0" width="64" height="64"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="ZI9-5f-F95"/>
-                                                        <constraint firstAttribute="height" constant="64" id="zr4-R4-RVY"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABSoft ERP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syQ-yd-CtL">
-                                                    <rect key="frame" x="0.0" y="64" width="375" height="46"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-name" translatesAutoresizingMaskIntoConstraints="NO" id="7Gu-pK-v9H">
+                                            <rect key="frame" x="106" y="55" width="162" height="100"/>
                                             <constraints>
-                                                <constraint firstItem="syQ-yd-CtL" firstAttribute="top" secondItem="XJS-26-3nu" secondAttribute="bottom" id="1dO-VX-YaJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="syQ-yd-CtL" secondAttribute="bottom" id="KMG-Ra-0jT"/>
-                                                <constraint firstAttribute="trailing" secondItem="syQ-yd-CtL" secondAttribute="trailing" id="OwS-XL-Dna"/>
-                                                <constraint firstItem="syQ-yd-CtL" firstAttribute="leading" secondItem="rtm-xz-K6K" secondAttribute="leading" id="Umj-2m-JdX"/>
-                                                <constraint firstItem="XJS-26-3nu" firstAttribute="top" secondItem="rtm-xz-K6K" secondAttribute="top" id="i49-Gn-CPi"/>
-                                                <constraint firstItem="XJS-26-3nu" firstAttribute="centerX" secondItem="rtm-xz-K6K" secondAttribute="centerX" id="orL-0Q-3UE"/>
-                                                <constraint firstAttribute="height" constant="110" id="rgU-1K-MRm"/>
+                                                <constraint firstAttribute="width" constant="162" id="Eqq-YS-ncc"/>
+                                                <constraint firstAttribute="height" constant="100" id="Iif-lO-8Zs"/>
                                             </constraints>
-                                        </view>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="rtm-xz-K6K" secondAttribute="trailing" id="TFj-F2-lE9"/>
-                                        <constraint firstItem="rtm-xz-K6K" firstAttribute="centerY" secondItem="vRW-gi-tmj" secondAttribute="centerY" id="UQJ-Q1-SBM"/>
-                                        <constraint firstItem="rtm-xz-K6K" firstAttribute="leading" secondItem="vRW-gi-tmj" secondAttribute="leading" id="lnJ-vQ-Kdo"/>
+                                        <constraint firstItem="7Gu-pK-v9H" firstAttribute="centerY" secondItem="vRW-gi-tmj" secondAttribute="centerY" id="1Kk-A5-oPa"/>
+                                        <constraint firstItem="7Gu-pK-v9H" firstAttribute="centerX" secondItem="vRW-gi-tmj" secondAttribute="centerX" id="4hR-nc-q5j"/>
                                         <constraint firstAttribute="height" constant="210" id="yaC-0r-S5d"/>
                                     </constraints>
                                 </view>
@@ -115,6 +93,6 @@
     </objects>
     <resources>
         <image name="bg-login" width="1080" height="1920"/>
-        <image name="logo-png" width="64" height="64"/>
+        <image name="logo-name" width="161" height="100"/>
     </resources>
 </document>

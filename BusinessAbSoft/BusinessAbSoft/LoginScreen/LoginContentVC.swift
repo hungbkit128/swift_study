@@ -27,11 +27,11 @@ class LoginContentVC: ButtonBarPagerTabStripViewController {
         // change selected bar color
         settings.style.buttonBarBackgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0)
         settings.style.buttonBarItemBackgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0)
-        settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        settings.style.selectedBarBackgroundColor = ColorManager.mainColor
         settings.style.selectedBarHeight = 2.0
-        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 14, weight:.regular)
         settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemTitleColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        settings.style.buttonBarItemTitleColor = ColorManager.mainColor
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
@@ -40,9 +40,9 @@ class LoginContentVC: ButtonBarPagerTabStripViewController {
             guard changeCurrentIndex == true else { return }
             
             oldCell?.label.textColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
-            oldCell?.label.font = UIFont.systemFont(ofSize: 16.0)
-            newCell?.label.textColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-            newCell?.label.font = UIFont.boldSystemFont(ofSize: 16.0)
+            oldCell?.label.font = .systemFont(ofSize: 14, weight:.bold)
+            newCell?.label.textColor = ColorManager.mainColor
+            newCell?.label.font = .systemFont(ofSize: 14, weight:.heavy)
         }
     }
     

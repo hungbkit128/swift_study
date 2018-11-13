@@ -73,9 +73,9 @@ class CustomerVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     
     fileprivate func initExpandingMenuButton() {
         let menuButtonSize: CGSize = CGSize(width: 64.0, height: 64.0)
-        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "chooser-button-tab")!, centerHighlightedImage: UIImage(named: "chooser-button-tab-highlighted")!)
+        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), image: UIImage(named: "chooser-button-tab")!, rotatedImage: UIImage(named: "chooser-button-tab-highlighted")!)
         menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: self.view.bounds.height - 32.0)
-        menuButton.allowSounds = false
+        menuButton.playSound = false
         self.view.addSubview(menuButton)
         
         let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Thêm mới", image: UIImage(named: "ic_person_add")!, highlightedImage: UIImage(named: "ic_person_add")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in

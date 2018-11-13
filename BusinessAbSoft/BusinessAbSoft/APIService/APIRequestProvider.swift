@@ -10,50 +10,28 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-let baseURL = Bundle.main.infoDictionary?["APP_SERVICE_ENDPOINT_URL"] as! String
-let apiVersion = Bundle.main.infoDictionary?["APP_SERVICE_ENDPOINT_VERSION"] as! String
-
 class APIRequestProvider: NSObject {
     
     // MARK: SINGLETON
     static var shareInstance: APIRequestProvider? = APIRequestProvider()
     
     private var alamoFireManager: SessionManager
+    private var privateURL: String = "http://118.70.190.38:8686"
+    private var businessURL: String = "http://118.70.190.38:8088"
     
-    private var _requestURL: String = baseURL
-    var requestURL: String {
-        set {
-            _requestURL = requestURL
-        }
-        get {
-            return _requestURL
-        }
-    }
-
-    private var _headers: HTTPHeaders = [:]
-    var headers: HTTPHeaders {
-        set {
-            _headers = headers
-        }
-        get {
-            var headers: HTTPHeaders = [:]
-            headers = [
-                "Accept": "application/json",
-                "Content-Type": "application/json;charset=UTF-8"
-            ]
-            return headers
-        }
-    }
+    private var headers: HTTPHeaders = [
+        "Accept": "application/json",
+        "Content-Type": "application/json;charset=UTF-8"
+    ]
     
     override init() {
-        
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 20
         configuration.timeoutIntervalForResource = 60
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         
-        if let domain = URL(string: baseURL)?.domain() {
+        if let domain = URL(string: privateURL)?.domain() {
             let serverTrustPolicies: [String: ServerTrustPolicy] = [
                 domain: .disableEvaluation
             ]
@@ -84,5 +62,21 @@ class APIRequestProvider: NSObject {
         }
         shareInstance = nil
         shareInstance = APIRequestProvider()
+    }
+    
+    func loginRequest(username: String, password: String) -> DataRequest {
+        let urlString = privateURL.appending("/absoft/login")
+        
+        var param = [String: Any]()
+        param["UserName"] = username
+        param["PassWord"] = password
+        param["Imei"] = "D83A295E-E598-4F6E-BFE4-5C25DEFE7D8F"
+        param["Model"] = "test"
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
     }
 }

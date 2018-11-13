@@ -10,6 +10,8 @@ import Foundation
 
 class ColorManager {
     
+    static let mainColor = UIColor(red: 22/255.0, green: 118/255.0, blue: 194/255.0, alpha: 1.0)
+    
     static let barTintColor = UIColor(red: 0/255.0, green: 140/255.0, blue: 198/255.0, alpha: 1.0)
     static let redColor = UIColor(red: 0/255.0, green: 140/255.0, blue: 198/255.0, alpha: 1.0)
     static let unselectedIconColor = UIColor(red: 73/255.0, green: 8/255.0, blue: 10/255.0, alpha: 1.0)

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScreenRegisterVC" customModule="BusinessAbSoft" customModuleProvider="target">
             <connections>
+                <outlet property="companyNameTF" destination="OFx-40-Xab" id="FpO-VG-T1V"/>
+                <outlet property="emailTF" destination="KYb-Sc-9tq" id="LCp-i9-wW0"/>
+                <outlet property="fullNameTF" destination="bQc-KM-v4h" id="p3L-fk-NwM"/>
+                <outlet property="phoneTF" destination="3e4-8G-l71" id="1Pi-26-y0d"/>
+                <outlet property="registerBT" destination="d4k-yJ-QZV" id="Zh7-qC-zJt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,11 +24,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-gz-53R">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-gz-53R">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="375-S4-6rs">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQc-KM-v4h" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                     <rect key="frame" x="0.0" y="16" width="375" height="50"/>
@@ -32,12 +37,12 @@
                                     </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    <textInputTraits key="textInputTraits" textContentType="name"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                             <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Họ tên"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYb-Sc-9tq" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -47,12 +52,12 @@
                                     </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    <textInputTraits key="textInputTraits" textContentType="email"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                             <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-8G-l71" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -62,12 +67,12 @@
                                     </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                             <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Số điện thoại"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-40-Xab" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -77,29 +82,32 @@
                                     </constraints>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" textContentType="name"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                             <color key="value" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Tên đăng nhập"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Tên công ty"/>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4k-yJ-QZV">
                                     <rect key="frame" x="0.0" y="296" width="375" height="50"/>
-                                    <color key="backgroundColor" red="0.37536525729999998" green="0.61512672899999998" blue="0.79986172909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="67W-q6-uTO"/>
                                         <constraint firstAttribute="height" constant="50" id="Miu-RK-dZk"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                     <state key="normal" title="ĐĂNG KÝ">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="registerBTAction:" destination="-1" eventType="touchUpInside" id="IhW-La-CVA"/>
+                                    </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="3e4-8G-l71" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="2jX-Bu-cyQ"/>
                                 <constraint firstAttribute="trailing" secondItem="bQc-KM-v4h" secondAttribute="trailing" id="6pF-Wy-gvg"/>
@@ -114,6 +122,7 @@
                                 <constraint firstItem="bQc-KM-v4h" firstAttribute="leading" secondItem="375-S4-6rs" secondAttribute="leading" id="Qix-x4-Jes"/>
                                 <constraint firstAttribute="trailing" secondItem="3e4-8G-l71" secondAttribute="trailing" id="SSO-rx-gIB"/>
                                 <constraint firstAttribute="trailing" secondItem="d4k-yJ-QZV" secondAttribute="trailing" id="TvB-Bf-Rte"/>
+                                <constraint firstAttribute="height" constant="362" id="fuf-yn-kxm"/>
                                 <constraint firstItem="d4k-yJ-QZV" firstAttribute="top" secondItem="OFx-40-Xab" secondAttribute="bottom" constant="32" id="goA-u4-RhB"/>
                                 <constraint firstAttribute="trailing" secondItem="bQc-KM-v4h" secondAttribute="trailing" id="prf-NU-iBW"/>
                                 <constraint firstItem="KYb-Sc-9tq" firstAttribute="top" secondItem="bQc-KM-v4h" secondAttribute="bottom" constant="16" id="rPp-eF-rXu"/>
@@ -121,12 +130,12 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="375-S4-6rs" firstAttribute="leading" secondItem="TK2-gz-53R" secondAttribute="leading" id="05s-4A-CRl"/>
                         <constraint firstAttribute="trailing" secondItem="375-S4-6rs" secondAttribute="trailing" id="4Bt-PM-8Cx"/>
                         <constraint firstItem="375-S4-6rs" firstAttribute="top" secondItem="TK2-gz-53R" secondAttribute="top" id="FhT-ra-ikF"/>
                         <constraint firstItem="375-S4-6rs" firstAttribute="centerX" secondItem="TK2-gz-53R" secondAttribute="centerX" id="eKN-EK-CQT"/>
-                        <constraint firstItem="375-S4-6rs" firstAttribute="height" secondItem="TK2-gz-53R" secondAttribute="height" id="uCq-y4-6GQ"/>
                         <constraint firstAttribute="bottom" secondItem="375-S4-6rs" secondAttribute="bottom" id="vMi-mN-X64"/>
                     </constraints>
                 </scrollView>
