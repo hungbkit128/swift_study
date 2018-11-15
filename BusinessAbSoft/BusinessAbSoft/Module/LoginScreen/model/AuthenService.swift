@@ -11,16 +11,18 @@ import SwiftyJSON
 
 class AuthenService: APIServiceAgent {
     
+    
+    
     func loginRequest(username: String,
                       password: String,
                       captchaId: String?,
                       captchaString: String?,
-                      completion: @escaping((NSError?) -> Void)) {
+                      completion: @escaping((UserInfoModel?, NSError?) -> Void)) {
         
         if let request = APIRequestProvider.shareInstance?.loginRequest(username: username, password: password) {
             self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
-                print(json)
-                completion(error)
+                let userInfo = UserInfoModel(json["UserLogin"])
+                completion(userInfo, error)
             }
         }
     }

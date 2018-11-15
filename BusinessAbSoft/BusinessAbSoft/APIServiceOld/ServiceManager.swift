@@ -17,7 +17,7 @@ class ServiceManager {
     
     static var delegate:ServiceManagerProtocol? = nil
     static var token:String? = nil
-    static var userData:UserLoginData? = nil
+    static var userData:UserInfoModel? = nil
     
     static func httpPost(urlString:String, jsonData:Any) {
         

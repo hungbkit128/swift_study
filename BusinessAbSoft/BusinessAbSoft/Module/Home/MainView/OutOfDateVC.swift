@@ -20,6 +20,7 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     var lstJobWarning:[JobData]?
     var refresher:UIRefreshControl?
     var isDataLoaded:Bool?
+    var homeService = HomeService()
     
     init(itemInfo: IndicatorInfo) {
         self.itemInfo = itemInfo
@@ -94,7 +95,20 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         let request:ViewDetailRequestData = ViewDetailRequestData(JobId:lstJobWarning![indexPath.row].JobId!, JobType:lstJobWarning![indexPath.row].JobType!, Token: ServiceManager.token!)
         ServiceManager.delegate = self
-        ServiceManager.httpPost(urlString: Constants.VIEW_DETAIL_URL, jsonData: request.toDictionary())
+        //ServiceManager.httpPost(urlString: Constants.VIEW_DETAIL_URL, jsonData: request.toDictionary())
+        
+        homeService.viewDetailRequest(jobId: lstJobWarning![indexPath.row].JobId!,
+                                      jobType: lstJobWarning![indexPath.row].JobType!) {
+                                        
+            (transModel: DetailTransModel?, error: NSError?) in
+            
+            if error == nil {
+                self.processViewDetailData(transModel: transModel)
+            } else {
+                self.stopAnimating()
+                UiUtils.showAlert(title:error?.localizedDescription ?? "", viewController:self)
+            }
+        }
     }
     
     // MARK: - IndicatorInfoProvider
@@ -127,18 +141,13 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         }
     }
     
-    func processViewDetailData(data:Any) -> Void {
-        do {
-            let viewDetailResponseData = try JSONDecoder().decode(ViewDetailResponseData.self, from: data as! Data)
-            
-            //DispatchQueue.main.async() {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                self.stopAnimating()
-                let secondViewController:DetailDealMainVC = DetailDealMainVC()
-                self.present(secondViewController, animated: true, completion: nil)
-            }
-        } catch {
-            print(error)
+    func processViewDetailData(transModel: DetailTransModel?) -> Void {
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+            self.stopAnimating()
+            let secondViewController:DetailDealMainVC = DetailDealMainVC()
+            secondViewController.transModel = transModel
+            self.present(secondViewController, animated: true, completion: nil)
         }
     }
     
@@ -146,8 +155,6 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     func didFinishService(data: Any, funcName: String) {
         if (funcName.elementsEqual(Constants.GET_JOB_WARNING_UN_MAKE_URL)) {
             self.processJobData(data: data)
-        } else if (funcName.elementsEqual(Constants.VIEW_DETAIL_URL)) {
-            self.processViewDetailData(data: data)
         }
     }
     func didErrorService(errString: String, funcName: String) {
@@ -155,8 +162,6 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             UiUtils.showAlert(title:errString, viewController:self)
             if (funcName.elementsEqual(Constants.GET_JOB_WARNING_UN_MAKE_URL)) {
                 self.refresher?.endRefreshing()
-            } else if (funcName.elementsEqual(Constants.VIEW_DETAIL_URL)) {
-                self.stopAnimating()
             }
         }
     }

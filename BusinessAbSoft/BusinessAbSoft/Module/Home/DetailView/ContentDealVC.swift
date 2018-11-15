@@ -12,10 +12,15 @@ import XLPagerTabStrip
 class ContentDealVC: UIViewController, IndicatorInfoProvider {
     
     var itemInfo = IndicatorInfo(title: "View")
-    init(itemInfo: IndicatorInfo) {
+    var transModel: DetailTransModel?
+    
+    init(itemInfo: IndicatorInfo, transModel: DetailTransModel?) {
         self.itemInfo = itemInfo
+        self.transModel = transModel
+        
         super.init(nibName: nil, bundle: nil)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -127,7 +127,7 @@ class LoginVC: UIViewController, ServiceManagerProtocol, NVActivityIndicatorView
         do {
             let loginResponseData = try JSONDecoder().decode(LoginResponseData.self, from: data as! Data)
             ServiceManager.token = loginResponseData.UserLogin?.Token
-            ServiceManager.userData = loginResponseData.UserLogin
+            //ServiceManager.userData = loginResponseData.UserLogin
         } catch {
             print(error)
         }

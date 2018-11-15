@@ -65,13 +65,28 @@ class APIRequestProvider: NSObject {
     }
     
     func loginRequest(username: String, password: String) -> DataRequest {
-        let urlString = privateURL.appending("/absoft/login")
+        let urlString = privateURL.appending(Constants.LOGIN_URL)
         
         var param = [String: Any]()
         param["UserName"] = username
         param["PassWord"] = password
         param["Imei"] = "D83A295E-E598-4F6E-BFE4-5C25DEFE7D8F"
         param["Model"] = "test"
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
+    func viewDetailRequest(jobId: String, jobType: String) -> DataRequest {
+        let urlString = businessURL.appending(Constants.VIEW_DETAIL_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        param["id"] = jobId
+        param["type"] = jobType
         
         return alamoFireManager.request(urlString,
                                         method: .post,

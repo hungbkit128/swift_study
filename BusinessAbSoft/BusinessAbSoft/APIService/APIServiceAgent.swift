@@ -12,9 +12,9 @@ import SwiftyJSON
 
 let responseCodeSuccess = 0
 let errorCodeNoData     = 404
-let statusCodeSuccess = "SUCCESS"
-let statusCodeFail = "FAIL"
-let statusCodeDashboardShared = "ERR_CODE_ACCEPT_UNSHARED_GROUP"
+
+let statusCodeSuccess = "1"
+let statusCodeFail = "0"
 
 class APIServiceAgent: NSObject {
     
@@ -22,20 +22,27 @@ class APIServiceAgent: NSObject {
         
         APIRequestProvider.clearCookie()
         
-        print(request.debugDescription)
+        #if DEBUG
+            DLog(request.debugDescription)
+        #endif
         
         request.validate().responseJSON { (_ response: DataResponse<Any>) in
             
             switch response.result {
                 
             case .success:
-                let json = JSON(response.result.value!)
-                print(json.description)
                 
-                let status = json["errorCode"].stringValue
-                let message = json["errorMessage"].stringValue
+                let json = JSON(response.result.value!)
+                
+                #if DEBUG
+                    DLog(json.description)
+                #endif
+                
+                let status = json["ErrorCode"].stringValue
+                let message = json["Description"].stringValue
+                
                 if status == statusCodeSuccess {
-                    completion(json["content"] as JSON, nil)
+                    completion(json as JSON, nil)
                 } else {
                     let error = NSError.errorWith(code: 0, message: message)
                     completion(json, error)
@@ -88,15 +95,13 @@ class APIServiceAgent: NSObject {
                                                              "data": json as Any])
                                 completion(JSON.null, err)
                                 break
-                            } else if errorCode == statusCodeDashboardShared {
-                                let err = NSError.errorWith(code: 500, message: json!["errorMessage"].stringValue)
-                                completion(JSON.null, err)
                             }
                         } else if statusCode != 401 {
                             let err = NSError(domain: "LocalizableHelper.happenError",
                                               code: 500,
                                               userInfo: [NSLocalizedDescriptionKey: "Đã có lỗi xảy ra"])
                             completion(JSON.null, err)
+                            break
                         }
                     }
                 }

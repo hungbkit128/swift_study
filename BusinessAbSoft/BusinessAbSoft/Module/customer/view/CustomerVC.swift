@@ -50,6 +50,8 @@ class CustomerVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         customerTBV.refreshControl = refresher
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         if (ServiceManager.token != nil && !isDataLoaded!) {
             getData()
