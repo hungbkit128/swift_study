@@ -11,6 +11,14 @@ import XLPagerTabStrip
 
 class ContentDealVC: UIViewController, IndicatorInfoProvider {
     
+    @IBOutlet weak var tranType: UILabel!
+    @IBOutlet weak var tranStatus: UILabel!
+    @IBOutlet weak var tranId: UILabel!
+    @IBOutlet weak var tranTitle: UILabel!
+    @IBOutlet weak var tranDate: UILabel!
+    @IBOutlet weak var tranNote: UILabel!
+    @IBOutlet weak var headTextLB: UILabel!
+    
     var itemInfo = IndicatorInfo(title: "View")
     var transModel: DetailTransModel?
     
@@ -29,7 +37,13 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider {
         
         super.viewDidLoad()
         
-        
+        self.headTextLB.text = transModel?.implementerName ?? "Không có"
+        self.tranType.text = transModel?.typeName ?? "Không có"
+        self.tranStatus.text = transModel?.implementName ?? "Không có"
+        self.tranId.text = transModel?.code ?? "Không có"
+        self.tranTitle.text = transModel?.subject ?? "Không có"
+        self.tranDate.text = transModel?.createDate ?? "Không có"
+        self.tranNote.text = transModel?.note ?? "Không có"
     }
     
     override func didReceiveMemoryWarning() {
