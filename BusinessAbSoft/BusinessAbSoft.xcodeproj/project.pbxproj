@@ -53,6 +53,10 @@
 		C02F85D21FB37F2E0042F07B /* RequestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85D11FB37F2E0042F07B /* RequestCommon.swift */; };
 		C02F85D51FB3998F0042F07B /* AddNewCusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85D31FB3998F0042F07B /* AddNewCusVC.swift */; };
 		C02F85D61FB3998F0042F07B /* AddNewCusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85D41FB3998F0042F07B /* AddNewCusVC.xib */; };
+		C0333CB021A369F400BBCF51 /* ApprovedTransVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0333CAE21A369F400BBCF51 /* ApprovedTransVC.swift */; };
+		C0333CB121A369F400BBCF51 /* ApprovedTransVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0333CAF21A369F400BBCF51 /* ApprovedTransVC.xib */; };
+		C0333CB521A379AC00BBCF51 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0333CB321A379AC00BBCF51 /* UserListVC.swift */; };
+		C0333CB621A379AC00BBCF51 /* UserListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0333CB421A379AC00BBCF51 /* UserListVC.xib */; };
 		C0338B77219B204800BE620B /* AuthenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0338B76219B204800BE620B /* AuthenService.swift */; };
 		C0446C2D1FC8F7D30027F996 /* LoadDataResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446C2C1FC8F7D30027F996 /* LoadDataResponseData.swift */; };
 		C04D8BBB1FC125110091334A /* InitReportTypeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BBA1FC125110091334A /* InitReportTypeRequest.swift */; };
@@ -176,6 +180,10 @@
 		C02F85D11FB37F2E0042F07B /* RequestCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommon.swift; sourceTree = "<group>"; };
 		C02F85D31FB3998F0042F07B /* AddNewCusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCusVC.swift; sourceTree = "<group>"; };
 		C02F85D41FB3998F0042F07B /* AddNewCusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewCusVC.xib; sourceTree = "<group>"; };
+		C0333CAE21A369F400BBCF51 /* ApprovedTransVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedTransVC.swift; sourceTree = "<group>"; };
+		C0333CAF21A369F400BBCF51 /* ApprovedTransVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApprovedTransVC.xib; sourceTree = "<group>"; };
+		C0333CB321A379AC00BBCF51 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
+		C0333CB421A379AC00BBCF51 /* UserListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListVC.xib; sourceTree = "<group>"; };
 		C0338B76219B204800BE620B /* AuthenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenService.swift; sourceTree = "<group>"; };
 		C0446C2C1FC8F7D30027F996 /* LoadDataResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataResponseData.swift; sourceTree = "<group>"; };
 		C04D8BBA1FC125110091334A /* InitReportTypeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitReportTypeRequest.swift; sourceTree = "<group>"; };
@@ -433,11 +441,23 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		C0333CB221A378B400BBCF51 /* ApproveTrans */ = {
+			isa = PBXGroup;
+			children = (
+				C0333CAE21A369F400BBCF51 /* ApprovedTransVC.swift */,
+				C0333CAF21A369F400BBCF51 /* ApprovedTransVC.xib */,
+				C0333CB321A379AC00BBCF51 /* UserListVC.swift */,
+				C0333CB421A379AC00BBCF51 /* UserListVC.xib */,
+			);
+			path = ApproveTrans;
+			sourceTree = "<group>";
+		};
 		C07643891FA2AEB900C57B1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				C07643961FA2AFDF00C57B1C /* MainView */,
 				C0E6BF3B1FBB7A7900F7E3D9 /* DetailView */,
+				C0333CB221A378B400BBCF51 /* ApproveTrans */,
 				C07643971FA2AFEC00C57B1C /* Model */,
 			);
 			path = Home;
@@ -735,6 +755,7 @@
 				499E2F5F218C2FA700B2E2E0 /* LoginMainVC.xib in Resources */,
 				499E2F63218C2FC200B2E2E0 /* LoginContentVC.xib in Resources */,
 				C0DC56241FBF770B00787FBF /* ReportMainVC.xib in Resources */,
+				C0333CB621A379AC00BBCF51 /* UserListVC.xib in Resources */,
 				C076438D1FA2AF2500C57B1C /* ABSoftERPVC.xib in Resources */,
 				C02F85BE1FAF62870042F07B /* IndayViewCell.xib in Resources */,
 				C0BCA2801F899E0600F62316 /* LaunchScreen.storyboard in Resources */,
@@ -750,6 +771,7 @@
 				C05511261FD1AA4A0093275D /* SettingVC.xib in Resources */,
 				C0E6BF361FBA047500F7E3D9 /* HistDealVC.xib in Resources */,
 				C0E6BF5C1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.xib in Resources */,
+				C0333CB121A369F400BBCF51 /* ApprovedTransVC.xib in Resources */,
 				C07643951FA2AFC200C57B1C /* OutOfDateVC.xib in Resources */,
 				C07643911FA2AF7000C57B1C /* InDayVC.xib in Resources */,
 				C0E6BF581FBB82A800F7E3D9 /* ProductShowPriceVC.xib in Resources */,
@@ -854,6 +876,7 @@
 				C0DC56231FBF770B00787FBF /* ReportMainVC.swift in Sources */,
 				C004C1F21F8FD32F00FB80D9 /* ChildExampleViewController.swift in Sources */,
 				C0BCA2781F899E0600F62316 /* ViewController.swift in Sources */,
+				C0333CB021A369F400BBCF51 /* ApprovedTransVC.swift in Sources */,
 				C0DC3A921FA21B7800DCFBE7 /* ColorManager.swift in Sources */,
 				499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */,
 				C0E6BF5F1FBB87E000F7E3D9 /* HistDealTBVCell.swift in Sources */,
@@ -874,6 +897,7 @@
 				C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */,
 				C02F85C71FB3717D0042F07B /* CustomerVC.swift in Sources */,
 				C0E6BF4F1FBB826400F7E3D9 /* ShowPriceMainVC.swift in Sources */,
+				C0333CB521A379AC00BBCF51 /* UserListVC.swift in Sources */,
 				C004C1CF1F8E894D00FB80D9 /* SignupVC.swift in Sources */,
 				C0338B77219B204800BE620B /* AuthenService.swift in Sources */,
 				C0446C2D1FC8F7D30027F996 /* LoadDataResponseData.swift in Sources */,

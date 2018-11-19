@@ -36,4 +36,19 @@ class HomeService: APIServiceAgent {
             }
         }
     }
+    
+    //doApprove
+    func doApprove(approveTypeId: String,
+                   completion: @escaping((DetailTransModel?, NSError?) -> Void)) {
+        
+        if let request = APIRequestProvider.shareInstance?.doApprove(approveTypeId: approveTypeId) {
+            self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
+                let userInfo = DetailTransModel(json["TransModel"])
+                completion(userInfo, error)
+            }
+        }
+    }
+    
+    
+    
 }

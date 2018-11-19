@@ -36,6 +36,9 @@
                             <state key="normal" title="PHÊ DUYỆT">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="tickBTAction:" destination="-1" eventType="touchUpInside" id="ux0-g2-Rfn"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -19,6 +19,7 @@ class Constants {
     static let GET_WARNING_IN_DAY_URL = "/absoft/getWarningInDay"
     static let GET_JOB_WARNING_UN_MAKE_URL = "/absoft/getJobWarningUnMake"
     static let VIEW_DETAIL_URL = "/absoft/viewDetail"
+    static let DO_APPROVE_URL = "/absoft/doApprove"
     
     // report
     static let INIT_GROUP_REPORT_URL = "/absoft/initGroupReport"
