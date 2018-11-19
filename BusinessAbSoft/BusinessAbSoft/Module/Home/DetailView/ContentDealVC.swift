@@ -37,13 +37,21 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider {
         
         super.viewDidLoad()
         
-        self.headTextLB.text = transModel?.implementerName ?? "Không có"
-        self.tranType.text = transModel?.typeName ?? "Không có"
-        self.tranStatus.text = transModel?.implementName ?? "Không có"
-        self.tranId.text = transModel?.code ?? "Không có"
-        self.tranTitle.text = transModel?.subject ?? "Không có"
-        self.tranDate.text = transModel?.createDate ?? "Không có"
-        self.tranNote.text = transModel?.note ?? "Không có"
+        self.headTextLB.text = getTextData(transModel?.implementerName)
+        self.tranType.text = getTextData(transModel?.typeName)
+        self.tranStatus.text = getTextData(transModel?.implementName)
+        self.tranId.text = getTextData(transModel?.code)
+        self.tranTitle.text = getTextData(transModel?.subject)
+        self.tranDate.text = getTextData(transModel?.createDate)
+        self.tranNote.text = getTextData(transModel?.note)
+    }
+    
+    func getTextData(_ text: String?) -> String {
+        if let strValue = text, !strValue.isEmpty {
+            return strValue
+        } else {
+            return "Không có"
+        }
     }
     
     override func didReceiveMemoryWarning() {
