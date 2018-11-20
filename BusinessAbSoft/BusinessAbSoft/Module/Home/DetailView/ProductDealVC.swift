@@ -37,10 +37,10 @@ class ProductDealVC: UIViewController, IndicatorInfoProvider {
         
         super.viewDidLoad()
         
-//        self.productTableView.register(ReleaseNoteTableViewCell.nibDefault(),
-//                                forCellReuseIdentifier: ReleaseNoteTableViewCell.classString())
+        self.productTableView.register(ProductViewCell.nibDefault(), forCellReuseIdentifier: ProductViewCell.classString())
         self.productTableView.separatorStyle = .none
         
+        doRefreshView()
     }
     
     func doRefreshView() {
@@ -72,12 +72,21 @@ extension ProductDealVC: UITableViewDelegate {
         return 0
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.classString())
+            as? ProductViewCell else {
+                return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let itemModel: ProductModel = viewModel.getProductWithSection(section)
         if itemModel.isCollapse {
             return 200.0
         }
-        return 55.0
+        return 200.0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -99,7 +108,6 @@ extension ProductDealVC: UITableViewDelegate {
 }
 
 extension ProductDealVC: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.viewModel.updateCollapse(indexPath.section)
         self.doRefreshView()

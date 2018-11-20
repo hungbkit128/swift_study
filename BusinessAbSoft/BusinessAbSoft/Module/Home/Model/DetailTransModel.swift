@@ -21,6 +21,7 @@ class DetailTransModel: NSObject {
         lstAttackFileModel = []
         
         for (_, subJson) in jsonData["LstProductModel"] {
+            DLog(subJson.description)
             let model = ProductModel(subJson)
             lstProductModel.append(model)
         }

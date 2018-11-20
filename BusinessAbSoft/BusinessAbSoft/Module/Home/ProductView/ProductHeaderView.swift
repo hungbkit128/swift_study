@@ -66,12 +66,12 @@ class ProductHeaderView: UIView {
         self.productCodeLB.text = model.productCode
         self.productNameLB.text = model.productName
         if model.isCollapse {
-            self.imgArrow.image = #imageLiteral(resourceName: "ic-arrow-up")
+            self.imgArrow.image = #imageLiteral(resourceName: "ic_keyboard_arrow_right_48pt")
         } else {
-            self.imgArrow.image = #imageLiteral(resourceName: "ic-arrow-down")
+            self.imgArrow.image = #imageLiteral(resourceName: "ic_back")
         }
-        self.priceLB.text = model.price
-        self.priceDetailLB.text = model.price
+        self.priceLB.text = "Gia \(model.price)"
+        self.priceDetailLB.text = "Gia \(model.price)"
     }
 }
 

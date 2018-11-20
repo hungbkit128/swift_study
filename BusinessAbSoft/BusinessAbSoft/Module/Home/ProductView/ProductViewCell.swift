@@ -12,7 +12,11 @@ class ProductViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        if isIphoneApp() {
+            self.backgroundColor = UIColor.white
+        } else {
+            self.backgroundColor = UIColor(hexString: "#EEEEEE")
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
