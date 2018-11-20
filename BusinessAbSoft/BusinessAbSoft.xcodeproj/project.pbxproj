@@ -15,6 +15,17 @@
 		499E2F5F218C2FA700B2E2E0 /* LoginMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */; };
 		499E2F62218C2FC200B2E2E0 /* LoginContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */; };
 		499E2F63218C2FC200B2E2E0 /* LoginContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499E2F61218C2FC200B2E2E0 /* LoginContentVC.xib */; };
+		49A985F721A3B5E7001A9A43 /* ProductHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A985F621A3B5E7001A9A43 /* ProductHeaderView.swift */; };
+		49A985F921A3B5FE001A9A43 /* ProductHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A985F821A3B5FE001A9A43 /* ProductHeaderView.xib */; };
+		49A985FB21A3B76E001A9A43 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A985FA21A3B76E001A9A43 /* ProductModel.swift */; };
+		49A985FD21A3B86A001A9A43 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A985FC21A3B86A001A9A43 /* UIColorExtension.swift */; };
+		49A985FF21A3B93A001A9A43 /* AppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A985FE21A3B93A001A9A43 /* AppEnum.swift */; };
+		49A9860121A3BA46001A9A43 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860021A3BA46001A9A43 /* AppExtension.swift */; };
+		49A9860321A3BB09001A9A43 /* AttackFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860221A3BB09001A9A43 /* AttackFileModel.swift */; };
+		49A9860521A3BE4F001A9A43 /* TransModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860421A3BE4F001A9A43 /* TransModel.swift */; };
+		49A9860721A40208001A9A43 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860621A40208001A9A43 /* ProductViewModel.swift */; };
+		49A9860A21A41100001A9A43 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860821A41100001A9A43 /* ProductViewCell.swift */; };
+		49A9860B21A41100001A9A43 /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A9860921A41100001A9A43 /* ProductViewCell.xib */; };
 		4BE6E98A89B81A8FFF9C7B9D /* Pods_BusinessAbSoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7D911E1FF1E66C8CE293CB /* Pods_BusinessAbSoft.framework */; };
 		C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1B51F8E584100FB80D9 /* LoginVC.swift */; };
 		C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004C1B61F8E584100FB80D9 /* LoginVC.xib */; };
@@ -62,7 +73,6 @@
 		C04D8BBB1FC125110091334A /* InitReportTypeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BBA1FC125110091334A /* InitReportTypeRequest.swift */; };
 		C04D8BBD1FC127660091334A /* ReportTypeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BBC1FC127660091334A /* ReportTypeResponseData.swift */; };
 		C04D8BBF1FC4E29F0091334A /* ViewDetailRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BBE1FC4E29F0091334A /* ViewDetailRequestData.swift */; };
-		C04D8BC11FC4E5690091334A /* ViewDetailResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D8BC01FC4E5690091334A /* ViewDetailResponseData.swift */; };
 		C05511251FD1AA4A0093275D /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05511231FD1AA4A0093275D /* SettingVC.swift */; };
 		C05511261FD1AA4A0093275D /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05511241FD1AA4A0093275D /* SettingVC.xib */; };
 		C07643881FA2603000C57B1C /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07643871FA2603000C57B1C /* DeviceModel.swift */; };
@@ -143,6 +153,17 @@
 		499E2F5D218C2FA700B2E2E0 /* LoginMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginMainVC.xib; sourceTree = "<group>"; };
 		499E2F60218C2FC200B2E2E0 /* LoginContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentVC.swift; sourceTree = "<group>"; };
 		499E2F61218C2FC200B2E2E0 /* LoginContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginContentVC.xib; sourceTree = "<group>"; };
+		49A985F621A3B5E7001A9A43 /* ProductHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHeaderView.swift; sourceTree = "<group>"; };
+		49A985F821A3B5FE001A9A43 /* ProductHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductHeaderView.xib; sourceTree = "<group>"; };
+		49A985FA21A3B76E001A9A43 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		49A985FC21A3B86A001A9A43 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		49A985FE21A3B93A001A9A43 /* AppEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnum.swift; sourceTree = "<group>"; };
+		49A9860021A3BA46001A9A43 /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
+		49A9860221A3BB09001A9A43 /* AttackFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackFileModel.swift; sourceTree = "<group>"; };
+		49A9860421A3BE4F001A9A43 /* TransModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransModel.swift; sourceTree = "<group>"; };
+		49A9860621A40208001A9A43 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		49A9860821A41100001A9A43 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		49A9860921A41100001A9A43 /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		C004C1B51F8E584100FB80D9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C004C1B61F8E584100FB80D9 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		C004C1BA1F8E5A9700FB80D9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
@@ -189,7 +210,6 @@
 		C04D8BBA1FC125110091334A /* InitReportTypeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitReportTypeRequest.swift; sourceTree = "<group>"; };
 		C04D8BBC1FC127660091334A /* ReportTypeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTypeResponseData.swift; sourceTree = "<group>"; };
 		C04D8BBE1FC4E29F0091334A /* ViewDetailRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailRequestData.swift; sourceTree = "<group>"; };
-		C04D8BC01FC4E5690091334A /* ViewDetailResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailResponseData.swift; sourceTree = "<group>"; };
 		C05511231FD1AA4A0093275D /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		C05511241FD1AA4A0093275D /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		C07643871FA2603000C57B1C /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
@@ -290,8 +310,10 @@
 		499E2F52218BF28700B2E2E0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				49A9860021A3BA46001A9A43 /* AppExtension.swift */,
 				499E2F53218BF2C100B2E2E0 /* URLExtension.swift */,
 				499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */,
+				49A985FC21A3B86A001A9A43 /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -303,6 +325,17 @@
 				C016A497219C6336004D3D3F /* model */,
 			);
 			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		49A985F521A3B54B001A9A43 /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				49A985F621A3B5E7001A9A43 /* ProductHeaderView.swift */,
+				49A985F821A3B5FE001A9A43 /* ProductHeaderView.xib */,
+				49A9860821A41100001A9A43 /* ProductViewCell.swift */,
+				49A9860921A41100001A9A43 /* ProductViewCell.xib */,
+			);
+			path = ProductView;
 			sourceTree = "<group>";
 		};
 		C004C1B41F8E4F1800FB80D9 /* LoginOld */ = {
@@ -317,6 +350,7 @@
 		C004C1B91F8E5A5300FB80D9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				49A985FE21A3B93A001A9A43 /* AppEnum.swift */,
 				C016A49A219C641D004D3D3F /* DataManager.swift */,
 				C016A49E219C72C8004D3D3F /* AppMacro.swift */,
 				C004C1BA1F8E5A9700FB80D9 /* StringUtils.swift */,
@@ -455,6 +489,7 @@
 		C07643891FA2AEB900C57B1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				49A985F521A3B54B001A9A43 /* ProductView */,
 				C07643961FA2AFDF00C57B1C /* MainView */,
 				C0E6BF3B1FBB7A7900F7E3D9 /* DetailView */,
 				C0333CB221A378B400BBCF51 /* ApproveTrans */,
@@ -487,9 +522,12 @@
 			children = (
 				C016A4A0219C7F9F004D3D3F /* HomeService.swift */,
 				C016A4A2219C848D004D3D3F /* DetailTransModel.swift */,
+				49A9860421A3BE4F001A9A43 /* TransModel.swift */,
 				C02F85C31FB34F8B0042F07B /* JobWarningData.swift */,
 				C04D8BBE1FC4E29F0091334A /* ViewDetailRequestData.swift */,
-				C04D8BC01FC4E5690091334A /* ViewDetailResponseData.swift */,
+				49A985FA21A3B76E001A9A43 /* ProductModel.swift */,
+				49A9860221A3BB09001A9A43 /* AttackFileModel.swift */,
+				49A9860621A40208001A9A43 /* ProductViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -753,6 +791,7 @@
 				C013D2AE21939D4600021DF3 /* ScreenLoginVC.xib in Resources */,
 				C0E6BF321FBA045600F7E3D9 /* DealVC.xib in Resources */,
 				499E2F5F218C2FA700B2E2E0 /* LoginMainVC.xib in Resources */,
+				49A9860B21A41100001A9A43 /* ProductViewCell.xib in Resources */,
 				499E2F63218C2FC200B2E2E0 /* LoginContentVC.xib in Resources */,
 				C0DC56241FBF770B00787FBF /* ReportMainVC.xib in Resources */,
 				C0333CB621A379AC00BBCF51 /* UserListVC.xib in Resources */,
@@ -784,6 +823,7 @@
 				C0E6BF601FBB87E000F7E3D9 /* HistDealTBVCell.xib in Resources */,
 				C0E6BF281FB8577000F7E3D9 /* FontAwesome.otf in Resources */,
 				C004C1EE1F8FD12400FB80D9 /* ButtonCell.xib in Resources */,
+				49A985F921A3B5FE001A9A43 /* ProductHeaderView.xib in Resources */,
 				C02F85B61FAE897D0042F07B /* ERPChartVC.xib in Resources */,
 				C004C1D01F8E894D00FB80D9 /* SignupVC.xib in Resources */,
 				C0BCA27B1F899E0600F62316 /* Main.storyboard in Resources */,
@@ -881,7 +921,7 @@
 				499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */,
 				C0E6BF5F1FBB87E000F7E3D9 /* HistDealTBVCell.swift in Sources */,
 				499E2F62218C2FC200B2E2E0 /* LoginContentVC.swift in Sources */,
-				C04D8BC11FC4E5690091334A /* ViewDetailResponseData.swift in Sources */,
+				49A9860121A3BA46001A9A43 /* AppExtension.swift in Sources */,
 				C0DC561C1FBBBDEC00787FBF /* SearchHistRequestData.swift in Sources */,
 				C05511251FD1AA4A0093275D /* SettingVC.swift in Sources */,
 				C0E6BF4A1FBB7BC200F7E3D9 /* AttachFileDealVC.swift in Sources */,
@@ -890,8 +930,11 @@
 				C016A4A1219C7F9F004D3D3F /* HomeService.swift in Sources */,
 				C004C1BF1F8E5E6E00FB80D9 /* FileUtils.swift in Sources */,
 				C0DC56271FBF786200787FBF /* ReportTBVCell.swift in Sources */,
+				49A9860521A3BE4F001A9A43 /* TransModel.swift in Sources */,
 				C016A49D219C6447004D3D3F /* UserInfoModel.swift in Sources */,
 				C07643941FA2AFC200C57B1C /* OutOfDateVC.swift in Sources */,
+				49A985FF21A3B93A001A9A43 /* AppEnum.swift in Sources */,
+				49A985F721A3B5E7001A9A43 /* ProductHeaderView.swift in Sources */,
 				C07643881FA2603000C57B1C /* DeviceModel.swift in Sources */,
 				C0C15C171F9037DB00588A9F /* DataProvider.swift in Sources */,
 				C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */,
@@ -910,6 +953,7 @@
 				499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */,
 				C0BCA2761F899E0600F62316 /* AppDelegate.swift in Sources */,
 				C0884C441FA8F0A70012A2D0 /* Strings.swift in Sources */,
+				49A985FB21A3B76E001A9A43 /* ProductModel.swift in Sources */,
 				499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */,
 				C02F85CB1FB372DF0042F07B /* CustomerTBCell.swift in Sources */,
 				C0C15C571F92FDC000588A9F /* RegisterRequestData.swift in Sources */,
@@ -922,15 +966,18 @@
 				C02F85B51FAE897D0042F07B /* ERPChartVC.swift in Sources */,
 				C0BCA2B41F8BCD9000F62316 /* SWRevealViewController.m in Sources */,
 				C07862481F951AA000F6A619 /* RegisterResponseData.swift in Sources */,
+				49A9860A21A41100001A9A43 /* ProductViewCell.swift in Sources */,
 				499E2F56218BF8F400B2E2E0 /* NSErrorExtension.swift in Sources */,
 				C04D8BBD1FC127660091334A /* ReportTypeResponseData.swift in Sources */,
 				C0884C461FA8F2570012A2D0 /* NSURLError.swift in Sources */,
 				C0C15C5D1F9501B100588A9F /* LoginRequestData.swift in Sources */,
 				C0E6BF2D1FBA043E00F7E3D9 /* MainDealVC.swift in Sources */,
 				C0E6BF421FBB7B3D00F7E3D9 /* ContentDealVC.swift in Sources */,
+				49A9860721A40208001A9A43 /* ProductViewModel.swift in Sources */,
 				C04D8BBF1FC4E29F0091334A /* ViewDetailRequestData.swift in Sources */,
 				C016A4A3219C848D004D3D3F /* DetailTransModel.swift in Sources */,
 				C07643901FA2AF7000C57B1C /* InDayVC.swift in Sources */,
+				49A9860321A3BB09001A9A43 /* AttackFileModel.swift in Sources */,
 				C0E6BF311FBA045600F7E3D9 /* DealVC.swift in Sources */,
 				C02F85B91FAE99430042F07B /* ERPMainContentVC.swift in Sources */,
 				C013D2AD21939D4600021DF3 /* ScreenLoginVC.swift in Sources */,
@@ -940,6 +987,7 @@
 				C02F85D01FB37DCF0042F07B /* CustomerModelData.swift in Sources */,
 				C0E6BF5B1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.swift in Sources */,
 				C004C1E71F8FCC2400FB80D9 /* ButtonBarVC.swift in Sources */,
+				49A985FD21A3B86A001A9A43 /* UIColorExtension.swift in Sources */,
 				C004C1BD1F8E5E5800FB80D9 /* UiUtils.swift in Sources */,
 				C0C15C1C1F91FF3200588A9F /* ServiceManager.swift in Sources */,
 				C016A49F219C72C8004D3D3F /* AppMacro.swift in Sources */,

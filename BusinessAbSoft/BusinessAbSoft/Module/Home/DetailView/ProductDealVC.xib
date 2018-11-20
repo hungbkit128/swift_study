@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDealVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDealVC" customModule="BusinessAbSoft" customModuleProvider="target">
             <connections>
+                <outlet property="noDataLB" destination="Fes-BA-k9V" id="FLc-wv-xUn"/>
+                <outlet property="productTableView" destination="XAU-Dm-spx" id="kvs-qO-G1w"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +20,31 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-Dm-spx">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0UR-mq-iie"/>
+                        <outlet property="delegate" destination="-1" id="o1e-3Y-ZkM"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fes-BA-k9V">
+                    <rect key="frame" x="122.5" y="323" width="129" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XAU-Dm-spx" secondAttribute="bottom" id="Jx0-aV-6AM"/>
+                <constraint firstItem="XAU-Dm-spx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NOb-EW-7YP"/>
+                <constraint firstItem="XAU-Dm-spx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="heD-gd-DFN"/>
+                <constraint firstItem="Fes-BA-k9V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nou-s5-dCB"/>
+                <constraint firstAttribute="trailing" secondItem="XAU-Dm-spx" secondAttribute="trailing" id="sVs-1F-hUL"/>
+                <constraint firstItem="Fes-BA-k9V" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zz0-zX-Vm7"/>
+            </constraints>
         </view>
     </objects>
 </document>

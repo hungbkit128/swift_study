@@ -14,7 +14,7 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController {
     var contentDealVC:ContentDealVC?
     var productDealVC:ProductDealVC?
     var attachFileDealVC:AttachFileDealVC?
-    var transModel: DetailTransModel?
+    var detailTransModel: DetailTransModel?
     
     override func viewDidLoad() {
         initMenuView()
@@ -54,9 +54,9 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController {
     
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", transModel: transModel)
-        productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM")
-        attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM")
+        contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", detailTransModel: detailTransModel)
+        productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM", detailTransModel: detailTransModel)
+        attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM", detailTransModel: detailTransModel)
         return [contentDealVC!, productDealVC!, attachFileDealVC!]
     }
 }

@@ -20,12 +20,11 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var headTextLB: UILabel!
     
     var itemInfo = IndicatorInfo(title: "View")
-    var transModel: DetailTransModel?
+    var dataModel: DetailTransModel?
     
-    init(itemInfo: IndicatorInfo, transModel: DetailTransModel?) {
+    init(itemInfo: IndicatorInfo, detailTransModel: DetailTransModel?) {
         self.itemInfo = itemInfo
-        self.transModel = transModel
-        
+        self.dataModel = detailTransModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,13 +36,13 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider {
         
         super.viewDidLoad()
         
-        self.headTextLB.text = getTextData(transModel?.implementerName)
-        self.tranType.text = getTextData(transModel?.typeName)
-        self.tranStatus.text = getTextData(transModel?.implementName)
-        self.tranId.text = getTextData(transModel?.code)
-        self.tranTitle.text = getTextData(transModel?.subject)
-        self.tranDate.text = getTextData(transModel?.createDate)
-        self.tranNote.text = getTextData(transModel?.note)
+        self.headTextLB.text = getTextData(dataModel?.transModel?.implementerName)
+        self.tranType.text = getTextData(dataModel?.transModel?.typeName)
+        self.tranStatus.text = getTextData(dataModel?.transModel?.implementName)
+        self.tranId.text = getTextData(dataModel?.transModel?.code)
+        self.tranTitle.text = getTextData(dataModel?.transModel?.subject)
+        self.tranDate.text = getTextData(dataModel?.transModel?.createDate)
+        self.tranNote.text = getTextData(dataModel?.transModel?.note)
     }
     
     func getTextData(_ text: String?) -> String {

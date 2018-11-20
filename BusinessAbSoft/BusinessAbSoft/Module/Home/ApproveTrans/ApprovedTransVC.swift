@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
+import NVActivityIndicatorView
 
 class ApprovedTransVC: UIViewController {
     

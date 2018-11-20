@@ -93,10 +93,6 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         let size = CGSize(width: 32, height: 32)
         self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
         
-        let request:ViewDetailRequestData = ViewDetailRequestData(JobId:lstJobWarning![indexPath.row].JobId!, JobType:lstJobWarning![indexPath.row].JobType!, Token: ServiceManager.token!)
-        ServiceManager.delegate = self
-        //ServiceManager.httpPost(urlString: Constants.VIEW_DETAIL_URL, jsonData: request.toDictionary())
-        
         homeService.viewDetailRequest(jobId: lstJobWarning![indexPath.row].JobId!,
                                       jobType: lstJobWarning![indexPath.row].JobType!) {
                                         
@@ -146,7 +142,7 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
             self.stopAnimating()
             let secondViewController:DetailDealMainVC = DetailDealMainVC()
-            secondViewController.transModel = transModel
+            secondViewController.detailTransModel = transModel
             self.present(secondViewController, animated: true, completion: nil)
         }
     }

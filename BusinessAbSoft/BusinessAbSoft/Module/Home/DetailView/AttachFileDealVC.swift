@@ -11,9 +11,14 @@ import XLPagerTabStrip
 
 class AttachFileDealVC: UIViewController, IndicatorInfoProvider {
     
+    
     var itemInfo = IndicatorInfo(title: "View")
-    init(itemInfo: IndicatorInfo) {
+    var dataModel: DetailTransModel?
+    
+    
+    init(itemInfo: IndicatorInfo, detailTransModel: DetailTransModel?) {
         self.itemInfo = itemInfo
+        self.dataModel = detailTransModel
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {

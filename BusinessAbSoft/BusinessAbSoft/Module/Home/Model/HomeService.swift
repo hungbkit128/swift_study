@@ -31,7 +31,7 @@ class HomeService: APIServiceAgent {
         
         if let request = APIRequestProvider.shareInstance?.viewDetailRequest(jobId: jobId, jobType: jobType) {
             self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
-                let userInfo = DetailTransModel(json["TransModel"])
+                let userInfo = DetailTransModel(json)
                 completion(userInfo, error)
             }
         }
