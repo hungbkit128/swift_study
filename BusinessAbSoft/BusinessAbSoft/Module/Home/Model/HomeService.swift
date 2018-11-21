@@ -38,9 +38,24 @@ class HomeService: APIServiceAgent {
         }
     }
     
+    // getUserApprove
+    func getUserApprove(completion: @escaping([AccountApproveModel], NSError?) -> Void) {
+        if let request = APIRequestProvider.shareInstance?.getUserApprove() {
+            self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
+                var accModels = [AccountApproveModel]()
+                for (_, subJson) in json {
+                    let model = AccountApproveModel(subJson)
+                    accModels.append(model)
+                }
+                completion(accModels, error)
+            }
+        }
+    }
+    
+    
     //doApprove
     func doApprove(approveTypeId: String,
-                   completion: @escaping((DetailTransModel?, NSError?) -> Void)) {
+                   completion: @escaping(DetailTransModel?, NSError?) -> Void) {
         
         if let request = APIRequestProvider.shareInstance?.doApprove(approveTypeId: approveTypeId) {
             self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
@@ -49,7 +64,4 @@ class HomeService: APIServiceAgent {
             }
         }
     }
-    
-    
-    
 }

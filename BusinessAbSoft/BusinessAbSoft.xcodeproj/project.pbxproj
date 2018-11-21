@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		493B159721A54BED00B1377F /* AccountApproveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159621A54BED00B1377F /* AccountApproveModel.swift */; };
+		493B159B21A5656800B1377F /* ChoseAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159921A5656800B1377F /* ChoseAccountVC.swift */; };
+		493B159C21A5656800B1377F /* ChoseAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493B159A21A5656800B1377F /* ChoseAccountVC.xib */; };
+		493B159F21A565A600B1377F /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159D21A565A600B1377F /* AccountCell.swift */; };
+		493B15A021A565A600B1377F /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493B159E21A565A600B1377F /* AccountCell.xib */; };
 		499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */; };
 		499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */; };
 		499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F53218BF2C100B2E2E0 /* URLExtension.swift */; };
@@ -145,6 +150,11 @@
 
 /* Begin PBXFileReference section */
 		2D139F1BA88957AEE43C4530 /* Pods-BusinessAbSoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessAbSoft.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessAbSoft/Pods-BusinessAbSoft.release.xcconfig"; sourceTree = "<group>"; };
+		493B159621A54BED00B1377F /* AccountApproveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountApproveModel.swift; sourceTree = "<group>"; };
+		493B159921A5656800B1377F /* ChoseAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseAccountVC.swift; sourceTree = "<group>"; };
+		493B159A21A5656800B1377F /* ChoseAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoseAccountVC.xib; sourceTree = "<group>"; };
+		493B159D21A565A600B1377F /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		493B159E21A565A600B1377F /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
 		499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
 		499E2F53218BF2C100B2E2E0 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -298,6 +308,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		493B159821A5652800B1377F /* ChoseAccView */ = {
+			isa = PBXGroup;
+			children = (
+				493B159921A5656800B1377F /* ChoseAccountVC.swift */,
+				493B159A21A5656800B1377F /* ChoseAccountVC.xib */,
+				493B159D21A565A600B1377F /* AccountCell.swift */,
+				493B159E21A565A600B1377F /* AccountCell.xib */,
+			);
+			path = ChoseAccView;
+			sourceTree = "<group>";
+		};
 		499E2F4D218BEE0600B2E2E0 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +510,7 @@
 		C07643891FA2AEB900C57B1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				493B159821A5652800B1377F /* ChoseAccView */,
 				49A985F521A3B54B001A9A43 /* ProductView */,
 				C07643961FA2AFDF00C57B1C /* MainView */,
 				C0E6BF3B1FBB7A7900F7E3D9 /* DetailView */,
@@ -528,6 +550,7 @@
 				49A985FA21A3B76E001A9A43 /* ProductModel.swift */,
 				49A9860221A3BB09001A9A43 /* AttackFileModel.swift */,
 				49A9860621A40208001A9A43 /* ProductViewModel.swift */,
+				493B159621A54BED00B1377F /* AccountApproveModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -804,11 +827,13 @@
 				C0DC56281FBF786200787FBF /* ReportTBVCell.xib in Resources */,
 				C0C15C191F9037DB00588A9F /* PostCell.xib in Resources */,
 				C02F85C81FB3717D0042F07B /* CustomerVC.xib in Resources */,
+				493B15A021A565A600B1377F /* AccountCell.xib in Resources */,
 				C0BCA27D1F899E0600F62316 /* Assets.xcassets in Resources */,
 				C0E6BF471FBB7B5E00F7E3D9 /* ProductDealVC.xib in Resources */,
 				C02F85BA1FAE99430042F07B /* ERPMainContentVC.xib in Resources */,
 				C05511261FD1AA4A0093275D /* SettingVC.xib in Resources */,
 				C0E6BF361FBA047500F7E3D9 /* HistDealVC.xib in Resources */,
+				493B159C21A5656800B1377F /* ChoseAccountVC.xib in Resources */,
 				C0E6BF5C1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.xib in Resources */,
 				C0333CB121A369F400BBCF51 /* ApprovedTransVC.xib in Resources */,
 				C07643951FA2AFC200C57B1C /* OutOfDateVC.xib in Resources */,
@@ -933,6 +958,7 @@
 				49A9860521A3BE4F001A9A43 /* TransModel.swift in Sources */,
 				C016A49D219C6447004D3D3F /* UserInfoModel.swift in Sources */,
 				C07643941FA2AFC200C57B1C /* OutOfDateVC.swift in Sources */,
+				493B159F21A565A600B1377F /* AccountCell.swift in Sources */,
 				49A985FF21A3B93A001A9A43 /* AppEnum.swift in Sources */,
 				49A985F721A3B5E7001A9A43 /* ProductHeaderView.swift in Sources */,
 				C07643881FA2603000C57B1C /* DeviceModel.swift in Sources */,
@@ -951,6 +977,7 @@
 				C004C1ED1F8FD12400FB80D9 /* ButtonCell.swift in Sources */,
 				C076438C1FA2AF2500C57B1C /* ABSoftERPVC.swift in Sources */,
 				499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */,
+				493B159721A54BED00B1377F /* AccountApproveModel.swift in Sources */,
 				C0BCA2761F899E0600F62316 /* AppDelegate.swift in Sources */,
 				C0884C441FA8F0A70012A2D0 /* Strings.swift in Sources */,
 				49A985FB21A3B76E001A9A43 /* ProductModel.swift in Sources */,
@@ -994,6 +1021,7 @@
 				C0E6BF571FBB82A800F7E3D9 /* ProductShowPriceVC.swift in Sources */,
 				C02F85BD1FAF62870042F07B /* IndayViewCell.swift in Sources */,
 				C0C15C621F950C7400588A9F /* ResponseCommon.swift in Sources */,
+				493B159B21A5656800B1377F /* ChoseAccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

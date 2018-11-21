@@ -37,6 +37,12 @@ class ProductDealVC: UIViewController, IndicatorInfoProvider {
         
         super.viewDidLoad()
         
+        if viewModel.getNumberSection() == 0 {
+            noDataLB.isHidden = false
+        } else {
+            noDataLB.isHidden = true
+        }
+        
         self.productTableView.register(ProductViewCell.nibDefault(), forCellReuseIdentifier: ProductViewCell.classString())
         self.productTableView.separatorStyle = .none
         
@@ -84,9 +90,9 @@ extension ProductDealVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let itemModel: ProductModel = viewModel.getProductWithSection(section)
         if itemModel.isCollapse {
-            return 200.0
+            return 170.0
         }
-        return 200.0
+        return 90.0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

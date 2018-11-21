@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChoseAccountVC" customModule="BusinessAbSoft" customModuleProvider="target">
+            <connections>
+                <outlet property="accTableView" destination="JCw-R7-Eyp" id="ADB-kK-6VH"/>
+                <outlet property="searchBar" destination="amh-o1-3Gy" id="lnO-Lo-5de"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="amh-o1-3Gy">
+                    <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="c2A-ic-q1p"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="p2h-Hg-Bup"/>
+                    </connections>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHJ-tt-Obh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-i5-LT3">
+                            <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.199118197" green="0.55144143099999998" blue="0.77735430000000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <items>
+                                <navigationItem title="Chọn nhân viên" id="faZ-I0-w2B">
+                                    <barButtonItem key="leftBarButtonItem" image="ic_back" id="dmF-Hw-oPV">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="-1" id="YhJ-So-z4w"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.199118197" green="0.55144143099999998" blue="0.77735430000000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="0Rw-Zz-268"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-R7-Eyp">
+                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="f1x-mU-SvC"/>
+                        <outlet property="delegate" destination="-1" id="63X-fq-3Ta"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JCw-R7-Eyp" firstAttribute="bottom" secondItem="3od-nq-6Nw" secondAttribute="bottom" id="0Lr-p1-znr"/>
+                <constraint firstItem="JCw-R7-Eyp" firstAttribute="top" secondItem="amh-o1-3Gy" secondAttribute="bottom" id="7g5-n1-xqG"/>
+                <constraint firstItem="dHJ-tt-Obh" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="CM9-oW-ivO"/>
+                <constraint firstItem="JCw-R7-Eyp" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="E7Z-Fe-FUW"/>
+                <constraint firstItem="JCw-R7-Eyp" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="HxA-W3-wKA"/>
+                <constraint firstItem="amh-o1-3Gy" firstAttribute="top" secondItem="dHJ-tt-Obh" secondAttribute="bottom" id="LU8-vh-icV"/>
+                <constraint firstItem="dHJ-tt-Obh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ce1-Ez-hR0"/>
+                <constraint firstItem="dHJ-tt-Obh" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="hSp-Ft-NQw"/>
+                <constraint firstItem="amh-o1-3Gy" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="iSw-1D-ENz"/>
+                <constraint firstItem="amh-o1-3Gy" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="zRz-1E-ABU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="3od-nq-6Nw"/>
+            <point key="canvasLocation" x="31.5" y="104.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="13" height="21"/>
+    </resources>
+</document>

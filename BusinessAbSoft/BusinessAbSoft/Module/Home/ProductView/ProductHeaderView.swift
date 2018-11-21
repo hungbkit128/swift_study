@@ -10,8 +10,7 @@ import UIKit
 
 class ProductHeaderView: UIView {
     
-    @IBOutlet weak var imgArrow: UIImageView!
-    
+    @IBOutlet weak var detailLB: UILabel!
     @IBOutlet weak var productCodeLB: UILabel!
     @IBOutlet weak var productNameLB: UILabel!
     @IBOutlet weak var priceLB: UILabel!
@@ -66,9 +65,9 @@ class ProductHeaderView: UIView {
         self.productCodeLB.text = model.productCode
         self.productNameLB.text = model.productName
         if model.isCollapse {
-            self.imgArrow.image = #imageLiteral(resourceName: "ic_keyboard_arrow_right_48pt")
+            
         } else {
-            self.imgArrow.image = #imageLiteral(resourceName: "ic_back")
+            
         }
         self.priceLB.text = "Gia \(model.price)"
         self.priceDetailLB.text = "Gia \(model.price)"
