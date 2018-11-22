@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,7 +52,7 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-9m-TGm">
-                    <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                    <rect key="frame" x="0.0" y="114" width="375" height="503"/>
                 </scrollView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7xw-GG-ZJK" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                     <rect key="frame" x="0.0" y="64" width="375" height="50"/>
@@ -67,25 +67,49 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-zR-HsE">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-go-YpV">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="PHÊ DUYỆT">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="dkG-go-YpV" firstAttribute="top" secondItem="Qbj-zR-HsE" secondAttribute="top" id="9SI-31-tT9"/>
+                        <constraint firstItem="dkG-go-YpV" firstAttribute="leading" secondItem="Qbj-zR-HsE" secondAttribute="leading" id="EZk-q0-M5u"/>
+                        <constraint firstAttribute="bottom" secondItem="dkG-go-YpV" secondAttribute="bottom" id="I0l-VV-ulP"/>
+                        <constraint firstAttribute="trailing" secondItem="dkG-go-YpV" secondAttribute="trailing" id="rSz-bM-l0e"/>
+                        <constraint firstAttribute="height" constant="50" id="yQj-YU-lmd"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="t0j-9m-TGm" firstAttribute="top" secondItem="7xw-GG-ZJK" secondAttribute="bottom" id="1gv-3e-8UP"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="t0j-9m-TGm" secondAttribute="bottom" id="A0k-Zf-lNZ"/>
+                <constraint firstItem="Qbj-zR-HsE" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8h8-Wi-Ia1"/>
                 <constraint firstItem="hQr-s0-pn5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fxv-gX-n9q"/>
+                <constraint firstItem="Qbj-zR-HsE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ITY-xW-rXa"/>
                 <constraint firstItem="t0j-9m-TGm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nse-U4-S4b"/>
                 <constraint firstItem="t0j-9m-TGm" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Rja-E0-Puj"/>
                 <constraint firstItem="hQr-s0-pn5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VN8-v3-4gj"/>
                 <constraint firstItem="7xw-GG-ZJK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YFH-0g-kZ7"/>
+                <constraint firstItem="dkG-go-YpV" firstAttribute="top" secondItem="t0j-9m-TGm" secondAttribute="bottom" id="hCT-ja-Q06"/>
                 <constraint firstItem="7xw-GG-ZJK" firstAttribute="top" secondItem="hQr-s0-pn5" secondAttribute="bottom" id="lk5-0z-CGg"/>
                 <constraint firstItem="hQr-s0-pn5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nGf-WV-7OM"/>
                 <constraint firstItem="7xw-GG-ZJK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uNm-sQ-MGm"/>
+                <constraint firstItem="Qbj-zR-HsE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uYA-Im-6eU"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="32.5" y="105.5"/>
+            <point key="canvasLocation" x="31.199999999999999" y="104.7976011994003"/>
         </view>
     </objects>
     <resources>

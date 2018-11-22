@@ -92,7 +92,7 @@ extension ProductDealVC: UITableViewDelegate {
         if itemModel.isCollapse {
             return 170.0
         }
-        return 90.0
+        return 80.0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -100,9 +100,11 @@ extension ProductDealVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let headerView: ProductHeaderView = ProductHeaderView.initWithDefaultNib()
         let itemModel: ProductModel = viewModel.getProductWithSection(section)
         headerView.binddingCellWithModel(itemModel, section, itemModel.isCollapse)
+        
         weak var weakSelf = self
         headerView.actionCollapse = { () in
             weakSelf?.viewModel.updateCollapse(section)

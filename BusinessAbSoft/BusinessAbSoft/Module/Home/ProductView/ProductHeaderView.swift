@@ -18,6 +18,7 @@ class ProductHeaderView: UIView {
     @IBOutlet weak var vatLB: UILabel!
     @IBOutlet weak var discountLB: UILabel!
     
+    @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var viewShadow: UIView!
     @IBOutlet weak var lineImg: UIImageView!
     
@@ -65,12 +66,15 @@ class ProductHeaderView: UIView {
         self.productCodeLB.text = model.productCode
         self.productNameLB.text = model.productName
         if model.isCollapse {
-            
+            self.detailView.isHidden = false
         } else {
-            
+            self.detailView.isHidden = true
         }
-        self.priceLB.text = "Gia \(model.price)"
-        self.priceDetailLB.text = "Gia \(model.price)"
+        self.priceLB.text = "(" + String(model.quantity ?? 0) + ")"
+            + convertIntToMoneyString(model.price ?? 0)
+        self.priceDetailLB.text = convertIntToMoneyString(model.price ?? 0)
+        self.vatLB.text = String(model.vat ?? 0)
+        self.discountLB.text = String(model.discount ?? 0)
     }
 }
 

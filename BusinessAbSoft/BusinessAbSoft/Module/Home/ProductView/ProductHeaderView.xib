@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductHeaderView" customModule="BusinessAbSoft" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-9m-sk1">
-                    <rect key="frame" x="8" y="8" width="359" height="146"/>
+                    <rect key="frame" x="8" y="8" width="359" height="166"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atu-gP-FRF">
                             <rect key="frame" x="8" y="8" width="37.5" height="17"/>
@@ -37,7 +37,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qx5-9y-DIK">
-                            <rect key="frame" x="8" y="58" width="343" height="80"/>
+                            <rect key="frame" x="8" y="58" width="343" height="100"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_assignment_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="Fix-CP-0b2">
                                     <rect key="frame" x="8" y="8" width="24" height="24"/>
@@ -120,20 +120,20 @@
                             </constraints>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCK-ti-B1e">
-                            <rect key="frame" x="8" y="145" width="343" height="1"/>
+                            <rect key="frame" x="8" y="165" width="343" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="87N-Au-2vj"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJ8-M1-tgZ">
-                            <rect key="frame" x="0.0" y="0.0" width="359" height="146"/>
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="166"/>
                             <connections>
                                 <action selector="onColapse:" destination="iN0-l3-epB" eventType="touchUpInside" id="uc8-ac-k2w"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi tiết" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-zt-B1V">
-                            <rect key="frame" x="304" y="33" width="46.5" height="17"/>
+                            <rect key="frame" x="304.5" y="33" width="46.5" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -176,6 +176,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="detailLB" destination="sZq-zt-B1V" id="XDi-mO-saC"/>
+                <outlet property="detailView" destination="Qx5-9y-DIK" id="9E6-ex-zC1"/>
                 <outlet property="discountLB" destination="OHu-f7-Flm" id="14L-Nh-vgy"/>
                 <outlet property="lineImg" destination="aCK-ti-B1e" id="cF5-Pg-x1O"/>
                 <outlet property="priceDetailLB" destination="Gd2-7a-KRN" id="guS-HF-aPY"/>
@@ -185,7 +186,7 @@
                 <outlet property="vatLB" destination="yUe-5D-WWW" id="Yuw-iI-JAi"/>
                 <outlet property="viewShadow" destination="hdA-9m-sk1" id="NSr-ed-r3C"/>
             </connections>
-            <point key="canvasLocation" x="30.5" y="-45"/>
+            <point key="canvasLocation" x="29.600000000000001" y="-36.881559220389811"/>
         </view>
     </objects>
     <resources>

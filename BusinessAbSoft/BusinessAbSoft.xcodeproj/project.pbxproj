@@ -146,6 +146,7 @@
 		C0E6BF5C1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E6BF5A1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.xib */; };
 		C0E6BF5F1FBB87E000F7E3D9 /* HistDealTBVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E6BF5D1FBB87E000F7E3D9 /* HistDealTBVCell.swift */; };
 		C0E6BF601FBB87E000F7E3D9 /* HistDealTBVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E6BF5E1FBB87E000F7E3D9 /* HistDealTBVCell.xib */; };
+		C0F8B0E321A75DAC00CC0D58 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F8B0E221A75DAC00CC0D58 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -292,6 +293,7 @@
 		C0E6BF5A1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttachFileShowPriceVC.xib; sourceTree = "<group>"; };
 		C0E6BF5D1FBB87E000F7E3D9 /* HistDealTBVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistDealTBVCell.swift; sourceTree = "<group>"; };
 		C0E6BF5E1FBB87E000F7E3D9 /* HistDealTBVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistDealTBVCell.xib; sourceTree = "<group>"; };
+		C0F8B0E221A75DAC00CC0D58 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DF7D911E1FF1E66C8CE293CB /* Pods_BusinessAbSoft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusinessAbSoft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5AE0FF315AD1026BDF9FB3 /* Pods-BusinessAbSoft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessAbSoft.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessAbSoft/Pods-BusinessAbSoft.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,6 +337,7 @@
 				499E2F53218BF2C100B2E2E0 /* URLExtension.swift */,
 				499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */,
 				49A985FC21A3B86A001A9A43 /* UIColorExtension.swift */,
+				C0F8B0E221A75DAC00CC0D58 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -995,6 +998,7 @@
 				C07862481F951AA000F6A619 /* RegisterResponseData.swift in Sources */,
 				49A9860A21A41100001A9A43 /* ProductViewCell.swift in Sources */,
 				499E2F56218BF8F400B2E2E0 /* NSErrorExtension.swift in Sources */,
+				C0F8B0E321A75DAC00CC0D58 /* StringExtension.swift in Sources */,
 				C04D8BBD1FC127660091334A /* ReportTypeResponseData.swift in Sources */,
 				C0884C461FA8F2570012A2D0 /* NSURLError.swift in Sources */,
 				C0C15C5D1F9501B100588A9F /* LoginRequestData.swift in Sources */,
