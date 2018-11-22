@@ -30,6 +30,9 @@ class ApprovedTransVC: UIViewController {
     }
     
     @IBAction func selectUserBTAction(_ sender: Any) {
+        let secondViewController:ChoseAccountVC = ChoseAccountVC()
+        //secondViewController.transModel = transModel
+        self.present(secondViewController, animated: true, completion: nil)
     }
     
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
