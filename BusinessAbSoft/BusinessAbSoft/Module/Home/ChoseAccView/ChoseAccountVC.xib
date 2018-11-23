@@ -22,11 +22,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="amh-o1-3Gy">
-                    <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7W-nk-lYr">
+                    <rect key="frame" x="0.0" y="113" width="375" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="56" id="c2A-ic-q1p"/>
+                        <constraint firstAttribute="height" constant="1" id="azF-2H-PP1"/>
                     </constraints>
+                </view>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="amh-o1-3Gy">
+                    <rect key="frame" x="0.0" y="64" width="295" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="c2A-ic-q1p"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="p2h-Hg-Bup"/>
@@ -57,25 +66,40 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-R7-Eyp">
-                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="f1x-mU-SvC"/>
                         <outlet property="delegate" destination="-1" id="63X-fq-3Ta"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKB-Ph-2ph">
+                    <rect key="frame" x="295" y="64" width="80" height="48"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="dRB-JJ-umG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="TẤT CẢ"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="JCw-R7-Eyp" firstAttribute="bottom" secondItem="3od-nq-6Nw" secondAttribute="bottom" id="0Lr-p1-znr"/>
-                <constraint firstItem="JCw-R7-Eyp" firstAttribute="top" secondItem="amh-o1-3Gy" secondAttribute="bottom" id="7g5-n1-xqG"/>
                 <constraint firstItem="dHJ-tt-Obh" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="CM9-oW-ivO"/>
+                <constraint firstItem="JCw-R7-Eyp" firstAttribute="top" secondItem="I7W-nk-lYr" secondAttribute="bottom" id="DIH-cm-DT6"/>
+                <constraint firstItem="YKB-Ph-2ph" firstAttribute="height" secondItem="amh-o1-3Gy" secondAttribute="height" id="Daq-sv-57V"/>
+                <constraint firstItem="I7W-nk-lYr" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="DsL-pK-uRa"/>
                 <constraint firstItem="JCw-R7-Eyp" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="E7Z-Fe-FUW"/>
                 <constraint firstItem="JCw-R7-Eyp" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="HxA-W3-wKA"/>
+                <constraint firstItem="YKB-Ph-2ph" firstAttribute="leading" secondItem="amh-o1-3Gy" secondAttribute="trailing" id="IoA-zA-Wa2"/>
+                <constraint firstItem="I7W-nk-lYr" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="Klt-SU-2pJ"/>
                 <constraint firstItem="amh-o1-3Gy" firstAttribute="top" secondItem="dHJ-tt-Obh" secondAttribute="bottom" id="LU8-vh-icV"/>
+                <constraint firstItem="YKB-Ph-2ph" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="O9J-it-Hyu"/>
                 <constraint firstItem="dHJ-tt-Obh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ce1-Ez-hR0"/>
                 <constraint firstItem="dHJ-tt-Obh" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="hSp-Ft-NQw"/>
-                <constraint firstItem="amh-o1-3Gy" firstAttribute="trailing" secondItem="3od-nq-6Nw" secondAttribute="trailing" id="iSw-1D-ENz"/>
+                <constraint firstItem="I7W-nk-lYr" firstAttribute="top" secondItem="amh-o1-3Gy" secondAttribute="bottom" constant="1" id="n2A-4e-ddz"/>
+                <constraint firstItem="YKB-Ph-2ph" firstAttribute="top" secondItem="dHJ-tt-Obh" secondAttribute="bottom" id="sGj-W3-5Lb"/>
                 <constraint firstItem="amh-o1-3Gy" firstAttribute="leading" secondItem="3od-nq-6Nw" secondAttribute="leading" id="zRz-1E-ABU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="3od-nq-6Nw"/>

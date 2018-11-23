@@ -95,6 +95,20 @@ class APIRequestProvider: NSObject {
                                         headers: headers)
     }
     
+    // getApproveType
+    func getApproveType() -> DataRequest {
+        let urlString = businessURL.appending(Constants.GET_APPROVE_TYPE_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
     // getUserApprove
     func getUserApprove() -> DataRequest {
         let urlString = businessURL.appending(Constants.GET_USER_APPROVE_URL)

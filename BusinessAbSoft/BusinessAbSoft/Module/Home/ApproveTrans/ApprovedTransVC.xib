@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,55 +55,55 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loại phê duyệt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYs-S0-jEx">
-                    <rect key="frame" x="16" y="80" width="343" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="16" y="80" width="343" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày cảnh báo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPo-1v-0bB">
-                    <rect key="frame" x="16" y="157" width="343" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="16" y="155.5" width="343" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nội dung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-ex-INc">
-                    <rect key="frame" x="16" y="235" width="69.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="16" y="232" width="66" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGd-Md-aoo">
-                    <rect key="frame" x="16" y="101" width="343" height="40"/>
+                    <rect key="frame" x="16" y="99.5" width="343" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="eBb-Ue-VwX"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="Chọn loại phê duyệt"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YEC-5V-taV">
-                    <rect key="frame" x="16" y="141" width="343" height="1"/>
+                    <rect key="frame" x="16" y="139.5" width="343" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="aKI-nZ-xWy"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE8-2i-Jfh">
-                    <rect key="frame" x="16" y="178" width="343" height="40"/>
+                    <rect key="frame" x="16" y="175" width="343" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="lUG-q1-Ad5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="12/08/1991"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A0b-za-qNU">
-                    <rect key="frame" x="16" y="218" width="343" height="1"/>
+                    <rect key="frame" x="16" y="215" width="343" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="TGF-yZ-oU2"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F84-U5-Chs">
-                    <rect key="frame" x="319" y="218" width="40" height="40"/>
+                    <rect key="frame" x="319" y="222" width="40" height="40"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-nf-xFc">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -152,16 +152,16 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nhập nội dung" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-T5-95j">
-                    <rect key="frame" x="16" y="274" width="343" height="128"/>
+                    <rect key="frame" x="16" y="270" width="343" height="128"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="tfw-qV-wMf"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxJ-cR-jhs">
-                    <rect key="frame" x="16" y="418" width="343" height="50"/>
+                    <rect key="frame" x="16" y="414" width="343" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.43921568630000002" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="h1e-lL-viJ"/>
@@ -184,7 +184,7 @@
                 <constraint firstItem="gxJ-cR-jhs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="66O-BA-qLR"/>
                 <constraint firstItem="oGd-Md-aoo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8nn-FH-L3q"/>
                 <constraint firstItem="A0b-za-qNU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ADo-9Q-znz"/>
-                <constraint firstItem="jrv-T5-95j" firstAttribute="top" secondItem="F84-U5-Chs" secondAttribute="bottom" constant="16" id="AaC-9i-EXa"/>
+                <constraint firstItem="jrv-T5-95j" firstAttribute="top" secondItem="F84-U5-Chs" secondAttribute="bottom" constant="8" id="AaC-9i-EXa"/>
                 <constraint firstItem="pb4-aN-sK8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D2L-EP-spM"/>
                 <constraint firstItem="LE8-2i-Jfh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="DRI-o9-B58"/>
                 <constraint firstItem="qYs-S0-jEx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="IVB-v5-GMH"/>
@@ -202,10 +202,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LE8-2i-Jfh" secondAttribute="trailing" constant="16" id="f0o-zc-l1s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oGd-Md-aoo" secondAttribute="trailing" constant="16" id="iWY-6V-9h5"/>
                 <constraint firstItem="0u3-ex-INc" firstAttribute="top" secondItem="A0b-za-qNU" secondAttribute="bottom" constant="16" id="m88-29-Mgp"/>
-                <constraint firstItem="F84-U5-Chs" firstAttribute="top" secondItem="LE8-2i-Jfh" secondAttribute="bottom" id="mTe-q2-viT"/>
                 <constraint firstItem="gxJ-cR-jhs" firstAttribute="top" secondItem="jrv-T5-95j" secondAttribute="bottom" constant="16" id="pjW-X7-QYj"/>
                 <constraint firstItem="A0b-za-qNU" firstAttribute="top" secondItem="LE8-2i-Jfh" secondAttribute="bottom" id="qRf-qr-uUa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PPo-1v-0bB" secondAttribute="trailing" constant="16" id="qUP-Ct-W6l"/>
+                <constraint firstItem="F84-U5-Chs" firstAttribute="centerY" secondItem="0u3-ex-INc" secondAttribute="centerY" id="r9q-Y2-Sk8"/>
                 <constraint firstItem="LE8-2i-Jfh" firstAttribute="top" secondItem="PPo-1v-0bB" secondAttribute="bottom" id="wOW-yu-Zvv"/>
                 <constraint firstItem="YEC-5V-taV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wWB-Jd-dKp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A0b-za-qNU" secondAttribute="trailing" constant="16" id="zX7-Jr-ca3"/>

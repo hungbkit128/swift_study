@@ -59,4 +59,10 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController {
         attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM", detailTransModel: detailTransModel)
         return [contentDealVC!, productDealVC!, attachFileDealVC!]
     }
+    
+    @IBAction func tickBTAction(_ sender: Any) {
+        let secondViewController:ApprovedTransVC = ApprovedTransVC()
+        //secondViewController.transModel = transModel
+        self.present(secondViewController, animated: true, completion: nil)
+    }
 }

@@ -53,17 +53,10 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider {
         }
     }
     
-    @IBAction func tickBTAction(_ sender: Any) {
-        let secondViewController:ApprovedTransVC = ApprovedTransVC()
-        //secondViewController.transModel = transModel
-        self.present(secondViewController, animated: true, completion: nil)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
     
     // MARK: - IndicatorInfoProvider
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

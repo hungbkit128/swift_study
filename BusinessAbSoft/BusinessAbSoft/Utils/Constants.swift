@@ -21,6 +21,7 @@ class Constants {
     static let VIEW_DETAIL_URL = "/absoft/viewDetail"
     static let DO_APPROVE_URL = "/absoft/doApprove"
     static let GET_USER_APPROVE_URL = "/absoft/getUserApprove"
+    static let GET_APPROVE_TYPE_URL = "/absoft/getApproveType"
     
     // report
     static let INIT_GROUP_REPORT_URL = "/absoft/initGroupReport"

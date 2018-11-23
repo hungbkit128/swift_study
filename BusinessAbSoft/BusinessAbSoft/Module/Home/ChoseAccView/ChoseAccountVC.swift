@@ -13,15 +13,30 @@ class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var accTableView: UITableView!
     
+    var listFilter:[AccountApproveModel] = []
+    var listSelected:[AccountApproveModel] = []
+    var listAcc:[AccountApproveModel] = []
+    
+    var homeService:HomeService = HomeService()
     var searchActive : Bool = false
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
-    var filtered:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.accTableView.register(UINib(nibName: "AccountCell", bundle: Bundle.main), forCellReuseIdentifier: "AccountCell")
+        
+        homeService.getUserApprove() {
+            (listResult: [AccountApproveModel], error: NSError?) in
+            
+            if error == nil {
+                self.listAcc = listResult
+                self.listFilter = listResult
+                self.accTableView.reloadData()
+            } else {
+                UiUtils.showAlert(title: (error?.localizedDescription)!, viewController: self)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,16 +66,18 @@ class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filtered = data.filter({ (text) -> Bool in
-            let tmp: NSString = text as NSString
-            let range = tmp.range(of: searchText, options: .caseInsensitive)
-            return range.location != NSNotFound
+        listFilter = listAcc.filter({ (item) -> Bool in
+            let tmp: AccountApproveModel = item as AccountApproveModel
+            let name = tmp.userName?.lowercased() ?? ""
+            return name.contains(searchText.lowercased())
         })
-        if(filtered.count == 0){
-            searchActive = false;
+        
+        if searchText.isEmpty {
+            searchActive = false
         } else {
-            searchActive = true;
+            searchActive = true
         }
+        
         self.accTableView.reloadData()
     }
     
@@ -68,20 +85,37 @@ class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64.0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchActive) {
-            return filtered.count
+            return listFilter.count
         }
-        return data.count;
+        return listAcc.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = accTableView.dequeueReusableCell(withIdentifier: "AccountCell") as! AccountCell;
         if(searchActive) {
-            cell.nameLB?.text = filtered[indexPath.row]
+            cell.bindModelData(listFilter[indexPath.row])
         } else {
-            cell.nameLB?.text = data[indexPath.row];
+            cell.bindModelData(listAcc[indexPath.row])
         }
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellSelect = tableView.cellForRow(at:indexPath) as! AccountCell
+        var modelSelect:AccountApproveModel
+        if(searchActive) {
+            modelSelect = listFilter[indexPath.row]
+        } else {
+            modelSelect = listAcc[indexPath.row]
+        }
+        modelSelect.isSelected = !modelSelect.isSelected
+            
+        accTableView.reloadData()
     }
 }

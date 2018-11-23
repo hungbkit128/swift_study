@@ -23,4 +23,18 @@ class AccountCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func bindModelData(_ model: AccountApproveModel) {
+        
+        iconImg.image = iconImg.image!.withRenderingMode(.alwaysTemplate)
+        statusImg.image = statusImg.image!.withRenderingMode(.alwaysTemplate)
+        iconImg.tintColor = ColorManager.barTintColor
+        
+        nameLB.text = model.userName
+        departmentLB.text = model.departmentsName
+        if model.isSelected {
+            statusImg.tintColor = ColorManager.barTintColor
+        } else {
+            statusImg.tintColor = ColorManager.lightGreyColor
+        }
+    }
 }
