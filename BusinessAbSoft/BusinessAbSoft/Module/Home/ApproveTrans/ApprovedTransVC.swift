@@ -18,10 +18,13 @@ class ApprovedTransVC: UIViewController {
     @IBOutlet weak var contentTV: UITextView!
     @IBOutlet weak var numberUserLB: UILabel!
     
+    var selectAccVC:ChoseAccountVC!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.selectAccVC = ChoseAccountVC()
     }
 
 
@@ -30,9 +33,7 @@ class ApprovedTransVC: UIViewController {
     }
     
     @IBAction func selectUserBTAction(_ sender: Any) {
-        let secondViewController:ChoseAccountVC = ChoseAccountVC()
-        //secondViewController.transModel = transModel
-        self.present(secondViewController, animated: true, completion: nil)
+        self.present(selectAccVC, animated: true, completion: nil)
     }
     
     @IBAction func backTapped(_ sender: UIBarButtonItem) {

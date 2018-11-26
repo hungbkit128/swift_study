@@ -20,6 +20,8 @@ target 'BusinessAbSoft' do
     pod 'SwiftyJSON'
     pod 'TPKeyboardAvoiding'
     
+    #    pod 'KUIPopOver'
+    #    pod 'SwiftyPickerPopover'
     #    pod 'SDWebImage', '~> 4.0'
     #    pod 'SCLAlertView'
     #    pod 'SwiftMessages'

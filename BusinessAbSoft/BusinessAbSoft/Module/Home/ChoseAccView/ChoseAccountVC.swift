@@ -10,6 +10,7 @@ import UIKit
 
 class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
+    @IBOutlet weak var selectAllBT: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var accTableView: UITableView!
     
@@ -19,6 +20,7 @@ class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var homeService:HomeService = HomeService()
     var searchActive : Bool = false
+    var isSelectAll : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,27 @@ class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func doneTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
+    @IBAction func allBTAction(_ sender: Any) {
+        isSelectAll = !isSelectAll
+        if isSelectAll {
+            for item in listAcc {
+                item.isSelected = true
+            }
+            selectAllBT.setTitle("BỎ CHỌN", for: .normal)
+        } else {
+            for item in listAcc {
+                item.isSelected = false
+            }
+            selectAllBT.setTitle("TẤT CẢ", for: .normal)
+        }
+        self.accTableView.reloadData()
+    }
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
     }

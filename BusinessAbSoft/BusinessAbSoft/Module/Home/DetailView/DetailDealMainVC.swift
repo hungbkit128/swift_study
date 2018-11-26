@@ -25,6 +25,10 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func hisTransTapped(_ sender: UIBarButtonItem) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
