@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4933585121ABFC3800C036FF /* ApproveHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */; };
 		493B159721A54BED00B1377F /* AccountApproveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159621A54BED00B1377F /* AccountApproveModel.swift */; };
 		493B159B21A5656800B1377F /* ChoseAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159921A5656800B1377F /* ChoseAccountVC.swift */; };
 		493B159C21A5656800B1377F /* ChoseAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493B159A21A5656800B1377F /* ChoseAccountVC.xib */; };
@@ -151,6 +152,7 @@
 
 /* Begin PBXFileReference section */
 		2D139F1BA88957AEE43C4530 /* Pods-BusinessAbSoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessAbSoft.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessAbSoft/Pods-BusinessAbSoft.release.xcconfig"; sourceTree = "<group>"; };
+		4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveHistoryModel.swift; sourceTree = "<group>"; };
 		493B159621A54BED00B1377F /* AccountApproveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountApproveModel.swift; sourceTree = "<group>"; };
 		493B159921A5656800B1377F /* ChoseAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseAccountVC.swift; sourceTree = "<group>"; };
 		493B159A21A5656800B1377F /* ChoseAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoseAccountVC.xib; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				49A9860221A3BB09001A9A43 /* AttackFileModel.swift */,
 				49A9860621A40208001A9A43 /* ProductViewModel.swift */,
 				493B159621A54BED00B1377F /* AccountApproveModel.swift */,
+				4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1004,6 +1007,7 @@
 				C0C15C5D1F9501B100588A9F /* LoginRequestData.swift in Sources */,
 				C0E6BF2D1FBA043E00F7E3D9 /* MainDealVC.swift in Sources */,
 				C0E6BF421FBB7B3D00F7E3D9 /* ContentDealVC.swift in Sources */,
+				4933585121ABFC3800C036FF /* ApproveHistoryModel.swift in Sources */,
 				49A9860721A40208001A9A43 /* ProductViewModel.swift in Sources */,
 				C04D8BBF1FC4E29F0091334A /* ViewDetailRequestData.swift in Sources */,
 				C016A4A3219C848D004D3D3F /* DetailTransModel.swift in Sources */,

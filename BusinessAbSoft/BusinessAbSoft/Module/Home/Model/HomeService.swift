@@ -78,4 +78,20 @@ class HomeService: APIServiceAgent {
             }
         }
     }
+    
+    // getTransApproveHistory
+    func getTransApproveHistory(completion: @escaping([ApproveHistoryModel], NSError?) -> Void) {
+        if let request = APIRequestProvider.shareInstance?.getTransApproveHistory() {
+            self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
+                var hisModels = [ApproveHistoryModel]()
+                for (_, subJson) in json["LstHisApprove"] {
+                    let model = ApproveHistoryModel(subJson)
+                    accModels.append(model)
+                }
+                completion(accModels, error)
+            }
+        }
+    }
+    
+    
 }

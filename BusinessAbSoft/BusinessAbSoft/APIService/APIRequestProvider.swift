@@ -137,4 +137,20 @@ class APIRequestProvider: NSObject {
                                         encoding: JSONEncoding.default,
                                         headers: headers)
     }
+    
+    // getTransApproveHistory
+    func getTransApproveHistory() -> DataRequest {
+        let urlString = businessURL.appending(Constants.GET_TRANS_APPROVE_HIS_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
+    
 }
