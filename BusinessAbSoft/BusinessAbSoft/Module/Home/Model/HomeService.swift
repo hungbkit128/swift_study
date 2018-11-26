@@ -86,12 +86,10 @@ class HomeService: APIServiceAgent {
                 var hisModels = [ApproveHistoryModel]()
                 for (_, subJson) in json["LstHisApprove"] {
                     let model = ApproveHistoryModel(subJson)
-                    accModels.append(model)
+                    hisModels.append(model)
                 }
-                completion(accModels, error)
+                completion(hisModels, error)
             }
         }
     }
-    
-    
 }

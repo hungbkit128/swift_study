@@ -8,13 +8,17 @@
 
 import UIKit
 import XLPagerTabStrip
+import WYPopoverController
+import NVActivityIndicatorView
 
-class DetailDealMainVC: ButtonBarPagerTabStripViewController {
+class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicatorViewable {
     
     var contentDealVC:ContentDealVC?
     var productDealVC:ProductDealVC?
     var attachFileDealVC:AttachFileDealVC?
     var detailTransModel: DetailTransModel?
+    
+    var homeService:HomeService = HomeService()
     
     override func viewDidLoad() {
         initMenuView()
@@ -27,6 +31,12 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController {
     
     @IBAction func hisTransTapped(_ sender: UIBarButtonItem) {
         
+        let size = CGSize(width: 32, height: 32)
+        self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
+        
+        homeService.getTransApproveHistory(completion: { (hisModels, error) in
+            
+        });
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,5 +78,20 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController {
         let secondViewController:ApprovedTransVC = ApprovedTransVC()
         //secondViewController.transModel = transModel
         self.present(secondViewController, animated: true, completion: nil)
+    }
+    
+    func doShowPopoverWithVC(_ vc: UIViewController, from: CGRect, inView: UIView!) {
+//        self.popOverVC = WYPopoverController(contentViewController: vc)
+//        self.popOverVC?.popoverLayoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+//        self.popOverVC?.wantsDefaultContentAppearance = true
+//        self.popOverVC?.delegate = self
+//        let direction = isIphoneApp() ? WYPopoverArrowDirection.none : WYPopoverArrowDirection.up
+//        self.popOverVC?.presentPopover(from: from,
+//                                       in: inView,
+//                                       permittedArrowDirections: direction,
+//                                       animated: true,
+//                                       options: WYPopoverAnimationOptions.fade,
+//                                       completion: {
+//        })
     }
 }

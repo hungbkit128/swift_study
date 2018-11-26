@@ -19,6 +19,7 @@ target 'BusinessAbSoft' do
     pod 'Alamofire'
     pod 'SwiftyJSON'
     pod 'TPKeyboardAvoiding'
+    pod 'WYPopoverController'
     
     #    pod 'KUIPopOver'
     #    pod 'SwiftyPickerPopover'
