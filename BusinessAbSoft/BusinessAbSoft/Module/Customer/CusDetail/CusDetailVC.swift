@@ -11,43 +11,25 @@ import XLPagerTabStrip
 import WYPopoverController
 import NVActivityIndicatorView
 
-class CusDetailVC: ButtonBarPagerTabStripViewController, NVActivityIndicatorViewable {
-
+class CusDetailVC: UIViewController {
+    
+    @IBOutlet weak var cusNameLB: UILabel!
+    @IBOutlet weak var cusAdressLB: UILabel!
+    @IBOutlet weak var cusPhoneLB: UILabel!
+    @IBOutlet weak var cusMailLB: UILabel!
+    
+    var cusModel: CustomerModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cusNameLB.text = cusModel?.CustomerName
+        cusAdressLB.text = cusModel?.Address
+        cusPhoneLB.text = cusModel?.PhoneNumber
+        cusMailLB.text = cusModel?.Email
     }
     
-    func initMenuView() -> Void {
-        // change selected bar color
-        settings.style.buttonBarBackgroundColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.0976027397)
-        settings.style.buttonBarItemBackgroundColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.1029537672)
-        settings.style.selectedBarBackgroundColor = ColorManager.mainColor
-        settings.style.selectedBarHeight = 2.0
-        settings.style.buttonBarItemFont = .systemFont(ofSize: 14, weight:.regular)
-        settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemTitleColor = ColorManager.mainColor
-        settings.style.buttonBarItemsShouldFillAvailableWidth = true
-        settings.style.buttonBarLeftContentInset = 0
-        settings.style.buttonBarRightContentInset = 0
-        
-        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
-            guard changeCurrentIndex == true else { return }
-            
-            oldCell?.label.textColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
-            oldCell?.label.font = .systemFont(ofSize: 14, weight:.bold)
-            newCell?.label.textColor = ColorManager.mainColor
-            newCell?.label.font = .systemFont(ofSize: 14, weight:.heavy)
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    
-    // MARK: - PagerTabStripDataSource
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG")
-        productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM")
-        attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM")
-        return [contentDealVC!, productDealVC!, attachFileDealVC!]
-    }
-
 }

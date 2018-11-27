@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CusDetailVC" customModule="BusinessAbSoft" customModuleProvider="target">
             <connections>
+                <outlet property="cusAdressLB" destination="2Ga-s4-LCu" id="08g-D3-oLw"/>
+                <outlet property="cusMailLB" destination="bTI-da-B3b" id="3Jt-5T-sMa"/>
+                <outlet property="cusNameLB" destination="a6F-Ax-hwO" id="wY0-bv-f2S"/>
+                <outlet property="cusPhoneLB" destination="ter-ez-752" id="2A7-Fd-jOQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -92,34 +96,7 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euk-M4-y55">
                     <rect key="frame" x="0.0" y="173.5" width="375" height="493.5"/>
-                    <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a7c-YX-AVU" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="Bdn-Ld-QBx"/>
-                            </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jy2-mT-zgd">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcS-2C-9zB">
-                            <rect key="frame" x="0.0" y="50" width="375" height="443.5"/>
-                        </scrollView>
-                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="a7c-YX-AVU" firstAttribute="top" secondItem="euk-M4-y55" secondAttribute="top" id="09a-o8-PQv"/>
-                        <constraint firstAttribute="bottom" secondItem="zcS-2C-9zB" secondAttribute="bottom" id="8sp-5g-UWx"/>
-                        <constraint firstItem="zcS-2C-9zB" firstAttribute="leading" secondItem="euk-M4-y55" secondAttribute="leading" id="IM0-mz-Hml"/>
-                        <constraint firstAttribute="trailing" secondItem="zcS-2C-9zB" secondAttribute="trailing" id="Qbj-qi-HVp"/>
-                        <constraint firstAttribute="trailing" secondItem="a7c-YX-AVU" secondAttribute="trailing" id="cT9-M2-pyy"/>
-                        <constraint firstItem="a7c-YX-AVU" firstAttribute="leading" secondItem="euk-M4-y55" secondAttribute="leading" id="f0V-D1-D1R"/>
-                        <constraint firstItem="zcS-2C-9zB" firstAttribute="top" secondItem="a7c-YX-AVU" secondAttribute="bottom" id="rdM-WB-dG0"/>
-                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

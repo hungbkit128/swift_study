@@ -128,16 +128,16 @@ class CustomerVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //let cell:CustomerTBCell = customerTBV.cellForRow(at:indexPath) as! CustomerTBCell
         
         if let lstCus = lstCustomerModel {
             let model = lstCus[indexPath.row]
-            
-            
+            let secondViewController = CusDetailVC()
+            secondViewController.cusModel = model
+            self.present(secondViewController, animated: true, completion: nil)
         }
-        
-        
     }
     
     // MARK: - IndicatorInfoProvider

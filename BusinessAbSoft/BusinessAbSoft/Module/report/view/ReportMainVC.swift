@@ -86,7 +86,7 @@ class ReportMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell:ReportTBVCell = tableView.cellForRow(at:indexPath) as! ReportTBVCell
+        //let cell:ReportTBVCell = tableView.cellForRow(at:indexPath) as! ReportTBVCell
         
         let idValue = lstGroupReport![indexPath.row].Key
         let secondViewController:ReportTypeDetailVC = ReportTypeDetailVC(idValue!)

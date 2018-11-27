@@ -11,6 +11,10 @@ import XLPagerTabStrip
 import PullToRefreshKit
 import NVActivityIndicatorView
 
+let TYPE_VIEW_PRICE = 1
+let TYPE_VIEW_CONTRACT = 2
+let TYPE_VIEW_HOME = 3
+
 class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider, ServiceManagerProtocol, NVActivityIndicatorViewable {
     
     @IBOutlet weak var tableView: UITableView!
@@ -22,9 +26,14 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     var isDataLoaded:Bool?
     var homeService = HomeService()
     
-    init(itemInfo: IndicatorInfo) {
+    var idCus: String?
+    var viewType: Int
+    
+    init(itemInfo: IndicatorInfo, viewType: Int, idCus: String?) {
         self.itemInfo = itemInfo
         self.lstJobWarning = []
+        self.viewType = viewType
+        self.idCus = idCus
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -88,7 +97,7 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell:IndayViewCell = tableView.cellForRow(at:indexPath) as! IndayViewCell
+        //let cell:IndayViewCell = tableView.cellForRow(at:indexPath) as! IndayViewCell
         
         let size = CGSize(width: 32, height: 32)
         self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)

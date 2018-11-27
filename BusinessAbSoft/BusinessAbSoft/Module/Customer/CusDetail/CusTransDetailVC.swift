@@ -1,26 +1,25 @@
 //
-//  ERPMainContentVC.swift
+//  CusTransDetailVC.swift
 //  BusinessAbSoft
 //
-//  Created by Tran Van Hung on 11/5/17.
-//  Copyright © 2017 hungtv. All rights reserved.
+//  Created by Vtsoft2 on 11/27/18.
+//  Copyright © 2018 hungtv. All rights reserved.
 //
 
 import UIKit
 import XLPagerTabStrip
+import WYPopoverController
+import NVActivityIndicatorView
 
-class ERPMainContentVC: ButtonBarPagerTabStripViewController {
+class CusTransDetailVC: ButtonBarPagerTabStripViewController, NVActivityIndicatorViewable {
     
-    var inDayVC:InDayVC?
-    var outOfDateVC:OutOfDateVC?
-    
+    var quotesVC:OutOfDateVC?
+    var orderVC:OutOfDateVC?
+    var contractVC:OutOfDateVC?
+
     override func viewDidLoad() {
-        initMenuView()
         super.viewDidLoad()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func initMenuView() -> Void {
@@ -48,12 +47,14 @@ class ERPMainContentVC: ButtonBarPagerTabStripViewController {
     
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        inDayVC = InDayVC(itemInfo: "TRONG NGÀY")
-        outOfDateVC = OutOfDateVC(itemInfo: "QUÁ HẠN", viewType: TYPE_VIEW_HOME, idCus: nil)
-        return [inDayVC!, outOfDateVC!]
+        quotesVC = OutOfDateVC(itemInfo: "BÁO GIÁ", viewType: TYPE_VIEW_HOME, idCus: nil)
+        orderVC = OutOfDateVC(itemInfo: "ĐƠN HÀNG", viewType: TYPE_VIEW_HOME, idCus: nil)
+        contractVC = OutOfDateVC(itemInfo: "HỢP ĐỒNG", viewType: TYPE_VIEW_HOME, idCus: nil)
+        return [quotesVC!, orderVC!, contractVC!]
     }
     
-    func updateInDayData() -> Void {
-        inDayVC?.initData()
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
