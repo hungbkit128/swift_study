@@ -95,6 +95,20 @@ class APIRequestProvider: NSObject {
                                         headers: headers)
     }
     
+    // getJobWarningUnMake
+    func getJobWarningUnMake() -> DataRequest {
+        let urlString = businessURL.appending(Constants.GET_JOB_WARNING_UN_MAKE_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
     // getApproveType
     func getApproveType() -> DataRequest {
         let urlString = businessURL.appending(Constants.GET_APPROVE_TYPE_URL)
@@ -152,5 +166,19 @@ class APIRequestProvider: NSObject {
                                         headers: headers)
     }
     
-    
+    // getTransactions
+    func getTransactions(idCustomer: String, businessType: String) -> DataRequest {
+        let urlString = businessURL.appending(Constants.DO_GET_TRANSACTIONS_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        param["idCustomer"] = idCustomer
+        param["businessType"] = businessType
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
 }

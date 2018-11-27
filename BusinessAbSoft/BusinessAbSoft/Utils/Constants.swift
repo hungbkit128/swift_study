@@ -32,6 +32,7 @@ class Constants {
     // customer
     static let DO_GET_CUSTOMER_URL = "/absoft/doGetCustomer"
     static let DO_INSERT_CUSTOMER_URL = "/absoft/doInsertCustomer"
+    static let DO_GET_TRANSACTIONS_URL = "/absoft/getTransactions"
     
     // deal
     static let SEARCH_HISTORY_URL = "/absoft/searcLHistory"

@@ -15,6 +15,7 @@
 		493B15A021A565A600B1377F /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493B159E21A565A600B1377F /* AccountCell.xib */; };
 		4966A12321AD220C00CE8427 /* CusTransDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A12121AD220C00CE8427 /* CusTransDetailVC.swift */; };
 		4966A12421AD220C00CE8427 /* CusTransDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4966A12221AD220C00CE8427 /* CusTransDetailVC.xib */; };
+		4966A12621AD7CAB00CE8427 /* JobWarningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */; };
 		499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */; };
 		499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */; };
 		499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F53218BF2C100B2E2E0 /* URLExtension.swift */; };
@@ -165,6 +166,7 @@
 		493B159E21A565A600B1377F /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		4966A12121AD220C00CE8427 /* CusTransDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusTransDetailVC.swift; sourceTree = "<group>"; };
 		4966A12221AD220C00CE8427 /* CusTransDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CusTransDetailVC.xib; sourceTree = "<group>"; };
+		4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobWarningModel.swift; sourceTree = "<group>"; };
 		499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
 		499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
 		499E2F53218BF2C100B2E2E0 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -580,6 +582,7 @@
 				49A9860621A40208001A9A43 /* ProductViewModel.swift */,
 				493B159621A54BED00B1377F /* AccountApproveModel.swift */,
 				4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */,
+				4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1016,6 +1019,7 @@
 				C0884C441FA8F0A70012A2D0 /* Strings.swift in Sources */,
 				49A985FB21A3B76E001A9A43 /* ProductModel.swift in Sources */,
 				499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */,
+				4966A12621AD7CAB00CE8427 /* JobWarningModel.swift in Sources */,
 				C02F85CB1FB372DF0042F07B /* CustomerTBCell.swift in Sources */,
 				C0C15C571F92FDC000588A9F /* RegisterRequestData.swift in Sources */,
 				C0C15C181F9037DB00588A9F /* PostCell.swift in Sources */,

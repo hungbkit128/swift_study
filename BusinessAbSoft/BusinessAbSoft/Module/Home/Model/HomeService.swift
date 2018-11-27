@@ -11,6 +11,24 @@ import SwiftyJSON
 
 class HomeService: APIServiceAgent {
     
+    // getJobWarningUnMake
+    func getJobWarningUnMake(completion: @escaping(([JobWarningModel], NSError?) -> Void)) {
+        
+        if let request = APIRequestProvider.shareInstance?.getJobWarningUnMake() {
+            self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
+                if error == nil {
+                    var listJob = [JobWarningModel]()
+                    for (_, subJson) in json["LstJobWarning"] {
+                        let job = JobWarningModel(subJson)
+                        listJob.append(job)
+                    }
+                    completion(listJob, error)
+                } else {
+                    completion([], error)
+                }
+            }
+        }
+    }
     
     func getWarningUnMake(jobId: String,
                            jobType: String,

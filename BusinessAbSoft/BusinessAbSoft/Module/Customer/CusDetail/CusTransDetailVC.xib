@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CusTransDetailVC" customModule="BusinessAbSoft" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="buttonBarView" destination="acN-g0-OZq" id="ZGP-nM-2d3"/>
+                <outlet property="containerView" destination="ngP-7j-vCH" id="aKN-ah-bFK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="pV9-ga-t5r"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

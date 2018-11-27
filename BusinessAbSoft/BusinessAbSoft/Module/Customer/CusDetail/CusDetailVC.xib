@@ -16,6 +16,7 @@
                 <outlet property="cusMailLB" destination="bTI-da-B3b" id="3Jt-5T-sMa"/>
                 <outlet property="cusNameLB" destination="a6F-Ax-hwO" id="wY0-bv-f2S"/>
                 <outlet property="cusPhoneLB" destination="ter-ez-752" id="2A7-Fd-jOQ"/>
+                <outlet property="detailView" destination="euk-M4-y55" id="OPq-xz-eff"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

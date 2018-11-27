@@ -13,18 +13,20 @@ import NVActivityIndicatorView
 
 let TYPE_VIEW_PRICE = 1
 let TYPE_VIEW_CONTRACT = 2
-let TYPE_VIEW_HOME = 3
+let TYPE_VIEW_ORDER = 3
+let TYPE_VIEW_HOME = 4
 
-class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider, ServiceManagerProtocol, NVActivityIndicatorViewable {
+class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider, NVActivityIndicatorViewable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noDataLB: UILabel!
     
     var itemInfo = IndicatorInfo(title: "View")
-    var lstJobWarning:[JobData]?
+    var lstJobWarning:[JobWarningModel] = []
     var refresher:UIRefreshControl?
     var isDataLoaded:Bool?
     var homeService = HomeService()
+    var cusService = CustomerService()
     
     var idCus: String?
     var viewType: Int
@@ -64,12 +66,40 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     @objc func getData() -> Void {
+        
         noDataLB.isHidden = true
         refresher?.beginRefreshing()
         
-        let request:RequestCommon = RequestCommon(Token: ServiceManager.token!)
-        ServiceManager.delegate = self
-        ServiceManager.httpPost(urlString: Constants.GET_JOB_WARNING_UN_MAKE_URL, jsonData: request.toDictionary())
+        if viewType == TYPE_VIEW_HOME {
+            homeService.getJobWarningUnMake() { (listJob, error) in
+                self.refreshUI(listJob: listJob)
+            }
+        } else if viewType == TYPE_VIEW_PRICE {
+            cusService.getTransactions(idCustomer: self.idCus!, businessType: "QUOTATION") { (listJob, error) in
+                self.refreshUI(listJob: listJob)
+            }
+        } else if viewType == TYPE_VIEW_ORDER {
+            cusService.getTransactions(idCustomer: self.idCus!, businessType: "ORDER") { (listJob, error) in
+                self.refreshUI(listJob: listJob)
+            }
+        } else if viewType == TYPE_VIEW_CONTRACT {
+            cusService.getTransactions(idCustomer: self.idCus!, businessType: "CONTRACT") { (listJob, error) in
+                self.refreshUI(listJob: listJob)
+            }
+        }
+    }
+    
+    func refreshUI(listJob: [JobWarningModel]) {
+        if listJob.count > 0  {
+            self.lstJobWarning = listJob
+            self.isDataLoaded = true
+            self.noDataLB.isHidden = true
+        } else {
+            self.noDataLB.isHidden = false
+        }
+        
+        self.tableView.reloadData()
+        self.refresher?.endRefreshing()
     }
     
     // tableview
@@ -77,7 +107,7 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lstJobWarning!.count
+        return lstJobWarning.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 152
@@ -86,11 +116,11 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         let cell = tableView.dequeueReusableCell(withIdentifier: "IndayViewCell") as! IndayViewCell
         
         cell.indexLB.text = String(indexPath.row + 1)
-        cell.cusLB.text = lstJobWarning![indexPath.row].CustomerName == "" ? " " : lstJobWarning![indexPath.row].CustomerName
-        cell.contentLB.text = lstJobWarning![indexPath.row].Content == "" ? " " : lstJobWarning![indexPath.row].Content
-        cell.staffLB.text = lstJobWarning![indexPath.row].UserImplement == "" ? " " : lstJobWarning![indexPath.row].UserImplement
+        cell.cusLB.text = lstJobWarning[indexPath.row].customerName == "" ? " " : lstJobWarning[indexPath.row].customerName
+        cell.contentLB.text = lstJobWarning[indexPath.row].content == "" ? " " : lstJobWarning[indexPath.row].content
+        cell.staffLB.text = lstJobWarning[indexPath.row].userImplement == "" ? " " : lstJobWarning[indexPath.row].userImplement
         
-        let dateString = lstJobWarning![indexPath.row].DateWarning
+        let dateString = lstJobWarning[indexPath.row].dateWarning
         cell.dateLB.text = DateTimeUtils.getDateTimeString(inputString:dateString!, inputFormat:"yyyy-MM-dd'T'HH:mm:ss", outputFormat:"dd/MM/yyyy HH:mm:ss")
         
         return cell
@@ -102,8 +132,8 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         let size = CGSize(width: 32, height: 32)
         self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
         
-        homeService.viewDetailRequest(jobId: lstJobWarning![indexPath.row].JobId!,
-                                      jobType: lstJobWarning![indexPath.row].JobType!) {
+        homeService.viewDetailRequest(jobId: lstJobWarning[indexPath.row].jobId!,
+                                      jobType: lstJobWarning[indexPath.row].jobType!) {
                                         
             (transModel: DetailTransModel?, error: NSError?) in
             
@@ -125,49 +155,12 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         super.didReceiveMemoryWarning()
     }
     
-    func processJobData(data:Any) -> Void {
-        do {
-            let jobs = try JSONDecoder().decode(JobWarningData.self, from: data as! Data)
-            self.lstJobWarning = jobs.LstJobWarning
-            
-            //DispatchQueue.main.async() {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                if (self.lstJobWarning?.count)! > Int(0) {
-                    self.isDataLoaded = true
-                    self.noDataLB.isHidden = true
-                } else {
-                    self.noDataLB.isHidden = false
-                }
-                self.tableView.reloadData()
-                self.refresher?.endRefreshing()
-            }
-        } catch {
-            print(error)
-        }
-    }
-    
     func processViewDetailData(transModel: DetailTransModel?) -> Void {
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
             self.stopAnimating()
             let secondViewController:DetailDealMainVC = DetailDealMainVC()
             secondViewController.detailTransModel = transModel
             self.present(secondViewController, animated: true, completion: nil)
-        }
-    }
-    
-    // Service delegate
-    func didFinishService(data: Any, funcName: String) {
-        if (funcName.elementsEqual(Constants.GET_JOB_WARNING_UN_MAKE_URL)) {
-            self.processJobData(data: data)
-        }
-    }
-    func didErrorService(errString: String, funcName: String) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-            UiUtils.showAlert(title:errString, viewController:self)
-            if (funcName.elementsEqual(Constants.GET_JOB_WARNING_UN_MAKE_URL)) {
-                self.refresher?.endRefreshing()
-            }
         }
     }
 }

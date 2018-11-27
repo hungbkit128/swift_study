@@ -16,10 +16,12 @@ class CusTransDetailVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     var quotesVC:OutOfDateVC?
     var orderVC:OutOfDateVC?
     var contractVC:OutOfDateVC?
+    
+    var cusModel: CustomerModel?
 
     override func viewDidLoad() {
+        initMenuView()
         super.viewDidLoad()
-
     }
     
     func initMenuView() -> Void {
@@ -47,9 +49,9 @@ class CusTransDetailVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        quotesVC = OutOfDateVC(itemInfo: "BÁO GIÁ", viewType: TYPE_VIEW_HOME, idCus: nil)
-        orderVC = OutOfDateVC(itemInfo: "ĐƠN HÀNG", viewType: TYPE_VIEW_HOME, idCus: nil)
-        contractVC = OutOfDateVC(itemInfo: "HỢP ĐỒNG", viewType: TYPE_VIEW_HOME, idCus: nil)
+        quotesVC = OutOfDateVC(itemInfo: "BÁO GIÁ", viewType: TYPE_VIEW_PRICE, idCus: cusModel?.CustomerId)
+        orderVC = OutOfDateVC(itemInfo: "ĐƠN HÀNG", viewType: TYPE_VIEW_ORDER, idCus: cusModel?.CustomerId)
+        contractVC = OutOfDateVC(itemInfo: "HỢP ĐỒNG", viewType: TYPE_VIEW_CONTRACT, idCus: cusModel?.CustomerId)
         return [quotesVC!, orderVC!, contractVC!]
     }
     
