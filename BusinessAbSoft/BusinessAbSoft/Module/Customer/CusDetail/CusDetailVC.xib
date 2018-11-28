@@ -17,6 +17,9 @@
                 <outlet property="cusNameLB" destination="a6F-Ax-hwO" id="wY0-bv-f2S"/>
                 <outlet property="cusPhoneLB" destination="ter-ez-752" id="2A7-Fd-jOQ"/>
                 <outlet property="detailView" destination="euk-M4-y55" id="OPq-xz-eff"/>
+                <outlet property="iconLocalImg" destination="6ag-im-Ta1" id="9lT-HQ-Hlu"/>
+                <outlet property="iconMailImg" destination="gcP-fd-moA" id="9dj-qJ-Bei"/>
+                <outlet property="iconPhoneImg" destination="fhV-3i-rVc" id="xqZ-UG-RuQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,12 +36,12 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" red="0.199118197" green="0.55144143099999998" blue="0.77735430000000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <items>
-                                <navigationItem title="Chọn nhân viên" id="WdQ-EY-lzR">
+                                <navigationItem title="Chi tiết" id="WdQ-EY-lzR">
                                     <barButtonItem key="leftBarButtonItem" image="ic_back" id="g8h-R8-IqY">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" title="Item" image="ic_checked" id="ycz-Je-Yxu">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="-1" id="SQE-s8-PlW"/>
+                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
@@ -57,46 +60,46 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hải Ninh, Hải Hậu, NamĐịnh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-s4-LCu">
-                    <rect key="frame" x="40" y="100.5" width="319" height="17"/>
+                    <rect key="frame" x="42" y="101.5" width="317" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location_on" translatesAutoresizingMaskIntoConstraints="NO" id="6ag-im-Ta1">
-                    <rect key="frame" x="16" y="101" width="16" height="16"/>
+                    <rect key="frame" x="16" y="101" width="18" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="16" id="Aqs-aC-vxW"/>
-                        <constraint firstAttribute="height" constant="16" id="ibc-W1-kLj"/>
+                        <constraint firstAttribute="width" constant="18" id="Aqs-aC-vxW"/>
+                        <constraint firstAttribute="height" constant="18" id="ibc-W1-kLj"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0988 388 933" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ter-ez-752">
-                    <rect key="frame" x="40" y="124.5" width="319" height="17"/>
+                    <rect key="frame" x="42" y="127.5" width="317" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_phone" translatesAutoresizingMaskIntoConstraints="NO" id="fhV-3i-rVc">
-                    <rect key="frame" x="16" y="125" width="16" height="16"/>
+                    <rect key="frame" x="16" y="127" width="18" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="16" id="QiP-NO-EJb"/>
-                        <constraint firstAttribute="width" constant="16" id="yA1-0n-ut5"/>
+                        <constraint firstAttribute="height" constant="18" id="QiP-NO-EJb"/>
+                        <constraint firstAttribute="width" constant="18" id="yA1-0n-ut5"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hungbkit128" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTI-da-B3b">
-                    <rect key="frame" x="40" y="148.5" width="319" height="17"/>
+                    <rect key="frame" x="42" y="153.5" width="317" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sync" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-fd-moA">
-                    <rect key="frame" x="16" y="149" width="16" height="16"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-fd-moA">
+                    <rect key="frame" x="16" y="153" width="18" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="16" id="6wR-Fj-uFX"/>
-                        <constraint firstAttribute="height" constant="16" id="C8i-fq-kE0"/>
+                        <constraint firstAttribute="width" constant="18" id="6wR-Fj-uFX"/>
+                        <constraint firstAttribute="height" constant="18" id="C8i-fq-kE0"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euk-M4-y55">
-                    <rect key="frame" x="0.0" y="173.5" width="375" height="493.5"/>
+                    <rect key="frame" x="0.0" y="179.5" width="375" height="487.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
@@ -134,9 +137,8 @@
     </objects>
     <resources>
         <image name="ic_back" width="13" height="21"/>
-        <image name="ic_checked" width="24" height="24"/>
+        <image name="ic_email" width="24" height="24"/>
         <image name="ic_location_on" width="24" height="24"/>
         <image name="ic_phone" width="24" height="24"/>
-        <image name="ic_sync" width="24" height="24"/>
     </resources>
 </document>

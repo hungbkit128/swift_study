@@ -27,7 +27,7 @@ class IndayViewCell: UITableViewCell {
         
         super.awakeFromNib()
         
-        let color = ColorManager.getRandomColor()
+        let color = ColorManager.mainColor
         
         cusIconIMV.image = cusIconIMV.image!.withRenderingMode(.alwaysTemplate)
         contentIconIM.image = contentIconIM.image!.withRenderingMode(.alwaysTemplate)

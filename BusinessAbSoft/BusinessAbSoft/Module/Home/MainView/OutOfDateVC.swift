@@ -115,7 +115,7 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IndayViewCell") as! IndayViewCell
         
-        cell.indexLB.text = String(indexPath.row + 1)
+        cell.indexLB.text = lstJobWarning[indexPath.row].jobId
         cell.cusLB.text = lstJobWarning[indexPath.row].customerName == "" ? " " : lstJobWarning[indexPath.row].customerName
         cell.contentLB.text = lstJobWarning[indexPath.row].content == "" ? " " : lstJobWarning[indexPath.row].content
         cell.staffLB.text = lstJobWarning[indexPath.row].userImplement == "" ? " " : lstJobWarning[indexPath.row].userImplement

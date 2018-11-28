@@ -16,6 +16,12 @@
 		4966A12321AD220C00CE8427 /* CusTransDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A12121AD220C00CE8427 /* CusTransDetailVC.swift */; };
 		4966A12421AD220C00CE8427 /* CusTransDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4966A12221AD220C00CE8427 /* CusTransDetailVC.xib */; };
 		4966A12621AD7CAB00CE8427 /* JobWarningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */; };
+		496769C221AE8744001C927F /* TransMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496769C021AE8744001C927F /* TransMainVC.swift */; };
+		496769C321AE8744001C927F /* TransMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496769C121AE8744001C927F /* TransMainVC.xib */; };
+		496769C621AE875C001C927F /* TransContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496769C421AE875C001C927F /* TransContentVC.swift */; };
+		496769C721AE875C001C927F /* TransContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496769C521AE875C001C927F /* TransContentVC.xib */; };
+		496769CA21AE8778001C927F /* TransHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496769C821AE8778001C927F /* TransHistoryVC.swift */; };
+		496769CB21AE8778001C927F /* TransHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496769C921AE8778001C927F /* TransHistoryVC.xib */; };
 		499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */; };
 		499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */; };
 		499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F53218BF2C100B2E2E0 /* URLExtension.swift */; };
@@ -167,6 +173,12 @@
 		4966A12121AD220C00CE8427 /* CusTransDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusTransDetailVC.swift; sourceTree = "<group>"; };
 		4966A12221AD220C00CE8427 /* CusTransDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CusTransDetailVC.xib; sourceTree = "<group>"; };
 		4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobWarningModel.swift; sourceTree = "<group>"; };
+		496769C021AE8744001C927F /* TransMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransMainVC.swift; sourceTree = "<group>"; };
+		496769C121AE8744001C927F /* TransMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransMainVC.xib; sourceTree = "<group>"; };
+		496769C421AE875C001C927F /* TransContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransContentVC.swift; sourceTree = "<group>"; };
+		496769C521AE875C001C927F /* TransContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransContentVC.xib; sourceTree = "<group>"; };
+		496769C821AE8778001C927F /* TransHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryVC.swift; sourceTree = "<group>"; };
+		496769C921AE8778001C927F /* TransHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransHistoryVC.xib; sourceTree = "<group>"; };
 		499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
 		499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
 		499E2F53218BF2C100B2E2E0 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -335,6 +347,19 @@
 			path = ChoseAccView;
 			sourceTree = "<group>";
 		};
+		496769BF21AE86FA001C927F /* TransView */ = {
+			isa = PBXGroup;
+			children = (
+				496769C021AE8744001C927F /* TransMainVC.swift */,
+				496769C121AE8744001C927F /* TransMainVC.xib */,
+				496769C421AE875C001C927F /* TransContentVC.swift */,
+				496769C521AE875C001C927F /* TransContentVC.xib */,
+				496769C821AE8778001C927F /* TransHistoryVC.swift */,
+				496769C921AE8778001C927F /* TransHistoryVC.xib */,
+			);
+			path = TransView;
+			sourceTree = "<group>";
+		};
 		499E2F4D218BEE0600B2E2E0 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +455,7 @@
 		C00EE5F61FA8D0C3005A3430 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
+				496769BF21AE86FA001C927F /* TransView */,
 				C050B5D321AC661300D1AC88 /* CusDetail */,
 				C02F85CD1FB37D7C0042F07B /* MainView */,
 				C0E6BF4C1FBB81DC00F7E3D9 /* showprice */,
@@ -853,6 +879,7 @@
 				C0333CB621A379AC00BBCF51 /* UserListVC.xib in Resources */,
 				C076438D1FA2AF2500C57B1C /* ABSoftERPVC.xib in Resources */,
 				C02F85BE1FAF62870042F07B /* IndayViewCell.xib in Resources */,
+				496769C321AE8744001C927F /* TransMainVC.xib in Resources */,
 				C0BCA2801F899E0600F62316 /* LaunchScreen.storyboard in Resources */,
 				C0E6BF4B1FBB7BC200F7E3D9 /* AttachFileDealVC.xib in Resources */,
 				C0DC56301FBF891200787FBF /* ReportTypeDetailVC.xib in Resources */,
@@ -862,6 +889,7 @@
 				C02F85C81FB3717D0042F07B /* CustomerVC.xib in Resources */,
 				493B15A021A565A600B1377F /* AccountCell.xib in Resources */,
 				C050B5D721AC666000D1AC88 /* CusDetailVC.xib in Resources */,
+				496769CB21AE8778001C927F /* TransHistoryVC.xib in Resources */,
 				C0BCA27D1F899E0600F62316 /* Assets.xcassets in Resources */,
 				C0E6BF471FBB7B5E00F7E3D9 /* ProductDealVC.xib in Resources */,
 				C02F85BA1FAE99430042F07B /* ERPMainContentVC.xib in Resources */,
@@ -876,6 +904,7 @@
 				C0E6BF3F1FBB7ADA00F7E3D9 /* DetailDealMainVC.xib in Resources */,
 				C02F85CC1FB372DF0042F07B /* CustomerTBCell.xib in Resources */,
 				C0E6BF431FBB7B3D00F7E3D9 /* ContentDealVC.xib in Resources */,
+				496769C721AE875C001C927F /* TransContentVC.xib in Resources */,
 				C0E6BF2E1FBA043E00F7E3D9 /* MainDealVC.xib in Resources */,
 				C013D2B221939D6300021DF3 /* ScreenRegisterVC.xib in Resources */,
 				C0E6BF541FBB828F00F7E3D9 /* ContentShowPriceVC.xib in Resources */,
@@ -997,11 +1026,13 @@
 				493B159F21A565A600B1377F /* AccountCell.swift in Sources */,
 				49A985FF21A3B93A001A9A43 /* AppEnum.swift in Sources */,
 				49A985F721A3B5E7001A9A43 /* ProductHeaderView.swift in Sources */,
+				496769CA21AE8778001C927F /* TransHistoryVC.swift in Sources */,
 				C07643881FA2603000C57B1C /* DeviceModel.swift in Sources */,
 				C0C15C171F9037DB00588A9F /* DataProvider.swift in Sources */,
 				C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */,
 				C02F85C71FB3717D0042F07B /* CustomerVC.swift in Sources */,
 				C0E6BF4F1FBB826400F7E3D9 /* ShowPriceMainVC.swift in Sources */,
+				496769C621AE875C001C927F /* TransContentVC.swift in Sources */,
 				C0333CB521A379AC00BBCF51 /* UserListVC.swift in Sources */,
 				C004C1CF1F8E894D00FB80D9 /* SignupVC.swift in Sources */,
 				C0338B77219B204800BE620B /* AuthenService.swift in Sources */,
@@ -1011,6 +1042,7 @@
 				C050B5D621AC666000D1AC88 /* CusDetailVC.swift in Sources */,
 				C0DC56201FBBBFFE00787FBF /* TransData.swift in Sources */,
 				C013D2B121939D6300021DF3 /* ScreenRegisterVC.swift in Sources */,
+				496769C221AE8744001C927F /* TransMainVC.swift in Sources */,
 				C004C1ED1F8FD12400FB80D9 /* ButtonCell.swift in Sources */,
 				C076438C1FA2AF2500C57B1C /* ABSoftERPVC.swift in Sources */,
 				499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */,
