@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-Uo-q1P">
-                        <rect key="frame" x="4" y="37.5" width="534" height="92"/>
+                        <rect key="frame" x="4" y="37.5" width="506" height="92"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aon-Y6-uY2">
-                                <rect key="frame" x="56" y="0.0" width="470" height="92"/>
+                                <rect key="frame" x="56" y="0.0" width="442" height="92"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q29-ZM-tQf">
-                                        <rect key="frame" x="0.0" y="0.0" width="470" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="442" height="21"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_assignment_ind_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="Aig-wT-wcA">
                                                 <rect key="frame" x="0.0" y="4" width="18" height="18"/>
@@ -36,7 +35,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xom 9 hai ninh hai hau nam dinh" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ne-Yl-ZLa">
-                                                <rect key="frame" x="26" y="2" width="444" height="17"/>
+                                                <rect key="frame" x="26" y="2" width="416" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -53,7 +52,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyF-Mz-B7y">
-                                        <rect key="frame" x="0.0" y="23" width="470" height="21"/>
+                                        <rect key="frame" x="0.0" y="23" width="442" height="21"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_assignment_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="dwB-r2-GLB">
                                                 <rect key="frame" x="0.0" y="1.5" width="18" height="18"/>
@@ -63,7 +62,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập hàng về" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noo-ft-0qN">
-                                                <rect key="frame" x="26" y="2" width="444" height="17"/>
+                                                <rect key="frame" x="26" y="2" width="416" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -81,7 +80,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3r-RR-02q">
-                                        <rect key="frame" x="0.0" y="44" width="470" height="25"/>
+                                        <rect key="frame" x="0.0" y="44" width="442" height="25"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pan_tool_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="jnA-Ic-lYF">
                                                 <rect key="frame" x="0.0" y="3.5" width="18" height="18"/>
@@ -91,7 +90,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trần Văn Hưng" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-M7-Q1u">
-                                                <rect key="frame" x="26" y="2" width="444" height="21"/>
+                                                <rect key="frame" x="26" y="2" width="416" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -109,7 +108,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gij-Xz-oaf">
-                                        <rect key="frame" x="0.0" y="69" width="470" height="25"/>
+                                        <rect key="frame" x="0.0" y="69" width="442" height="25"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_date_range_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="5pw-YV-b8g">
                                                 <rect key="frame" x="0.0" y="3.5" width="18" height="18"/>
@@ -119,7 +118,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/08/1991" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-mH-tLX">
-                                                <rect key="frame" x="26" y="2" width="444" height="21"/>
+                                                <rect key="frame" x="26" y="2" width="416" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -155,7 +154,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTf-dr-gNT">
-                                <rect key="frame" x="526" y="0.0" width="0.0" height="92"/>
+                                <rect key="frame" x="498" y="0.0" width="0.0" height="92"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="NbM-RB-j07"/>
@@ -202,15 +201,23 @@
                             <constraint firstItem="DQz-ps-SPN" firstAttribute="centerY" secondItem="BE4-Uo-q1P" secondAttribute="centerY" id="yyj-LC-MuT"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_coin" translatesAutoresizingMaskIntoConstraints="NO" id="QFT-49-22Z">
+                        <rect key="frame" x="510" y="71.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="8ye-60-wJs"/>
+                            <constraint firstAttribute="width" constant="24" id="EMJ-en-Wmk"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="BE4-Uo-q1P" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6b2-yY-kvr"/>
-                    <constraint firstAttribute="trailing" secondItem="BE4-Uo-q1P" secondAttribute="trailing" constant="4" id="7HK-4P-GA9"/>
+                    <constraint firstItem="QFT-49-22Z" firstAttribute="leading" secondItem="BE4-Uo-q1P" secondAttribute="trailing" id="FRZ-3R-RtM"/>
+                    <constraint firstItem="QFT-49-22Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="N5j-on-tq2"/>
+                    <constraint firstAttribute="trailing" secondItem="QFT-49-22Z" secondAttribute="trailing" constant="8" id="Z7a-eb-zRq"/>
                     <constraint firstItem="BE4-Uo-q1P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="jjR-5d-x7N"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgNumberIM" destination="yGc-De-Ezt" id="g4K-SR-mgh"/>
                 <outlet property="contentIconIM" destination="dwB-r2-GLB" id="ldQ-FA-eVc"/>
@@ -219,16 +226,18 @@
                 <outlet property="cusLB" destination="4Ne-Yl-ZLa" id="Cm1-g4-mox"/>
                 <outlet property="dateIconIM" destination="5pw-YV-b8g" id="ssP-Bk-gJb"/>
                 <outlet property="dateLB" destination="UeV-mH-tLX" id="T95-9d-dWO"/>
+                <outlet property="iconTypeImg" destination="QFT-49-22Z" id="hT1-YP-Z5n"/>
                 <outlet property="indexLB" destination="qKa-xr-46r" id="LpU-F1-lke"/>
                 <outlet property="staffIconIM" destination="jnA-Ic-lYF" id="xYl-Cb-Iwv"/>
                 <outlet property="staffLB" destination="9h2-M7-Q1u" id="bMF-8R-OLk"/>
             </connections>
-            <point key="canvasLocation" x="49.600000000000001" y="81.409295352323838"/>
+            <point key="canvasLocation" x="49" y="80.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="ic_assignment_18pt" width="18" height="18"/>
         <image name="ic_assignment_ind_18pt" width="18" height="18"/>
+        <image name="ic_coin" width="48" height="48"/>
         <image name="ic_date_range_18pt" width="18" height="18"/>
         <image name="ic_pan_tool_18pt" width="18" height="18"/>
     </resources>
