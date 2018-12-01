@@ -41,6 +41,8 @@
 		49A9860721A40208001A9A43 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860621A40208001A9A43 /* ProductViewModel.swift */; };
 		49A9860A21A41100001A9A43 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9860821A41100001A9A43 /* ProductViewCell.swift */; };
 		49A9860B21A41100001A9A43 /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A9860921A41100001A9A43 /* ProductViewCell.xib */; };
+		49C915D821B23DDA00999554 /* HisTransListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915D621B23DDA00999554 /* HisTransListVC.swift */; };
+		49C915D921B23DDA00999554 /* HisTransListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C915D721B23DDA00999554 /* HisTransListVC.xib */; };
 		4BE6E98A89B81A8FFF9C7B9D /* Pods_BusinessAbSoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7D911E1FF1E66C8CE293CB /* Pods_BusinessAbSoft.framework */; };
 		C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1B51F8E584100FB80D9 /* LoginVC.swift */; };
 		C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004C1B61F8E584100FB80D9 /* LoginVC.xib */; };
@@ -198,6 +200,8 @@
 		49A9860621A40208001A9A43 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		49A9860821A41100001A9A43 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		49A9860921A41100001A9A43 /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
+		49C915D621B23DDA00999554 /* HisTransListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisTransListVC.swift; sourceTree = "<group>"; };
+		49C915D721B23DDA00999554 /* HisTransListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HisTransListVC.xib; sourceTree = "<group>"; };
 		C004C1B51F8E584100FB80D9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C004C1B61F8E584100FB80D9 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		C004C1BA1F8E5A9700FB80D9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
@@ -769,6 +773,8 @@
 				C0E6BF451FBB7B5E00F7E3D9 /* ProductDealVC.xib */,
 				C0E6BF481FBB7BC200F7E3D9 /* AttachFileDealVC.swift */,
 				C0E6BF491FBB7BC200F7E3D9 /* AttachFileDealVC.xib */,
+				49C915D621B23DDA00999554 /* HisTransListVC.swift */,
+				49C915D721B23DDA00999554 /* HisTransListVC.xib */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -915,6 +921,7 @@
 				C02F85B61FAE897D0042F07B /* ERPChartVC.xib in Resources */,
 				C004C1D01F8E894D00FB80D9 /* SignupVC.xib in Resources */,
 				C0BCA27B1F899E0600F62316 /* Main.storyboard in Resources */,
+				49C915D921B23DDA00999554 /* HisTransListVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,6 +1021,7 @@
 				49A9860121A3BA46001A9A43 /* AppExtension.swift in Sources */,
 				C0DC561C1FBBBDEC00787FBF /* SearchHistRequestData.swift in Sources */,
 				C05511251FD1AA4A0093275D /* SettingVC.swift in Sources */,
+				49C915D821B23DDA00999554 /* HisTransListVC.swift in Sources */,
 				C0E6BF4A1FBB7BC200F7E3D9 /* AttachFileDealVC.swift in Sources */,
 				C0BCA2C11F8BDABC00F62316 /* SystemInfoVC.swift in Sources */,
 				C04D8BBB1FC125110091334A /* InitReportTypeRequest.swift in Sources */,

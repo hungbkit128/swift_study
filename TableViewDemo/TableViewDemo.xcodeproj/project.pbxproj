@@ -15,6 +15,8 @@
 		49C915D021B2159300999554 /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915CF21B2159300999554 /* SimpleCell.swift */; };
 		49C915D421B224B100999554 /* AutoHeightRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915D221B224B100999554 /* AutoHeightRowVC.swift */; };
 		49C915D521B224B100999554 /* AutoHeightRowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C915D321B224B100999554 /* AutoHeightRowVC.xib */; };
+		49C915DC21B269A900999554 /* AutoHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915DA21B269A900999554 /* AutoHeightCell.swift */; };
+		49C915DD21B269A900999554 /* AutoHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C915DB21B269A900999554 /* AutoHeightCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		49C915CF21B2159300999554 /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
 		49C915D221B224B100999554 /* AutoHeightRowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHeightRowVC.swift; sourceTree = "<group>"; };
 		49C915D321B224B100999554 /* AutoHeightRowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoHeightRowVC.xib; sourceTree = "<group>"; };
+		49C915DA21B269A900999554 /* AutoHeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHeightCell.swift; sourceTree = "<group>"; };
+		49C915DB21B269A900999554 /* AutoHeightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoHeightCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			children = (
 				49C915D221B224B100999554 /* AutoHeightRowVC.swift */,
 				49C915D321B224B100999554 /* AutoHeightRowVC.xib */,
+				49C915DA21B269A900999554 /* AutoHeightCell.swift */,
+				49C915DB21B269A900999554 /* AutoHeightCell.xib */,
 			);
 			path = AutoHeightRow;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49C915DD21B269A900999554 /* AutoHeightCell.xib in Resources */,
 				49BAE6B021B155A40011F537 /* LaunchScreen.storyboard in Resources */,
 				49BAE6AD21B155A40011F537 /* Assets.xcassets in Resources */,
 				49BAE6AB21B1559C0011F537 /* Main.storyboard in Resources */,
@@ -163,6 +170,7 @@
 			files = (
 				49BAE6A821B1559C0011F537 /* ViewController.swift in Sources */,
 				49BAE6A621B1559C0011F537 /* AppDelegate.swift in Sources */,
+				49C915DC21B269A900999554 /* AutoHeightCell.swift in Sources */,
 				49C915D021B2159300999554 /* SimpleCell.swift in Sources */,
 				49C915D421B224B100999554 /* AutoHeightRowVC.swift in Sources */,
 			);
