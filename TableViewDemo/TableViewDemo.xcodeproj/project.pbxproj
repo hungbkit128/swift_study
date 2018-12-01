@@ -12,6 +12,9 @@
 		49BAE6AB21B1559C0011F537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAE6A921B1559C0011F537 /* Main.storyboard */; };
 		49BAE6AD21B155A40011F537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BAE6AC21B155A40011F537 /* Assets.xcassets */; };
 		49BAE6B021B155A40011F537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAE6AE21B155A40011F537 /* LaunchScreen.storyboard */; };
+		49C915D021B2159300999554 /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915CF21B2159300999554 /* SimpleCell.swift */; };
+		49C915D421B224B100999554 /* AutoHeightRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915D221B224B100999554 /* AutoHeightRowVC.swift */; };
+		49C915D521B224B100999554 /* AutoHeightRowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C915D321B224B100999554 /* AutoHeightRowVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		49BAE6AC21B155A40011F537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BAE6AF21B155A40011F537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BAE6B121B155A40011F537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C915CF21B2159300999554 /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
+		49C915D221B224B100999554 /* AutoHeightRowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoHeightRowVC.swift; sourceTree = "<group>"; };
+		49C915D321B224B100999554 /* AutoHeightRowVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoHeightRowVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		49BAE6A421B1559C0011F537 /* TableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				49C915D121B2246200999554 /* AutoHeightRow */,
+				49C915CE21B2156000999554 /* Simple */,
 				49BAE6A521B1559C0011F537 /* AppDelegate.swift */,
 				49BAE6A721B1559C0011F537 /* ViewController.swift */,
 				49BAE6A921B1559C0011F537 /* Main.storyboard */,
@@ -62,6 +70,23 @@
 				49BAE6B121B155A40011F537 /* Info.plist */,
 			);
 			path = TableViewDemo;
+			sourceTree = "<group>";
+		};
+		49C915CE21B2156000999554 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				49C915CF21B2159300999554 /* SimpleCell.swift */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		49C915D121B2246200999554 /* AutoHeightRow */ = {
+			isa = PBXGroup;
+			children = (
+				49C915D221B224B100999554 /* AutoHeightRowVC.swift */,
+				49C915D321B224B100999554 /* AutoHeightRowVC.xib */,
+			);
+			path = AutoHeightRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +150,7 @@
 				49BAE6B021B155A40011F537 /* LaunchScreen.storyboard in Resources */,
 				49BAE6AD21B155A40011F537 /* Assets.xcassets in Resources */,
 				49BAE6AB21B1559C0011F537 /* Main.storyboard in Resources */,
+				49C915D521B224B100999554 /* AutoHeightRowVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +163,8 @@
 			files = (
 				49BAE6A821B1559C0011F537 /* ViewController.swift in Sources */,
 				49BAE6A621B1559C0011F537 /* AppDelegate.swift in Sources */,
+				49C915D021B2159300999554 /* SimpleCell.swift in Sources */,
+				49C915D421B224B100999554 /* AutoHeightRowVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

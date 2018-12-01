@@ -8,11 +8,16 @@
 
 import UIKit
 
+let AUTO_ROW_HEIGHT = "Auto row height"
+let EXTEND_HEADER_VIEW = "Extend header view"
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var menuTableView: UITableView!
     
-    var menus:[String] = ["Auto height row", "Test 1", "Test 2"]
+    var menus:[String] = [AUTO_ROW_HEIGHT,
+                          EXTEND_HEADER_VIEW,
+                          "Test 1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         menuTableView.dataSource = self
         menuTableView.delegate = self
+        
+        self.navigationItem.title = "Main menu"
+        menuTableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,14 +44,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell")
-        cell?.textLabel?.text = menus[indexPath.row]
-        
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! SimpleCell
+        cell.nameLB.text = menus[indexPath.row]
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //no code
+        let menuContent = menus[indexPath.row]
+        switch menuContent {
+        case AUTO_ROW_HEIGHT:
+            let vc = AutoHeightRowVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case EXTEND_HEADER_VIEW:
+            let vc = AutoHeightRowVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
     }
 }
 
