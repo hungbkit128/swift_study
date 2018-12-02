@@ -11,13 +11,9 @@ import XLPagerTabStrip
 
 class ContentDealVC: UIViewController, IndicatorInfoProvider {
     
-    @IBOutlet weak var tranType: UILabel!
-    @IBOutlet weak var tranStatus: UILabel!
-    @IBOutlet weak var tranId: UILabel!
-    @IBOutlet weak var tranTitle: UILabel!
-    @IBOutlet weak var tranDate: UILabel!
-    @IBOutlet weak var tranNote: UILabel!
     @IBOutlet weak var headTextLB: UILabel!
+    
+    
     
     var itemInfo = IndicatorInfo(title: "View")
     var dataModel: DetailTransModel?
@@ -37,12 +33,12 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         
         self.headTextLB.text = getTextData(dataModel?.transModel?.implementerName)
-        self.tranType.text = getTextData(dataModel?.transModel?.typeName)
-        self.tranStatus.text = getTextData(dataModel?.transModel?.implementName)
-        self.tranId.text = getTextData(dataModel?.transModel?.code)
-        self.tranTitle.text = getTextData(dataModel?.transModel?.subject)
-        self.tranDate.text = getTextData(dataModel?.transModel?.createDate)
-        self.tranNote.text = getTextData(dataModel?.transModel?.note)
+//        self.tranType.text = getTextData(dataModel?.transModel?.typeName)
+//        self.tranStatus.text = getTextData(dataModel?.transModel?.implementName)
+//        self.tranId.text = getTextData(dataModel?.transModel?.code)
+//        self.tranTitle.text = getTextData(dataModel?.transModel?.subject)
+//        self.tranDate.text = getTextData(dataModel?.transModel?.createDate)
+//        self.tranNote.text = getTextData(dataModel?.transModel?.note)
     }
     
     func getTextData(_ text: String?) -> String {

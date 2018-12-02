@@ -11,7 +11,7 @@ import XLPagerTabStrip
 import WYPopoverController
 import NVActivityIndicatorView
 
-class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicatorViewable {
+class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicatorViewable, WYPopoverControllerDelegate {
     
     var contentDealVC:ContentDealVC?
     var productDealVC:ProductDealVC?
@@ -19,6 +19,7 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     var detailTransModel: DetailTransModel?
     
     var homeService:HomeService = HomeService()
+    var popOverVC:WYPopoverController?
     
     override func viewDidLoad() {
         initMenuView()
@@ -32,11 +33,16 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     @IBAction func hisTransTapped(_ sender: UIBarButtonItem) {
         
         let size = CGSize(width: 32, height: 32)
-        self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
+        //self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
         
-        homeService.getTransApproveHistory(completion: { (hisModels, error) in
-            
-        });
+//        homeService.getTransApproveHistory(completion: { (hisModels, error) in
+//
+//        });
+        
+        let vc = HisTransListVC()
+        let cgSize: CGSize = isIphoneApp() ? CGSize(width: 320.0, height: 250.0) : CGSize(width: 400.0, height: 300.0)
+        vc.preferredContentSize = cgSize
+        self.presentPopOverVC(viewController: vc, sender: sender.value(forKey: "view") as? UIView, style: .up)
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,17 +87,41 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     }
     
     func doShowPopoverWithVC(_ vc: UIViewController, from: CGRect, inView: UIView!) {
-//        self.popOverVC = WYPopoverController(contentViewController: vc)
-//        self.popOverVC?.popoverLayoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-//        self.popOverVC?.wantsDefaultContentAppearance = true
-//        self.popOverVC?.delegate = self
-//        let direction = isIphoneApp() ? WYPopoverArrowDirection.none : WYPopoverArrowDirection.up
-//        self.popOverVC?.presentPopover(from: from,
-//                                       in: inView,
-//                                       permittedArrowDirections: direction,
-//                                       animated: true,
-//                                       options: WYPopoverAnimationOptions.fade,
-//                                       completion: {
-//        })
+        
+        let popOverVC = WYPopoverController(contentViewController: vc)
+        popOverVC?.popoverLayoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        popOverVC?.wantsDefaultContentAppearance = true
+        popOverVC?.delegate = self
+        
+        let direction = isIphoneApp() ? WYPopoverArrowDirection.none : WYPopoverArrowDirection.up
+        popOverVC?.presentPopover(from: from,
+                                       in: inView,
+                                       permittedArrowDirections: direction,
+                                       animated: true,
+                                       options: WYPopoverAnimationOptions.fade,
+                                       completion: {
+        })
+    }
+    
+    func presentPopOverVC(viewController: UIViewController!, sender: UIView?, style: WYPopoverArrowDirection) {
+        
+        popOverVC = WYPopoverController(contentViewController: viewController)
+        popOverVC?.popoverLayoutMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        popOverVC?.wantsDefaultContentAppearance = false
+        popOverVC?.delegate = self
+        
+        if let button = sender {
+            popOverVC?.presentPopover(from: button.bounds,
+                                      in: button,
+                                      permittedArrowDirections: style,
+                                      animated: true)
+        } else {
+            popOverVC?.presentPopoverAsDialog(animated: true)
+        }
+    }
+    
+    func popoverControllerDidDismissPopover(_ popoverController: WYPopoverController!) {
+        self.popOverVC?.delegate = nil
+        self.popOverVC = nil
     }
 }

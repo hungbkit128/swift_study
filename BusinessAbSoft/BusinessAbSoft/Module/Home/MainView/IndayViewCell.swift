@@ -10,6 +10,7 @@ import UIKit
 
 class IndayViewCell: UITableViewCell {
     
+    @IBOutlet weak var iconTypeImg: UIImageView!
     @IBOutlet weak var dateIconIM: UIImageView!
     @IBOutlet weak var staffIconIM: UIImageView!
     @IBOutlet weak var contentIconIM: UIImageView!
