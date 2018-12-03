@@ -30,11 +30,13 @@ class IndayViewCell: UITableViewCell {
         
         let color = ColorManager.mainColor
         
+        iconTypeImg.image = iconTypeImg.image!.withRenderingMode(.alwaysTemplate)
         cusIconIMV.image = cusIconIMV.image!.withRenderingMode(.alwaysTemplate)
         contentIconIM.image = contentIconIM.image!.withRenderingMode(.alwaysTemplate)
         staffIconIM.image = staffIconIM.image!.withRenderingMode(.alwaysTemplate)
         dateIconIM.image = dateIconIM.image!.withRenderingMode(.alwaysTemplate)
         
+        iconTypeImg.tintColor = color
         cusIconIMV.tintColor = color
         contentIconIM.tintColor = color
         staffIconIM.tintColor = color
@@ -45,8 +47,27 @@ class IndayViewCell: UITableViewCell {
         bgNumberIM.layer.cornerRadius = 16
         bgNumberIM.layer.masksToBounds = false
         bgNumberIM.clipsToBounds = true
-        
         bgNumberIM.backgroundColor = color
+    }
+    
+    func bindData(_ model: JobWarningModel) {
+        self.indexLB.text = model.jobId
+        self.cusLB.text = model.customerName == "" ? " " : model.customerName
+        self.contentLB.text = model.content == "" ? " " : model.content
+        self.staffLB.text = model.userImplement == "" ? " " : model.userImplement
+        let dateString = model.dateWarning
+        self.dateLB.text = DateTimeUtils.getDateTimeString(inputString:dateString!, inputFormat:"yyyy-MM-dd'T'HH:mm:ss", outputFormat:"dd/MM/yyyy HH:mm:ss")
+        
+        if model.jobType == "HD" {
+            iconTypeImg.image = UIImage(named: "ic_certificate")
+        } else if model.jobType == "DH" {
+            iconTypeImg.image = UIImage(named: "ic_contract")
+        } else {
+            iconTypeImg.image = UIImage(named: "ic_coin")
+        }
+        
+        iconTypeImg.image = iconTypeImg.image!.withRenderingMode(.alwaysTemplate)
+        iconTypeImg.tintColor = ColorManager.mainColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

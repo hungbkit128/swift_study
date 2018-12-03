@@ -95,6 +95,20 @@ class APIRequestProvider: NSObject {
                                         headers: headers)
     }
     
+    // getWarningInDay
+    func getWarningInDay() -> DataRequest {
+        let urlString = businessURL.appending(Constants.GET_WARNING_IN_DAY_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
     // getJobWarningUnMake
     func getJobWarningUnMake() -> DataRequest {
         let urlString = businessURL.appending(Constants.GET_JOB_WARNING_UN_MAKE_URL)

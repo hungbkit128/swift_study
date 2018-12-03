@@ -72,7 +72,6 @@
 		C02F85BD1FAF62870042F07B /* IndayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85BB1FAF62870042F07B /* IndayViewCell.swift */; };
 		C02F85BE1FAF62870042F07B /* IndayViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85BC1FAF62870042F07B /* IndayViewCell.xib */; };
 		C02F85C01FB121810042F07B /* LoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85BF1FB121810042F07B /* LoginResponseData.swift */; };
-		C02F85C41FB34F8B0042F07B /* JobWarningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85C31FB34F8B0042F07B /* JobWarningData.swift */; };
 		C02F85C71FB3717D0042F07B /* CustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85C51FB3717D0042F07B /* CustomerVC.swift */; };
 		C02F85C81FB3717D0042F07B /* CustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C02F85C61FB3717D0042F07B /* CustomerVC.xib */; };
 		C02F85CB1FB372DF0042F07B /* CustomerTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F85C91FB372DF0042F07B /* CustomerTBCell.swift */; };
@@ -230,7 +229,6 @@
 		C02F85BB1FAF62870042F07B /* IndayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndayViewCell.swift; sourceTree = "<group>"; };
 		C02F85BC1FAF62870042F07B /* IndayViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndayViewCell.xib; sourceTree = "<group>"; };
 		C02F85BF1FB121810042F07B /* LoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseData.swift; sourceTree = "<group>"; };
-		C02F85C31FB34F8B0042F07B /* JobWarningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobWarningData.swift; sourceTree = "<group>"; };
 		C02F85C51FB3717D0042F07B /* CustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerVC.swift; sourceTree = "<group>"; };
 		C02F85C61FB3717D0042F07B /* CustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerVC.xib; sourceTree = "<group>"; };
 		C02F85C91FB372DF0042F07B /* CustomerTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTBCell.swift; sourceTree = "<group>"; };
@@ -605,7 +603,6 @@
 				C016A4A0219C7F9F004D3D3F /* HomeService.swift */,
 				C016A4A2219C848D004D3D3F /* DetailTransModel.swift */,
 				49A9860421A3BE4F001A9A43 /* TransModel.swift */,
-				C02F85C31FB34F8B0042F07B /* JobWarningData.swift */,
 				C04D8BBE1FC4E29F0091334A /* ViewDetailRequestData.swift */,
 				49A985FA21A3B76E001A9A43 /* ProductModel.swift */,
 				49A9860221A3BB09001A9A43 /* AttackFileModel.swift */,
@@ -1003,7 +1000,6 @@
 				C016A49B219C641D004D3D3F /* DataManager.swift in Sources */,
 				C0C15C641F950E0200588A9F /* Constants.swift in Sources */,
 				C0E6BF351FBA047500F7E3D9 /* HistDealVC.swift in Sources */,
-				C02F85C41FB34F8B0042F07B /* JobWarningData.swift in Sources */,
 				C004C1C11F8E5E9B00FB80D9 /* DateTimeUtils.swift in Sources */,
 				499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */,
 				C0DC562F1FBF891200787FBF /* ReportTypeDetailVC.swift in Sources */,

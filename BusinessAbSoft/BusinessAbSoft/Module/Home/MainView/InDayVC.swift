@@ -9,15 +9,18 @@
 import UIKit
 import XLPagerTabStrip
 
-class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider, ServiceManagerProtocol {
+class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider {
     
     @IBOutlet weak var noDataLB: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var lstJobWarning:[JobData]?
+    
     var itemInfo = IndicatorInfo(title: "View")
     var refresher:UIRefreshControl?
     var isDataLoaded:Bool?
+    
+    var homeService:HomeService = HomeService()
+    var lstJobWarning:[JobWarningModel] = []
     
     init(itemInfo: IndicatorInfo) {
         self.itemInfo = itemInfo
@@ -63,9 +66,26 @@ class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Ind
         refresher?.layoutIfNeeded()
         refresher?.beginRefreshing()
         
-        let inDayRequest:RequestCommon = RequestCommon(Token: ServiceManager.token!)
-        ServiceManager.delegate = self
-        ServiceManager.httpPost(urlString: Constants.GET_WARNING_IN_DAY_URL, jsonData: inDayRequest.toDictionary())
+        homeService.getWarningInDay { (listModel, error) in
+            if error == nil {
+                self.lstJobWarning = listModel
+                DispatchQueue.main.async() {
+                    if self.lstJobWarning.count > 0 {
+                        self.isDataLoaded = true
+                        self.noDataLB.isHidden = true
+                    } else {
+                        self.noDataLB.isHidden = false
+                    }
+                    self.tableView.reloadData()
+                    self.refresher?.endRefreshing()
+                }
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+                    UiUtils.showAlert(title:(error?.localizedDescription)!, viewController:self)
+                    self.refresher?.endRefreshing()
+                }
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,21 +93,15 @@ class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Ind
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let model = lstJobWarning[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "IndayViewCell") as! IndayViewCell
-        
-        cell.indexLB.text = String(indexPath.row + 1)
-        cell.cusLB.text = lstJobWarning![indexPath.row].CustomerName == "" ? " " : lstJobWarning![indexPath.row].CustomerName
-        cell.contentLB.text = lstJobWarning![indexPath.row].Content == "" ? " " : lstJobWarning![indexPath.row].Content
-        cell.staffLB.text = lstJobWarning![indexPath.row].UserImplement == "" ? " " : lstJobWarning![indexPath.row].UserImplement
-        
-        let dateString = lstJobWarning![indexPath.row].DateWarning
-        cell.dateLB.text = DateTimeUtils.getDateTimeString(inputString:dateString!, inputFormat:"yyyy-MM-dd'T'HH:mm:ss", outputFormat:"dd/MM/yyyy HH:mm:ss")
-        
+        cell.bindData(model)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lstJobWarning!.count
+        return lstJobWarning.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -108,34 +122,5 @@ class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Ind
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    // Service delegate
-    func didFinishService(data: Any, funcName: String) {
-        do {
-            let jobs = try JSONDecoder().decode(JobWarningData.self, from: data as! Data)
-            self.lstJobWarning = jobs.LstJobWarning
-            
-            DispatchQueue.main.async() {
-            //DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                if (self.lstJobWarning?.count)! > Int(0) {
-                    self.isDataLoaded = true
-                    self.noDataLB.isHidden = true
-                } else {
-                    self.noDataLB.isHidden = false
-                }
-                self.tableView.reloadData()
-                self.refresher?.endRefreshing()
-            }
-        } catch {
-            print(error)
-        }
-    }
-    
-    func didErrorService(errString: String, funcName: String) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-            UiUtils.showAlert(title:errString, viewController:self)
-            self.refresher?.endRefreshing()
-        }
     }
 }

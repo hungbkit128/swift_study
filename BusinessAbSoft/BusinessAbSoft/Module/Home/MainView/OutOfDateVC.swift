@@ -106,23 +106,19 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lstJobWarning.count
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 152
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = lstJobWarning[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "IndayViewCell") as! IndayViewCell
-        
-        cell.indexLB.text = lstJobWarning[indexPath.row].jobId
-        cell.cusLB.text = lstJobWarning[indexPath.row].customerName == "" ? " " : lstJobWarning[indexPath.row].customerName
-        cell.contentLB.text = lstJobWarning[indexPath.row].content == "" ? " " : lstJobWarning[indexPath.row].content
-        cell.staffLB.text = lstJobWarning[indexPath.row].userImplement == "" ? " " : lstJobWarning[indexPath.row].userImplement
-        
-        let dateString = lstJobWarning[indexPath.row].dateWarning
-        cell.dateLB.text = DateTimeUtils.getDateTimeString(inputString:dateString!, inputFormat:"yyyy-MM-dd'T'HH:mm:ss", outputFormat:"dd/MM/yyyy HH:mm:ss")
-        
+        cell.bindData(model)
         return cell
     }
     

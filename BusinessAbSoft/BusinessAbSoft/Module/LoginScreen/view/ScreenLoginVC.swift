@@ -43,6 +43,8 @@ class ScreenLoginVC: UIViewController, IndicatorInfoProvider, NVActivityIndicato
         UiUtils.applySkyscannerThemeWithIcon(textField: userNameTF)
         pwdTF.iconText = "\u{f13e}"
         userNameTF.iconText = "\u{f007}"
+        
+        userNameTF.text = "lanhdao"
     }
 
     @IBAction func loginBTAction(_ sender: Any) {
