@@ -11,7 +11,22 @@ import SwiftyJSON
 
 class AuthenService: APIServiceAgent {
     
-    
+    func registerRequest(companyName: String,
+                        custName: String,
+                        email: String,
+                        isdn: String,
+                        completion: @escaping((NSError?) -> Void)) {
+        
+        if let request = APIRequestProvider.shareInstance?.registerRequest(companyName: companyName,
+                                                                           custName: custName,
+                                                                           email: email,
+                                                                           isdn: isdn) {
+            
+            self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
+                completion(error)
+            }
+        }
+    }
     
     func loginRequest(username: String,
                       password: String,

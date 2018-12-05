@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491CC27521B7D3DC00EDC84B /* ApproveTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CC27421B7D3DC00EDC84B /* ApproveTypeModel.swift */; };
 		4933585121ABFC3800C036FF /* ApproveHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */; };
 		493B159721A54BED00B1377F /* AccountApproveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159621A54BED00B1377F /* AccountApproveModel.swift */; };
 		493B159B21A5656800B1377F /* ChoseAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B159921A5656800B1377F /* ChoseAccountVC.swift */; };
@@ -165,6 +166,7 @@
 
 /* Begin PBXFileReference section */
 		2D139F1BA88957AEE43C4530 /* Pods-BusinessAbSoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessAbSoft.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessAbSoft/Pods-BusinessAbSoft.release.xcconfig"; sourceTree = "<group>"; };
+		491CC27421B7D3DC00EDC84B /* ApproveTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTypeModel.swift; sourceTree = "<group>"; };
 		4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveHistoryModel.swift; sourceTree = "<group>"; };
 		493B159621A54BED00B1377F /* AccountApproveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountApproveModel.swift; sourceTree = "<group>"; };
 		493B159921A5656800B1377F /* ChoseAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseAccountVC.swift; sourceTree = "<group>"; };
@@ -338,6 +340,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491CC27221B7C2E100EDC84B /* AttackFileView */ = {
+			isa = PBXGroup;
+			children = (
+				C0E6BF481FBB7BC200F7E3D9 /* AttachFileDealVC.swift */,
+				C0E6BF491FBB7BC200F7E3D9 /* AttachFileDealVC.xib */,
+			);
+			path = AttackFileView;
+			sourceTree = "<group>";
+		};
+		491CC27321B7C38B00EDC84B /* HisTransView */ = {
+			isa = PBXGroup;
+			children = (
+				49C915D621B23DDA00999554 /* HisTransListVC.swift */,
+				49C915D721B23DDA00999554 /* HisTransListVC.xib */,
+			);
+			path = HisTransView;
+			sourceTree = "<group>";
+		};
 		493B159821A5652800B1377F /* ChoseAccView */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +415,8 @@
 		49A985F521A3B54B001A9A43 /* ProductView */ = {
 			isa = PBXGroup;
 			children = (
+				C0E6BF441FBB7B5E00F7E3D9 /* ProductDealVC.swift */,
+				C0E6BF451FBB7B5E00F7E3D9 /* ProductDealVC.xib */,
 				49A985F621A3B5E7001A9A43 /* ProductHeaderView.swift */,
 				49A985F821A3B5FE001A9A43 /* ProductHeaderView.xib */,
 				49A9860821A41100001A9A43 /* ProductViewCell.swift */,
@@ -569,7 +591,6 @@
 			isa = PBXGroup;
 			children = (
 				493B159821A5652800B1377F /* ChoseAccView */,
-				49A985F521A3B54B001A9A43 /* ProductView */,
 				C07643961FA2AFDF00C57B1C /* MainView */,
 				C0E6BF3B1FBB7A7900F7E3D9 /* DetailView */,
 				C0333CB221A378B400BBCF51 /* ApproveTrans */,
@@ -610,6 +631,7 @@
 				493B159621A54BED00B1377F /* AccountApproveModel.swift */,
 				4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */,
 				4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */,
+				491CC27421B7D3DC00EDC84B /* ApproveTypeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -762,16 +784,13 @@
 		C0E6BF3B1FBB7A7900F7E3D9 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				49A985F521A3B54B001A9A43 /* ProductView */,
+				491CC27221B7C2E100EDC84B /* AttackFileView */,
+				491CC27321B7C38B00EDC84B /* HisTransView */,
 				C0E6BF3C1FBB7ADA00F7E3D9 /* DetailDealMainVC.swift */,
 				C0E6BF3D1FBB7ADA00F7E3D9 /* DetailDealMainVC.xib */,
 				C0E6BF401FBB7B3D00F7E3D9 /* ContentDealVC.swift */,
 				C0E6BF411FBB7B3D00F7E3D9 /* ContentDealVC.xib */,
-				C0E6BF441FBB7B5E00F7E3D9 /* ProductDealVC.swift */,
-				C0E6BF451FBB7B5E00F7E3D9 /* ProductDealVC.xib */,
-				C0E6BF481FBB7BC200F7E3D9 /* AttachFileDealVC.swift */,
-				C0E6BF491FBB7BC200F7E3D9 /* AttachFileDealVC.xib */,
-				49C915D621B23DDA00999554 /* HisTransListVC.swift */,
-				49C915D721B23DDA00999554 /* HisTransListVC.xib */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -1049,6 +1068,7 @@
 				496769C221AE8744001C927F /* TransMainVC.swift in Sources */,
 				C004C1ED1F8FD12400FB80D9 /* ButtonCell.swift in Sources */,
 				C076438C1FA2AF2500C57B1C /* ABSoftERPVC.swift in Sources */,
+				491CC27521B7D3DC00EDC84B /* ApproveTypeModel.swift in Sources */,
 				499E2F5E218C2FA700B2E2E0 /* LoginMainVC.swift in Sources */,
 				493B159721A54BED00B1377F /* AccountApproveModel.swift in Sources */,
 				C0BCA2761F899E0600F62316 /* AppDelegate.swift in Sources */,

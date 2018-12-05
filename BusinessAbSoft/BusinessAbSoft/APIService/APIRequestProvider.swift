@@ -64,6 +64,29 @@ class APIRequestProvider: NSObject {
         shareInstance = APIRequestProvider()
     }
     
+    // register
+    func registerRequest(companyName: String,
+                         custName: String,
+                         email: String,
+                         isdn: String) -> DataRequest {
+        let urlString = privateURL.appending(Constants.REGISTER_URL)
+        
+        var param = [String: Any]()
+        param["CompanyName"] = companyName
+        param["CustName"] = custName
+        param["Email"] = email
+        param["Isdn"] = isdn
+        param["Model"] = UIDevice.current.modelName
+        param["Imei"] = UIDevice.current.identifierForVendor?.uuidString ?? ""
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
+    // login
     func loginRequest(username: String, password: String) -> DataRequest {
         let urlString = privateURL.appending(Constants.LOGIN_URL)
         

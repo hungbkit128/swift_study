@@ -10,7 +10,7 @@ import UIKit
 import ActionSheetPicker_3_0
 import NVActivityIndicatorView
 
-class ApprovedTransVC: UIViewController {
+class ApprovedTransVC: UIViewController, NVActivityIndicatorViewable {
     
     
     @IBOutlet weak var approveTypeBT: UIButton!
@@ -19,12 +19,25 @@ class ApprovedTransVC: UIViewController {
     @IBOutlet weak var numberUserLB: UILabel!
     
     var selectAccVC:ChoseAccountVC!
+    var homeService: HomeService = HomeService()
+    var lstApproveType:[ApproveTypeModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.selectAccVC = ChoseAccountVC()
+        
+        let size = CGSize(width: 32, height: 32)
+        self.startAnimating(size, message: "Đang lấy dữ liệu...", type: NVActivityIndicatorType(rawValue: 2)!)
+        self.homeService.getApproveType { (models, error) in
+            self.stopAnimating()
+            if error == nil {
+                self.lstApproveType = models
+            } else {
+                UiUtils.showAlert(title:(error?.localizedDescription)!, viewController:self)
+            }
+        }
     }
 
 

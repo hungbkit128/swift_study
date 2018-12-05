@@ -76,15 +76,15 @@ class HomeService: APIServiceAgent {
     }
     
     // getApproveType
-    func getApproveType(completion: @escaping([AccountApproveModel], NSError?) -> Void) {
+    func getApproveType(completion: @escaping([ApproveTypeModel], NSError?) -> Void) {
         if let request = APIRequestProvider.shareInstance?.getApproveType() {
             self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
-                var accModels = [AccountApproveModel]()
-                for (_, subJson) in json {
-                    let model = AccountApproveModel(subJson)
-                    accModels.append(model)
+                var typeModels = [ApproveTypeModel]()
+                for (_, subJson) in json["LstApproveType"] {
+                    let model = ApproveTypeModel(subJson)
+                    typeModels.append(model)
                 }
-                completion(accModels, error)
+                completion(typeModels, error)
             }
         }
     }

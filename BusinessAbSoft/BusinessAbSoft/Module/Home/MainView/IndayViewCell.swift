@@ -52,9 +52,9 @@ class IndayViewCell: UITableViewCell {
     
     func bindData(_ model: JobWarningModel) {
         self.indexLB.text = model.jobId
-        self.cusLB.text = model.customerName == "" ? " " : model.customerName
-        self.contentLB.text = model.content == "" ? " " : model.content
-        self.staffLB.text = model.userImplement == "" ? " " : model.userImplement
+        self.cusLB.text = model.customerName == "" ? "Không có thông tin" : model.customerName
+        self.contentLB.text = model.content == "" ? "Không có thông tin" : model.content
+        self.staffLB.text = model.userImplement == "" ? "Không có thông tin" : model.userImplement
         let dateString = model.dateWarning
         self.dateLB.text = DateTimeUtils.getDateTimeString(inputString:dateString!, inputFormat:"yyyy-MM-dd'T'HH:mm:ss", outputFormat:"dd/MM/yyyy HH:mm:ss")
         

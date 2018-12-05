@@ -74,7 +74,7 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", detailTransModel: detailTransModel)
+        contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", detailTransModel: detailTransModel, enableEdit: false)
         productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM", detailTransModel: detailTransModel)
         attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM", detailTransModel: detailTransModel)
         return [contentDealVC!, productDealVC!, attachFileDealVC!]

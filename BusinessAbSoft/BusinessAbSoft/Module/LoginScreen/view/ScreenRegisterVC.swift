@@ -12,7 +12,7 @@ import SkyFloatingLabelTextField
 import NVActivityIndicatorView
 import SwiftCop
 
-class ScreenRegisterVC: UIViewController, IndicatorInfoProvider, ServiceManagerProtocol, NVActivityIndicatorViewable {
+class ScreenRegisterVC: UIViewController, IndicatorInfoProvider, NVActivityIndicatorViewable {
     
     @IBOutlet weak var fullNameTF: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var emailTF: SkyFloatingLabelTextFieldWithIcon!
@@ -22,6 +22,7 @@ class ScreenRegisterVC: UIViewController, IndicatorInfoProvider, ServiceManagerP
     
     let swiftCop = SwiftCop()
     var itemInfo = IndicatorInfo(title: "View")
+    var authenService: AuthenService = AuthenService()
     
     init(itemInfo: IndicatorInfo) {
         self.itemInfo = itemInfo
@@ -85,8 +86,17 @@ class ScreenRegisterVC: UIViewController, IndicatorInfoProvider, ServiceManagerP
         let size = CGSize(width: 30, height: 30)
         self.startAnimating(size, message: "Đang thực hiện đăng ký...", type: NVActivityIndicatorType(rawValue: 2)!)
         
-        ServiceManager.delegate = self
-        ServiceManager.httpPost(urlString: Constants.REGISTER_URL, jsonData: jsonData)
+        authenService.registerRequest(companyName: companyNameTF.text ?? "",
+                                      custName: fullNameTF.text ?? "",
+                                      email: emailTF.text ?? "",
+                                      isdn: phoneTF.text ?? "") { (error) in
+            self.stopAnimating()
+            if error == nil {
+                self.showAlert("Đăng ký thành công!")
+            } else {
+                self.showAlert(error?.description ?? "")
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,29 +113,5 @@ class ScreenRegisterVC: UIViewController, IndicatorInfoProvider, ServiceManagerP
     // MARK: - IndicatorInfoProvider
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
-    }
-
-    // MARK: - ServiceManagerProtocol
-    func didFinishService(data: Any, funcName: String) {
-        DispatchQueue.main.async() {
-            self.stopAnimating()
-            do {
-                let regResponse = try JSONDecoder().decode(RegisterResponseData.self, from: data as! Data)
-                if "1" == regResponse.ErrorCode {
-                    self.showAlert("Đăng ký thành công!")
-                } else {
-                    self.showAlert(regResponse.Description!)
-                }
-            } catch {
-                print(error)
-            }
-        }
-    }
-    
-    func didErrorService(errString: String, funcName: String) {
-        DispatchQueue.main.async() {
-            self.stopAnimating()
-            UiUtils.showAlert(title: errString, viewController: self)
-        }
     }
 }
