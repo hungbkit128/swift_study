@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HisTransListVC" customModule="BusinessAbSoft" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="nyk-Qf-fed" id="Fe7-Q9-uE1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,18 +21,41 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nyk-Qf-fed">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="41" width="375" height="626"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lịch sử phê duyệt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-xT-gvQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nZC-ft-vwu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma4-Wc-MJc">
+                    <rect key="frame" x="0.0" y="40" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="cT0-cW-mWt"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="nyk-Qf-fed" firstAttribute="top" secondItem="Ma4-Wc-MJc" secondAttribute="bottom" id="0It-MY-pnw"/>
                 <constraint firstAttribute="trailing" secondItem="nyk-Qf-fed" secondAttribute="trailing" id="1iw-Fw-vLg"/>
+                <constraint firstItem="Ma4-Wc-MJc" firstAttribute="top" secondItem="Heb-xT-gvQ" secondAttribute="bottom" id="7OZ-iQ-iDB"/>
+                <constraint firstItem="Heb-xT-gvQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="K5D-tA-Z6u"/>
                 <constraint firstItem="nyk-Qf-fed" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OWo-iY-sbk"/>
-                <constraint firstItem="nyk-Qf-fed" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dtn-Jp-SM5"/>
                 <constraint firstAttribute="bottom" secondItem="nyk-Qf-fed" secondAttribute="bottom" id="gVG-L0-n8g"/>
+                <constraint firstItem="Heb-xT-gvQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jRa-P9-1Tc"/>
+                <constraint firstAttribute="trailing" secondItem="Ma4-Wc-MJc" secondAttribute="trailing" id="jxJ-G2-AoN"/>
+                <constraint firstAttribute="trailing" secondItem="Heb-xT-gvQ" secondAttribute="trailing" id="nVI-ny-Akl"/>
+                <constraint firstItem="Ma4-Wc-MJc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="weH-Nb-0eU"/>
             </constraints>
-            <point key="canvasLocation" x="32.5" y="80.5"/>
+            <point key="canvasLocation" x="31.199999999999999" y="79.610194902548727"/>
         </view>
     </objects>
 </document>

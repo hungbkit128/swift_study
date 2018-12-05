@@ -8,8 +8,9 @@
 
 import UIKit
 import XLPagerTabStrip
+import NVActivityIndicatorView
 
-class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider {
+class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider, NVActivityIndicatorViewable {
     
     @IBOutlet weak var noDataLB: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -109,10 +110,25 @@ class InDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Ind
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell:IndayViewCell = tableView.cellForRow(at:indexPath) as! IndayViewCell
+        //let cell:IndayViewCell = tableView.cellForRow(at:indexPath) as! IndayViewCell
         
-        let secondViewController:DetailDealMainVC = DetailDealMainVC()
-        self.present(secondViewController, animated: true, completion: nil)
+        let size = CGSize(width: 32, height: 32)
+        self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
+        
+        let jobModel = lstJobWarning[indexPath.row]
+        homeService.viewDetailRequest(jobId: jobModel.jobId!, jobType: jobModel.jobType!) {
+            
+            (transModel: DetailTransModel?, error: NSError?) in
+            self.stopAnimating()
+            if error == nil {
+                let secondViewController:DetailDealMainVC = DetailDealMainVC()
+                secondViewController.detailTransModel = transModel
+                secondViewController.jobModel = jobModel
+                self.present(secondViewController, animated: true, completion: nil)
+            } else {
+                UiUtils.showAlert(title:error?.localizedDescription ?? "", viewController:self)
+            }
+        }
     }
     
     // MARK: - IndicatorInfoProvider

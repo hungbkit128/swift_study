@@ -88,7 +88,7 @@ class ReportTypeDetailVC: UIViewController, NVActivityIndicatorViewable, Service
             return
         }
         
-        ActionSheetStringPicker.show(withTitle: "Chọn loại báo cáo", rows:reportTypes as! [Any], initialSelection: getIndexTypeSelected(), doneBlock: {
+        ActionSheetStringPicker.show(withTitle: "Chọn loại báo cáo", rows:reportTypes as? [Any], initialSelection: getIndexTypeSelected(), doneBlock: {
             picker, value, index in
             
             let stringValue = self.reportTypes?.object(at:value) as! String

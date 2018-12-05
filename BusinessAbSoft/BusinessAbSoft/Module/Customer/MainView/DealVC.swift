@@ -103,7 +103,7 @@ class DealVC: UIViewController, IndicatorInfoProvider, NVActivityIndicatorViewab
             UiUtils.showAlert(title:"Không có thông tin trạng thái công việc, bạn vui lòng kiểm tra lại!", viewController:self)
             return
         }
-        ActionSheetStringPicker.show(withTitle: "Trạng thái công việc", rows:lstStatus as! [Any], initialSelection: getIndexSttSelected(), doneBlock: {
+        ActionSheetStringPicker.show(withTitle: "Trạng thái công việc", rows:lstStatus as? [Any], initialSelection: getIndexSttSelected(), doneBlock: {
             picker, value, index in
             
             let stringValue = self.lstStatus?.object(at:value) as! String
@@ -119,7 +119,7 @@ class DealVC: UIViewController, IndicatorInfoProvider, NVActivityIndicatorViewab
             UiUtils.showAlert(title:"Không có thông tin loại công việc, bạn vui lòng kiểm tra lại!", viewController:self)
             return
         }
-        ActionSheetStringPicker.show(withTitle: "Loại công việc", rows:lstBusinessType as! [Any], initialSelection: getIndexBsnSelected(), doneBlock: {
+        ActionSheetStringPicker.show(withTitle: "Loại công việc", rows:lstBusinessType as? [Any], initialSelection: getIndexBsnSelected(), doneBlock: {
             picker, value, index in
             
             let stringValue = self.lstBusinessType?.object(at:value) as! String

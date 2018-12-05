@@ -117,11 +117,13 @@ class HomeService: APIServiceAgent {
     }
     
     // getTransApproveHistory
-    func getTransApproveHistory(completion: @escaping([ApproveHistoryModel], NSError?) -> Void) {
-        if let request = APIRequestProvider.shareInstance?.getTransApproveHistory() {
+    func getTransApproveHistory(businessType: String,
+                                tranId: String,
+                                completion: @escaping([ApproveHistoryModel], NSError?) -> Void) {
+        if let request = APIRequestProvider.shareInstance?.getTransApproveHistory(businessType, tranId) {
             self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
                 var hisModels = [ApproveHistoryModel]()
-                for (_, subJson) in json["LstHisApprove"] {
+                for (_, subJson) in json["LstTransApproveHistory"] {
                     let model = ApproveHistoryModel(subJson)
                     hisModels.append(model)
                 }

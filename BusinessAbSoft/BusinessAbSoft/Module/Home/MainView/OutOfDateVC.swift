@@ -128,15 +128,17 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         let size = CGSize(width: 32, height: 32)
         self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
         
-        homeService.viewDetailRequest(jobId: lstJobWarning[indexPath.row].jobId!,
-                                      jobType: lstJobWarning[indexPath.row].jobType!) {
+        let jobModel = lstJobWarning[indexPath.row]
+        homeService.viewDetailRequest(jobId: jobModel.jobId!, jobType: jobModel.jobType!) {
                                         
             (transModel: DetailTransModel?, error: NSError?) in
-            
+            self.stopAnimating()
             if error == nil {
-                self.processViewDetailData(transModel: transModel)
+                let secondViewController:DetailDealMainVC = DetailDealMainVC()
+                secondViewController.detailTransModel = transModel
+                secondViewController.jobModel = jobModel
+                self.present(secondViewController, animated: true, completion: nil)
             } else {
-                self.stopAnimating()
                 UiUtils.showAlert(title:error?.localizedDescription ?? "", viewController:self)
             }
         }
@@ -149,14 +151,5 @@ class OutOfDateVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func processViewDetailData(transModel: DetailTransModel?) -> Void {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-            self.stopAnimating()
-            let secondViewController:DetailDealMainVC = DetailDealMainVC()
-            secondViewController.detailTransModel = transModel
-            self.present(secondViewController, animated: true, completion: nil)
-        }
     }
 }

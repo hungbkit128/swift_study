@@ -10,6 +10,14 @@ import Foundation
 
 class StringUtils {
     
+    static func getTextData(_ text: String?) -> String {
+        if let strValue = text, !strValue.isEmpty {
+            return strValue
+        } else {
+            return "Không có"
+        }
+    }
+    
     static func isNilOrEmpty(stringInput: String) -> Bool {
         if stringInput.count == 0 {
             return true

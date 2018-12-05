@@ -190,17 +190,19 @@ class APIRequestProvider: NSObject {
     }
     
     // getTransApproveHistory
-    func getTransApproveHistory() -> DataRequest {
+    func getTransApproveHistory(_ businessType: String, _ tranId: String) -> DataRequest {
         let urlString = businessURL.appending(Constants.GET_TRANS_APPROVE_HIS_URL)
         
         var param = [String: Any]()
         param["Token"] = DataManager.shareInstance.userInfo?.Token
+        param["BusinessType"] = businessType
+        param["Id"] = tranId
         
         return alamoFireManager.request(urlString,
-                                        method: .post,
-                                        parameters: param,
-                                        encoding: JSONEncoding.default,
-                                        headers: headers)
+                                    method: .post,
+                                    parameters: param,
+                                    encoding: JSONEncoding.default,
+                                    headers: headers)
     }
     
     // getTransactions
@@ -211,6 +213,35 @@ class APIRequestProvider: NSObject {
         param["Token"] = DataManager.shareInstance.userInfo?.Token
         param["idCustomer"] = idCustomer
         param["businessType"] = businessType
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
+    // getLstBusinessType
+    func getLstBusinessType(_ businessType: String) -> DataRequest {
+        let urlString = businessURL.appending(Constants.GET_LST_BUSINESS_TYPE_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
+        param["BusinessType"] = businessType
+        
+        return alamoFireManager.request(urlString,
+                                        method: .post,
+                                        parameters: param,
+                                        encoding: JSONEncoding.default,
+                                        headers: headers)
+    }
+    
+    // getLstStatus
+    func getLstStatus() -> DataRequest {
+        let urlString = businessURL.appending(Constants.GET_LST_STATUS_URL)
+        
+        var param = [String: Any]()
+        param["Token"] = DataManager.shareInstance.userInfo?.Token
         
         return alamoFireManager.request(urlString,
                                         method: .post,

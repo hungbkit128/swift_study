@@ -11,13 +11,17 @@ import SwiftyJSON
 
 class ApproveHistoryModel: NSObject {
     
-    var aAttackFile:String?
-    var fileName:String?
-    var fileContent:String?
+    var implementerName:String?
+    var confirmName:String?
+    var confirmDate:String?
+    var confirmNote:String?
+    var id:Int?
     
     init(_ jsonData: JSON) {
-        self.aAttackFile = jsonData["AAttackFile"].string
-        self.fileName = jsonData["FileName"].string
-        self.fileContent = jsonData["FileContent"].string
+        self.implementerName = jsonData["ImplementerName"].string
+        self.confirmName = jsonData["ConfirmName"].string
+        self.confirmDate = jsonData["ConfirmDate"].string
+        self.confirmNote = jsonData["ConfirmNote"].string
+        self.id = jsonData["Id"].int
     }
 }

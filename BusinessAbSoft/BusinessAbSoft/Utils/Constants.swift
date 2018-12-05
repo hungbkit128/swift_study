@@ -23,6 +23,8 @@ class Constants {
     static let GET_USER_APPROVE_URL = "/absoft/getUserApprove"
     static let GET_APPROVE_TYPE_URL = "/absoft/getApproveType"
     static let GET_TRANS_APPROVE_HIS_URL = "/absoft/getTransApproveHistory"
+    static let GET_LST_BUSINESS_TYPE_URL = "/absoft/getLstBusinessType"
+    static let GET_LST_STATUS_URL = "/absoft/getLstStatus"
     
     // report
     static let INIT_GROUP_REPORT_URL = "/absoft/initGroupReport"

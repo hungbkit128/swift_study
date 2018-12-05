@@ -46,13 +46,17 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider, NVActivityIndicato
         
         super.viewDidLoad()
         
-        self.headTextLB.text = getTextData(dataModel?.transModel?.implementerName)
-        self.tranTypeBT.setTitle(getTextData(dataModel?.transModel?.typeName), for: .normal)
-        self.tranStatusBT.setTitle(getTextData(dataModel?.transModel?.implementName), for: .normal)
-        self.tranIdTF.text = getTextData(dataModel?.transModel?.code)
-        self.tranTitleTF.text = getTextData(dataModel?.transModel?.subject)
-        self.tranDateTF.text = getTextData(dataModel?.transModel?.createDate)
-        self.tranNoteTF.text = getTextData(dataModel?.transModel?.note)
+        self.headTextLB.text = StringUtils.getTextData(dataModel?.transModel?.implementerName)
+        self.tranTypeBT.setTitle(StringUtils.getTextData(dataModel?.transModel?.typeName), for: .normal)
+        self.tranStatusBT.setTitle(StringUtils.getTextData(dataModel?.transModel?.implementName), for: .normal)
+        self.tranIdTF.text = StringUtils.getTextData(dataModel?.transModel?.code)
+        self.tranTitleTF.text = StringUtils.getTextData(dataModel?.transModel?.title)
+        self.tranContentTF.text = StringUtils.getTextData(dataModel?.transModel?.subject)
+        let dateString = StringUtils.getTextData(dataModel?.transModel?.createDate)
+        self.tranDateTF.text = DateTimeUtils.getDateTimeString(inputString:dateString,
+                                                           inputFormat:"yyyy-MM-dd'T'HH:mm:ss",
+                                                           outputFormat:"dd/MM/yyyy HH:mm:ss")
+        self.tranNoteTF.text = StringUtils.getTextData(dataModel?.transModel?.note)
         
         let size = CGSize(width: 32, height: 32)
         self.startAnimating(size, message: "Đang lấy dữ liệu...", type: NVActivityIndicatorType(rawValue: 2)!)
@@ -87,14 +91,6 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider, NVActivityIndicato
             self.tranContentTF.isEnabled = false
             self.statusLineIMG.backgroundColor = ColorManager.lightGreyColor
             self.typeLineIMG.backgroundColor = ColorManager.lightGreyColor
-        }
-    }
-    
-    func getTextData(_ text: String?) -> String {
-        if let strValue = text, !strValue.isEmpty {
-            return strValue
-        } else {
-            return "Không có"
         }
     }
     

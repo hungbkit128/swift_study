@@ -17,6 +17,7 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     var productDealVC:ProductDealVC?
     var attachFileDealVC:AttachFileDealVC?
     var detailTransModel: DetailTransModel?
+    var jobModel: JobWarningModel?
     
     var homeService:HomeService = HomeService()
     var popOverVC:WYPopoverController?
@@ -33,16 +34,26 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     @IBAction func hisTransTapped(_ sender: UIBarButtonItem) {
         
         let size = CGSize(width: 32, height: 32)
-        //self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
-        
-//        homeService.getTransApproveHistory(completion: { (hisModels, error) in
-//
-//        });
-        
-        let vc = HisTransListVC()
-        let cgSize: CGSize = isIphoneApp() ? CGSize(width: 320.0, height: 250.0) : CGSize(width: 400.0, height: 300.0)
-        vc.preferredContentSize = cgSize
-        self.presentPopOverVC(viewController: vc, sender: sender.value(forKey: "view") as? UIView, style: .up)
+        self.startAnimating(size, message: "Đang lấy chi tiết công việc...", type: NVActivityIndicatorType(rawValue: 2)!)
+        if let model = self.jobModel,
+            let id = model.jobId  {
+            homeService.getTransApproveHistory(businessType: BusinessType.typeFromString(model.jobType ?? ""), tranId: id, completion: { (hisModels, error) in
+                self.stopAnimating()
+                if error == nil {
+                    if hisModels.count == 0 {
+                        UiUtils.showAlert(title: "Không có thông tin lịch sử giao dịch", viewController: self)
+                    } else {
+                        let vc = HisTransListVC()
+                        vc.listHisTrans = hisModels
+                        let cgSize: CGSize = isIphoneApp() ? CGSize(width: 320.0, height: 250.0) : CGSize(width: 400.0, height: 300.0)
+                        vc.preferredContentSize = cgSize
+                        self.presentPopOverVC(viewController: vc, sender: sender.value(forKey: "view") as? UIView, style: .up)
+                    }
+                } else {
+                    UiUtils.showAlert(title: error?.description ?? "Đã có lỗi xảy ra", viewController: self)
+                }
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {

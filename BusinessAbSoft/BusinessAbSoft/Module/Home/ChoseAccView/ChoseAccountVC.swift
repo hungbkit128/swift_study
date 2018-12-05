@@ -129,7 +129,7 @@ class ChoseAccountVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellSelect = tableView.cellForRow(at:indexPath) as! AccountCell
+        //let cellSelect = tableView.cellForRow(at:indexPath) as! AccountCell
         var modelSelect:AccountApproveModel
         if(searchActive) {
             modelSelect = listFilter[indexPath.row]
