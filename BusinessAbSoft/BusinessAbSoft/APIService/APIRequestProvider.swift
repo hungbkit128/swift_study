@@ -175,12 +175,20 @@ class APIRequestProvider: NSObject {
     }
     
     // doApprove
-    func doApprove(approveTypeId: String) -> DataRequest {
+    func doApprove(approveObj: DoApproveObject) -> DataRequest {
         let urlString = businessURL.appending(Constants.DO_APPROVE_URL)
         
         var param = [String: Any]()
         param["Token"] = DataManager.shareInstance.userInfo?.Token
-        param["id"] = approveTypeId
+        param["id"] = approveObj.id
+        param["content"] = approveObj.content
+        param["dateWarning"] = approveObj.dateWarning
+        param["lstUser"] = approveObj.lstUser
+        param["idCustomer"] = approveObj.idCustomer
+        param["type"] = approveObj.type
+        param["idContract"] = approveObj.idContract
+        param["idOrder"] = approveObj.idOrder
+        param["idQuotation"] = approveObj.idQuotation
         
         return alamoFireManager.request(urlString,
                                         method: .post,

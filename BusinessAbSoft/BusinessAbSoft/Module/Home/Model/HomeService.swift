@@ -105,10 +105,10 @@ class HomeService: APIServiceAgent {
     
     
     //doApprove
-    func doApprove(approveTypeId: String,
+    func doApprove(approveObj: DoApproveObject,
                    completion: @escaping(DetailTransModel?, NSError?) -> Void) {
         
-        if let request = APIRequestProvider.shareInstance?.doApprove(approveTypeId: approveTypeId) {
+        if let request = APIRequestProvider.shareInstance?.doApprove(approveObj: approveObj) {
             self.startRequest(request) { (_ json: JSON, _ error: NSError?) in
                 let userInfo = DetailTransModel(json["TransModel"])
                 completion(userInfo, error)

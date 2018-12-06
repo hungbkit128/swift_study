@@ -23,6 +23,8 @@
 		496769C721AE875C001C927F /* TransContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496769C521AE875C001C927F /* TransContentVC.xib */; };
 		496769CA21AE8778001C927F /* TransHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496769C821AE8778001C927F /* TransHistoryVC.swift */; };
 		496769CB21AE8778001C927F /* TransHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496769C921AE8778001C927F /* TransHistoryVC.xib */; };
+		49815DF121B9022B00236EE8 /* DoApproveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49815DF021B9022B00236EE8 /* DoApproveObject.swift */; };
+		49815DF321B90A9D00236EE8 /* UITextViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49815DF221B90A9D00236EE8 /* UITextViewExtention.swift */; };
 		499E2F4F218BEE6A00B2E2E0 /* APIRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */; };
 		499E2F51218BEE9F00B2E2E0 /* APIServiceAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */; };
 		499E2F54218BF2C100B2E2E0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E2F53218BF2C100B2E2E0 /* URLExtension.swift */; };
@@ -184,6 +186,8 @@
 		496769C521AE875C001C927F /* TransContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransContentVC.xib; sourceTree = "<group>"; };
 		496769C821AE8778001C927F /* TransHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryVC.swift; sourceTree = "<group>"; };
 		496769C921AE8778001C927F /* TransHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransHistoryVC.xib; sourceTree = "<group>"; };
+		49815DF021B9022B00236EE8 /* DoApproveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoApproveObject.swift; sourceTree = "<group>"; };
+		49815DF221B90A9D00236EE8 /* UITextViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtention.swift; sourceTree = "<group>"; };
 		499E2F4E218BEE6A00B2E2E0 /* APIRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProvider.swift; sourceTree = "<group>"; };
 		499E2F50218BEE9F00B2E2E0 /* APIServiceAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceAgent.swift; sourceTree = "<group>"; };
 		499E2F53218BF2C100B2E2E0 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -405,6 +409,7 @@
 				499E2F55218BF8F400B2E2E0 /* NSErrorExtension.swift */,
 				49A985FC21A3B86A001A9A43 /* UIColorExtension.swift */,
 				C0F8B0E221A75DAC00CC0D58 /* StringExtension.swift */,
+				49815DF221B90A9D00236EE8 /* UITextViewExtention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -638,6 +643,7 @@
 				4933585021ABFC3800C036FF /* ApproveHistoryModel.swift */,
 				4966A12521AD7CAB00CE8427 /* JobWarningModel.swift */,
 				491CC27421B7D3DC00EDC84B /* ApproveTypeModel.swift */,
+				49815DF021B9022B00236EE8 /* DoApproveObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1022,6 +1028,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49815DF321B90A9D00236EE8 /* UITextViewExtention.swift in Sources */,
 				C0E6BF2A1FB86DD100F7E3D9 /* InsertCusRequestData.swift in Sources */,
 				C016A49B219C641D004D3D3F /* DataManager.swift in Sources */,
 				C0C15C641F950E0200588A9F /* Constants.swift in Sources */,
@@ -1121,6 +1128,7 @@
 				C0E6BF5B1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.swift in Sources */,
 				C004C1E71F8FCC2400FB80D9 /* ButtonBarVC.swift in Sources */,
 				49A985FD21A3B86A001A9A43 /* UIColorExtension.swift in Sources */,
+				49815DF121B9022B00236EE8 /* DoApproveObject.swift in Sources */,
 				C004C1BD1F8E5E5800FB80D9 /* UiUtils.swift in Sources */,
 				C0C15C1C1F91FF3200588A9F /* ServiceManager.swift in Sources */,
 				C016A49F219C72C8004D3D3F /* AppMacro.swift in Sources */,

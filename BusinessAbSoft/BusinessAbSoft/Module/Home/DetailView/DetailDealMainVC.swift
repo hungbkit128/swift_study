@@ -11,7 +11,15 @@ import XLPagerTabStrip
 import WYPopoverController
 import NVActivityIndicatorView
 
+let TYPE_APPROVE = 1
+let TYPE_CONTRACT = 2
+let TYPE_ORDER = 3
+let TYPE_PRICE = 4
+
 class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicatorViewable, WYPopoverControllerDelegate {
+    
+    @IBOutlet weak var actionBT: UIButton!
+    @IBOutlet weak var hisTransBT: UIBarButtonItem!
     
     var contentDealVC:ContentDealVC?
     var productDealVC:ProductDealVC?
@@ -21,10 +29,32 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     
     var homeService:HomeService = HomeService()
     var popOverVC:WYPopoverController?
+    var typeView: Int = TYPE_APPROVE
     
     override func viewDidLoad() {
         initMenuView()
         super.viewDidLoad()
+        
+        switch typeView {
+        case TYPE_APPROVE:
+            actionBT.setTitle("PHÊ DUYỆT", for: .normal)
+            self.navigationItem.rightBarButtonItem = nil
+            break
+        case TYPE_CONTRACT:
+            actionBT.setTitle("HỢP ĐỒNG", for: .normal)
+            self.navigationItem.rightBarButtonItem = nil
+            break
+        case TYPE_ORDER:
+            actionBT.setTitle("HOÁ ĐƠN", for: .normal)
+            self.navigationItem.rightBarButtonItem = nil
+            break
+        case TYPE_PRICE:
+            actionBT.setTitle("BÁO GIÁ", for: .normal)
+            self.navigationItem.rightBarButtonItem = nil
+            break
+        default:
+            actionBT.setTitle("PHÊ DUYỆT", for: .normal)
+        }
     }
     
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
