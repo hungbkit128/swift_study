@@ -31,7 +31,7 @@ class ApprovedTransVC: UIViewController, NVActivityIndicatorViewable {
 
         // Do any additional setup after loading the view.
         self.selectAccVC = ChoseAccountVC()
-        
+        self.contentTV.placeholder = "Nhập nội dung"
         self.typeSelected = ""
         self.dateSelected = DateTimeUtils.getDateStringFromDate(date:Date(), outputFormat:"dd/MM/yyyy")
         
