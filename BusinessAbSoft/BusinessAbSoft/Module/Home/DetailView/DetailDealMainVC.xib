@@ -16,6 +16,7 @@
                 <outlet property="buttonBarView" destination="7xw-GG-ZJK" id="KAa-WB-50a"/>
                 <outlet property="containerView" destination="t0j-9m-TGm" id="yG0-tZ-V6t"/>
                 <outlet property="hisTransBT" destination="ihV-t5-6zE" id="J7L-Oy-Wjo"/>
+                <outlet property="navBar" destination="Qm5-bK-0OU" id="ty8-6H-F6M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

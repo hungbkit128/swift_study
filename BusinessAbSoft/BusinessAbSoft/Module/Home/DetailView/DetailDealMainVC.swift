@@ -20,6 +20,7 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     
     @IBOutlet weak var actionBT: UIButton!
     @IBOutlet weak var hisTransBT: UIBarButtonItem!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     var contentDealVC:ContentDealVC?
     var productDealVC:ProductDealVC?
@@ -50,7 +51,6 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
             break
         case TYPE_PRICE:
             actionBT.setTitle("BÁO GIÁ", for: .normal)
-            self.navigationItem.rightBarButtonItem = nil
             break
         default:
             actionBT.setTitle("PHÊ DUYỆT", for: .normal)
@@ -115,9 +115,15 @@ class DetailDealMainVC: ButtonBarPagerTabStripViewController, NVActivityIndicato
     
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", detailTransModel: detailTransModel, enableEdit: false)
-        productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM", detailTransModel: detailTransModel)
-        attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM", detailTransModel: detailTransModel)
+        if typeView != TYPE_APPROVE {
+            contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", detailTransModel: detailTransModel, enableEdit: true)
+            productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM", detailTransModel: detailTransModel)
+            attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM", detailTransModel: detailTransModel)
+        } else {
+            contentDealVC = ContentDealVC(itemInfo: "NỘI DUNG", detailTransModel: detailTransModel, enableEdit: false)
+            productDealVC = ProductDealVC(itemInfo: "SẢN PHẨM", detailTransModel: detailTransModel)
+            attachFileDealVC = AttachFileDealVC(itemInfo: "FILE ĐÍNH KÈM", detailTransModel: detailTransModel)
+        }
         return [contentDealVC!, productDealVC!, attachFileDealVC!]
     }
     

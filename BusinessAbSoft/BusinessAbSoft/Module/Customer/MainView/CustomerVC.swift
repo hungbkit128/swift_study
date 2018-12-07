@@ -86,20 +86,7 @@ class CustomerVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
             self.present(secondViewController, animated: true, completion: nil)
         }
         
-        let item2 = ExpandingMenuItem(size: menuButtonSize, title: "Giao dịch", image: UIImage(named: "ic_sync")!, highlightedImage: UIImage(named: "ic_sync")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-            
-            let secondViewController:MainDealVC = MainDealVC()
-            self.present(secondViewController, animated: true, completion: nil)
-        }
-        
-        let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Báo giá", image: UIImage(named: "ic_monetization_on")!, highlightedImage: UIImage(named: "ic_monetization_on")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
-            
-            //... ShowPriceMainVC
-            let secondViewController:ShowPriceMainVC = ShowPriceMainVC()
-            self.present(secondViewController, animated: true, completion: nil)
-        }
-        
-        menuButton.addMenuItems([item1, item2, item3])
+        menuButton.addMenuItems([item1])
         menuButton.willPresentMenuItems = { (menu) -> Void in
             print("MenuItems will present.")
         }

@@ -89,7 +89,8 @@ class CusDetailVC: UIViewController {
         let item4 = ExpandingMenuItem(size: menuButtonSize, title: "Báo giá", image: UIImage(named: "ic_monetization_on")!, highlightedImage: UIImage(named: "ic_monetization_on")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
             
             //... ShowPriceMainVC
-            let secondViewController:ShowPriceMainVC = ShowPriceMainVC()
+            let secondViewController:DetailDealMainVC = DetailDealMainVC()
+            secondViewController.typeView = TYPE_PRICE
             self.present(secondViewController, animated: true, completion: nil)
         }
         

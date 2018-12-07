@@ -46,6 +46,8 @@
 		49A9860B21A41100001A9A43 /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A9860921A41100001A9A43 /* ProductViewCell.xib */; };
 		49C915D821B23DDA00999554 /* HisTransListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C915D621B23DDA00999554 /* HisTransListVC.swift */; };
 		49C915D921B23DDA00999554 /* HisTransListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C915D721B23DDA00999554 /* HisTransListVC.xib */; };
+		49DD276921B9F76100EABC8B /* AttackFileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD276721B9F76100EABC8B /* AttackFileCell.swift */; };
+		49DD276A21B9F76100EABC8B /* AttackFileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49DD276821B9F76100EABC8B /* AttackFileCell.xib */; };
 		4BE6E98A89B81A8FFF9C7B9D /* Pods_BusinessAbSoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7D911E1FF1E66C8CE293CB /* Pods_BusinessAbSoft.framework */; };
 		C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004C1B51F8E584100FB80D9 /* LoginVC.swift */; };
 		C004C1B81F8E584100FB80D9 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004C1B61F8E584100FB80D9 /* LoginVC.xib */; };
@@ -209,6 +211,8 @@
 		49A9860921A41100001A9A43 /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		49C915D621B23DDA00999554 /* HisTransListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisTransListVC.swift; sourceTree = "<group>"; };
 		49C915D721B23DDA00999554 /* HisTransListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HisTransListVC.xib; sourceTree = "<group>"; };
+		49DD276721B9F76100EABC8B /* AttackFileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackFileCell.swift; sourceTree = "<group>"; };
+		49DD276821B9F76100EABC8B /* AttackFileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttackFileCell.xib; sourceTree = "<group>"; };
 		C004C1B51F8E584100FB80D9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C004C1B61F8E584100FB80D9 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		C004C1BA1F8E5A9700FB80D9 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 			children = (
 				C0E6BF481FBB7BC200F7E3D9 /* AttachFileDealVC.swift */,
 				C0E6BF491FBB7BC200F7E3D9 /* AttachFileDealVC.xib */,
+				49DD276721B9F76100EABC8B /* AttackFileCell.swift */,
+				49DD276821B9F76100EABC8B /* AttackFileCell.xib */,
 			);
 			path = AttackFileView;
 			sourceTree = "<group>";
@@ -934,6 +940,7 @@
 				C0E6BF5C1FBB82DB00F7E3D9 /* AttachFileShowPriceVC.xib in Resources */,
 				C0333CB121A369F400BBCF51 /* ApprovedTransVC.xib in Resources */,
 				C07643951FA2AFC200C57B1C /* OutOfDateVC.xib in Resources */,
+				49DD276A21B9F76100EABC8B /* AttackFileCell.xib in Resources */,
 				C07643911FA2AF7000C57B1C /* InDayVC.xib in Resources */,
 				C0E6BF581FBB82A800F7E3D9 /* ProductShowPriceVC.xib in Resources */,
 				C0E6BF3F1FBB7ADA00F7E3D9 /* DetailDealMainVC.xib in Resources */,
@@ -1069,6 +1076,7 @@
 				C0C15C171F9037DB00588A9F /* DataProvider.swift in Sources */,
 				C004C1B71F8E584100FB80D9 /* LoginVC.swift in Sources */,
 				C02F85C71FB3717D0042F07B /* CustomerVC.swift in Sources */,
+				49DD276921B9F76100EABC8B /* AttackFileCell.swift in Sources */,
 				C0E6BF4F1FBB826400F7E3D9 /* ShowPriceMainVC.swift in Sources */,
 				496769C621AE875C001C927F /* TransContentVC.swift in Sources */,
 				C0333CB521A379AC00BBCF51 /* UserListVC.swift in Sources */,

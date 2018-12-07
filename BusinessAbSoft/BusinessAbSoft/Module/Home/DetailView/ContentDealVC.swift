@@ -46,17 +46,19 @@ class ContentDealVC: UIViewController, IndicatorInfoProvider, NVActivityIndicato
         
         super.viewDidLoad()
         
-        self.headTextLB.text = StringUtils.getTextData(dataModel?.transModel?.implementerName)
-        self.tranTypeBT.setTitle(StringUtils.getTextData(dataModel?.transModel?.typeName), for: .normal)
-        self.tranStatusBT.setTitle(StringUtils.getTextData(dataModel?.transModel?.implementName), for: .normal)
-        self.tranIdTF.text = StringUtils.getTextData(dataModel?.transModel?.code)
-        self.tranTitleTF.text = StringUtils.getTextData(dataModel?.transModel?.title)
-        self.tranContentTF.text = StringUtils.getTextData(dataModel?.transModel?.subject)
-        let dateString = StringUtils.getTextData(dataModel?.transModel?.createDate)
-        self.tranDateTF.text = DateTimeUtils.getDateTimeString(inputString:dateString,
-                                                           inputFormat:"yyyy-MM-dd'T'HH:mm:ss",
-                                                           outputFormat:"dd/MM/yyyy HH:mm:ss")
-        self.tranNoteTF.text = StringUtils.getTextData(dataModel?.transModel?.note)
+        if dataModel != nil {
+            self.headTextLB.text = StringUtils.getTextData(dataModel?.transModel?.implementerName)
+            self.tranTypeBT.setTitle(StringUtils.getTextData(dataModel?.transModel?.typeName), for: .normal)
+            self.tranStatusBT.setTitle(StringUtils.getTextData(dataModel?.transModel?.implementName), for: .normal)
+            self.tranIdTF.text = StringUtils.getTextData(dataModel?.transModel?.code)
+            self.tranTitleTF.text = StringUtils.getTextData(dataModel?.transModel?.title)
+            self.tranContentTF.text = StringUtils.getTextData(dataModel?.transModel?.subject)
+            let dateString = StringUtils.getTextData(dataModel?.transModel?.createDate)
+            self.tranDateTF.text = DateTimeUtils.getDateTimeString(inputString:dateString,
+                                                                   inputFormat:"yyyy-MM-dd'T'HH:mm:ss",
+                                                                   outputFormat:"dd/MM/yyyy HH:mm:ss")
+            self.tranNoteTF.text = StringUtils.getTextData(dataModel?.transModel?.note)
+        }
         
         let size = CGSize(width: 32, height: 32)
         self.startAnimating(size, message: "Đang lấy dữ liệu...", type: NVActivityIndicatorType(rawValue: 2)!)
