@@ -1,0 +1,14 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "fdc9e811786839aa860f95e4a1bad272"
+build_time: [1524129521, 241182000]
+inputs:
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/View/AddViewController.swift": [1523848601, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViewController.swift": [1523844048, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/Interactor/VIPERInteractor.swift": [1523613213, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/View/VIPERViewController.swift": [1523848601, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ItemModel.swift": [1523611575, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/ViewModel/VIPERViewModel.swift": [1523612539, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/Presenter/VIPERPresenter.swift": [1523848601, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/Configure/VIPERConfigure.swift": [1523612560, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/AppDelegate.swift": [1523844048, 0]
+  "/Users/vtsoft2/Documents/hungtv64/DemoCodes/ViperDemo/ViperDemo/ViperView/WireFrame/VIPERWireFrame.swift": [1523844094, 0]

@@ -1,0 +1,212 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "VIPERPresenter"
+provides-nominal:
+- "9ViperDemo14VIPERPresenterC"
+provides-member:
+- ["9ViperDemo14VIPERPresenterC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "ItemModel"
+- "NSObject"
+- "String"
+- "VIPERInteractorInput"
+- "VIPERInteractorOutput"
+- "VIPERPresenter"
+- "VIPERViewControllerInput"
+- "VIPERViewControllerOutput"
+- "VIPERViewModel"
+- "VIPERWireFrameInput"
+- "VIPERWireFrameOutput"
+depends-member:
+- ["s7CVarArgP", "addActionOutput"]
+- ["s7CVarArgP", "didGetData"]
+- ["s7CVarArgP", "didGetText"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "interactor"]
+- !private ["s7CVarArgP", "updateListItem"]
+- !private ["s7CVarArgP", "view"]
+- ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "viewModel"]
+- ["s7CVarArgP", "viewWillAppear"]
+- !private ["s7CVarArgP", "wireFrame"]
+- ["s7CVarArgP", ""]
+- ["s28CustomDebugStringConvertibleP", "addActionOutput"]
+- ["s28CustomDebugStringConvertibleP", "didGetData"]
+- ["s28CustomDebugStringConvertibleP", "didGetText"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "interactor"]
+- !private ["s28CustomDebugStringConvertibleP", "updateListItem"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
+- ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "viewModel"]
+- ["s28CustomDebugStringConvertibleP", "viewWillAppear"]
+- !private ["s28CustomDebugStringConvertibleP", "wireFrame"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "addActionOutput"]
+- ["s23CustomStringConvertibleP", "didGetData"]
+- ["s23CustomStringConvertibleP", "didGetText"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "interactor"]
+- !private ["s23CustomStringConvertibleP", "updateListItem"]
+- !private ["s23CustomStringConvertibleP", "view"]
+- ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "viewModel"]
+- ["s23CustomStringConvertibleP", "viewWillAppear"]
+- !private ["s23CustomStringConvertibleP", "wireFrame"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9EquatableP", "addActionOutput"]
+- ["s9EquatableP", "didGetData"]
+- ["s9EquatableP", "didGetText"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "interactor"]
+- !private ["s9EquatableP", "updateListItem"]
+- !private ["s9EquatableP", "view"]
+- ["s9EquatableP", "viewDidLoad"]
+- !private ["s9EquatableP", "viewModel"]
+- ["s9EquatableP", "viewWillAppear"]
+- !private ["s9EquatableP", "wireFrame"]
+- ["s9EquatableP", ""]
+- ["s8HashableP", "addActionOutput"]
+- ["s8HashableP", "didGetData"]
+- ["s8HashableP", "didGetText"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "interactor"]
+- !private ["s8HashableP", "updateListItem"]
+- !private ["s8HashableP", "view"]
+- ["s8HashableP", "viewDidLoad"]
+- !private ["s8HashableP", "viewModel"]
+- ["s8HashableP", "viewWillAppear"]
+- !private ["s8HashableP", "wireFrame"]
+- ["s8HashableP", ""]
+- ["So8NSObjectC", "ItemModel"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "VIPERInteractorInput"]
+- ["So8NSObjectC", "VIPERViewControllerInput"]
+- ["So8NSObjectC", "VIPERViewModel"]
+- ["So8NSObjectC", "VIPERWireFrameInput"]
+- ["So8NSObjectC", "addActionOutput"]
+- ["So8NSObjectC", "didGetData"]
+- ["So8NSObjectC", "didGetText"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "interactor"]
+- !private ["So8NSObjectC", "updateListItem"]
+- ["So8NSObjectC", "view"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So8NSObjectC", "viewModel"]
+- ["So8NSObjectC", "viewWillAppear"]
+- ["So8NSObjectC", "wireFrame"]
+- ["So8NSObjectC", ""]
+- ["So16NSObjectProtocolP", "addActionOutput"]
+- ["So16NSObjectProtocolP", "didGetData"]
+- ["So16NSObjectProtocolP", "didGetText"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "interactor"]
+- !private ["So16NSObjectProtocolP", "updateListItem"]
+- !private ["So16NSObjectProtocolP", "view"]
+- ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "viewModel"]
+- ["So16NSObjectProtocolP", "viewWillAppear"]
+- !private ["So16NSObjectProtocolP", "wireFrame"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["9ViperDemo20VIPERInteractorInputP", "getData"]
+- ["9ViperDemo21VIPERInteractorOutputP", "addActionOutput"]
+- ["9ViperDemo21VIPERInteractorOutputP", "didGetData"]
+- ["9ViperDemo21VIPERInteractorOutputP", "didGetText"]
+- !private ["9ViperDemo21VIPERInteractorOutputP", "interactor"]
+- !private ["9ViperDemo21VIPERInteractorOutputP", "view"]
+- ["9ViperDemo21VIPERInteractorOutputP", "viewDidLoad"]
+- !private ["9ViperDemo21VIPERInteractorOutputP", "viewModel"]
+- ["9ViperDemo21VIPERInteractorOutputP", "viewWillAppear"]
+- !private ["9ViperDemo21VIPERInteractorOutputP", "wireFrame"]
+- ["9ViperDemo21VIPERInteractorOutputP", ""]
+- ["9ViperDemo14VIPERPresenterC", "ItemModel"]
+- ["9ViperDemo14VIPERPresenterC", "String"]
+- ["9ViperDemo14VIPERPresenterC", "VIPERInteractorInput"]
+- ["9ViperDemo14VIPERPresenterC", "VIPERViewControllerInput"]
+- ["9ViperDemo14VIPERPresenterC", "VIPERViewModel"]
+- ["9ViperDemo14VIPERPresenterC", "VIPERWireFrameInput"]
+- ["9ViperDemo14VIPERPresenterC", "addActionOutput"]
+- ["9ViperDemo14VIPERPresenterC", "deinit"]
+- ["9ViperDemo14VIPERPresenterC", "didGetData"]
+- ["9ViperDemo14VIPERPresenterC", "didGetText"]
+- ["9ViperDemo14VIPERPresenterC", "init"]
+- ["9ViperDemo14VIPERPresenterC", "interactor"]
+- ["9ViperDemo14VIPERPresenterC", "view"]
+- ["9ViperDemo14VIPERPresenterC", "viewDidLoad"]
+- ["9ViperDemo14VIPERPresenterC", "viewModel"]
+- ["9ViperDemo14VIPERPresenterC", "viewWillAppear"]
+- ["9ViperDemo14VIPERPresenterC", "wireFrame"]
+- !private ["9ViperDemo24VIPERViewControllerInputP", "doRefreshView"]
+- ["9ViperDemo25VIPERViewControllerOutputP", "addActionOutput"]
+- ["9ViperDemo25VIPERViewControllerOutputP", "didGetData"]
+- ["9ViperDemo25VIPERViewControllerOutputP", "didGetText"]
+- !private ["9ViperDemo25VIPERViewControllerOutputP", "interactor"]
+- !private ["9ViperDemo25VIPERViewControllerOutputP", "view"]
+- ["9ViperDemo25VIPERViewControllerOutputP", "viewDidLoad"]
+- !private ["9ViperDemo25VIPERViewControllerOutputP", "viewModel"]
+- ["9ViperDemo25VIPERViewControllerOutputP", "viewWillAppear"]
+- !private ["9ViperDemo25VIPERViewControllerOutputP", "wireFrame"]
+- ["9ViperDemo25VIPERViewControllerOutputP", ""]
+- !private ["9ViperDemo14VIPERViewModelC", "deinit"]
+- !private ["9ViperDemo14VIPERViewModelC", "updateListItem"]
+- !private ["9ViperDemo19VIPERViewModelInputP", "updateListItem"]
+- !private ["9ViperDemo20VIPERViewModelOutputP", "updateListItem"]
+- !private ["9ViperDemo19VIPERWireFrameInputP", "showFormAdd"]
+- ["9ViperDemo20VIPERWireFrameOutputP", "addActionOutput"]
+- ["9ViperDemo20VIPERWireFrameOutputP", "didGetData"]
+- ["9ViperDemo20VIPERWireFrameOutputP", "didGetText"]
+- !private ["9ViperDemo20VIPERWireFrameOutputP", "interactor"]
+- !private ["9ViperDemo20VIPERWireFrameOutputP", "view"]
+- ["9ViperDemo20VIPERWireFrameOutputP", "viewDidLoad"]
+- !private ["9ViperDemo20VIPERWireFrameOutputP", "viewModel"]
+- ["9ViperDemo20VIPERWireFrameOutputP", "viewWillAppear"]
+- !private ["9ViperDemo20VIPERWireFrameOutputP", "wireFrame"]
+- ["9ViperDemo20VIPERWireFrameOutputP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "addActionOutput"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "didGetData"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "didGetText"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "interactor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateListItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewModel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wireFrame"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "9ViperDemo20VIPERInteractorInputP"
+- "9ViperDemo21VIPERInteractorOutputP"
+- "9ViperDemo14VIPERPresenterC"
+- !private "9ViperDemo24VIPERViewControllerInputP"
+- "9ViperDemo25VIPERViewControllerOutputP"
+- !private "9ViperDemo14VIPERViewModelC"
+- !private "9ViperDemo19VIPERViewModelInputP"
+- !private "9ViperDemo20VIPERViewModelOutputP"
+- !private "9ViperDemo19VIPERWireFrameInputP"
+- "9ViperDemo20VIPERWireFrameOutputP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "50d724acab9317dd1654244e793a28be"
