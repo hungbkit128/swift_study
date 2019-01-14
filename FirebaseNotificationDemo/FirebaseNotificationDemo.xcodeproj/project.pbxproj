@@ -340,8 +340,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirebaseNotificationDemo/FirebaseNotificationDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RTR7KZGAQ6;
+				DEVELOPMENT_TEAM = M54TSZC4E5;
 				INFOPLIST_FILE = FirebaseNotificationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,8 +361,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirebaseNotificationDemo/FirebaseNotificationDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RTR7KZGAQ6;
+				DEVELOPMENT_TEAM = M54TSZC4E5;
 				INFOPLIST_FILE = FirebaseNotificationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
