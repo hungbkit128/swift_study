@@ -2,6 +2,7 @@ import UIKit
 
 var str = "Hello, playground"
 str = "hungtv64"
+str = str + "abc" + String("hungtv64")
 
 let a = 12
 //a = 11
