@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  NSLocalizedStringDemo
+
+  Created by Hưng Trần on 5/2/19.
+  Copyright © 2019 Hưng Trần. All rights reserved.
+*/
+"key.hello" = "Xin chào fdgg";
