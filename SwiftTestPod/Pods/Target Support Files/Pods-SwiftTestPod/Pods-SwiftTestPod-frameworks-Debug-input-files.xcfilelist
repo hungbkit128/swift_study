@@ -1,0 +1,14 @@
+${PODS_ROOT}/Target Support Files/Pods-SwiftTestPod/Pods-SwiftTestPod-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework
+${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework
+${BUILT_PRODUCTS_DIR}/EasyPopUp/EasyPopUp.framework
+${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework
+${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework
+${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework
+${BUILT_PRODUCTS_DIR}/WYPopoverController/WYPopoverController.framework
+${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework

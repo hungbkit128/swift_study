@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target 'SwiftTestPod' do
+    pod 'NVActivityIndicatorView'
+    pod 'XLPagerTabStrip'
+    pod 'SwiftyJSON'
+    pod 'EasyPopUp'
+    pod 'WYPopoverController'
+    pod 'Alamofire'
+    pod 'ExpandingMenu'
+    pod 'FSCalendar'
+    pod 'BottomPopup'
+    pod 'TPKeyboardAvoiding'
+    pod 'SkyFloatingLabelTextField'
+    pod "SearchTextField"
+    
+    #    pod 'KUIPopOver'
+    #    pod 'SwiftyPickerPopover'
+    #    pod 'SDWebImage', '~> 4.0'
+    #    pod 'SCLAlertView'
+    #    pod 'SwiftMessages'
+end
+
