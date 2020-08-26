@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleSigninDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zi-qZ-xag" customClass="GIDSignInButton">
+                                <rect key="frame" x="87.5" y="308.5" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="94Q-cV-oM7"/>
+                                    <constraint firstAttribute="height" constant="50" id="zgq-jB-v6v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7zi-qZ-xag" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hbW-GR-GC2"/>
+                            <constraint firstItem="7zi-qZ-xag" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jBJ-Ld-pow"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="ZcQ-6n-ZCx" kind="show" identifier="go_to_signedin" id="pG9-7f-1oc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+        <!--SignedinVC-->
+        <scene sceneID="gfw-al-qZR">
+            <objects>
+                <viewController id="ZcQ-6n-ZCx" customClass="SignedinVC" customModule="GoogleSigninDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ppf-cP-ekB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bki-5y-RGU">
+                                <rect key="frame" x="137.5" y="301.5" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZdQ-FF-leY"/>
+                                    <constraint firstAttribute="height" constant="44" id="q9h-Cv-6qw"/>
+                                </constraints>
+                                <state key="normal" title="Signout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signoutBtnClick:" destination="ZcQ-6n-ZCx" eventType="touchUpInside" id="Qab-AG-yTJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bki-5y-RGU" firstAttribute="centerY" secondItem="ppf-cP-ekB" secondAttribute="centerY" id="r0s-Fg-qJv"/>
+                            <constraint firstItem="Bki-5y-RGU" firstAttribute="centerX" secondItem="ppf-cP-ekB" secondAttribute="centerX" id="ysn-FG-Ls1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k3y-zC-rNN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iYE-ZU-l71"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPm-Ex-Cvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="139"/>
+        </scene>
+    </scenes>
+</document>

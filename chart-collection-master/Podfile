@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target 'chart-collection-master' do
+    pod 'NVActivityIndicatorView'
+    pod 'XLPagerTabStrip'
+    pod 'SwiftyJSON'
+    pod 'Charts'
+end

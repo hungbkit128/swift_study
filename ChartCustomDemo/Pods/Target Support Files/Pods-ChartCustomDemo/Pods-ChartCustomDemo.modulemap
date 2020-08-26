@@ -1,6 +1,0 @@
-module Pods_ChartCustomDemo {
-  umbrella header "Pods-ChartCustomDemo-umbrella.h"
-
-  export *
-  module * { export * }
-}
