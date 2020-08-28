@@ -14,59 +14,91 @@ import Foundation
 open class CandleChartDataEntry: ChartDataEntry
 {
     /// shadow-high value
-    @objc open var high = Double(0.0)
+    open var high = Double(0.0)
     
     /// shadow-low value
-    @objc open var low = Double(0.0)
+    open var low = Double(0.0)
     
     /// close value
-    @objc open var close = Double(0.0)
+    open var close = Double(0.0)
     
     /// open value
-    @objc open var open = Double(0.0)
+    open var open = Double(0.0)
+    
+    /// open value
+    open var middle = Double(0.0)
+    
+    /// open value
+    open var lineColor = NSUIColor()
+    
+    /// open value
+    open var backgroundColor = NSUIColor()
     
     public required init()
     {
         super.init()
     }
     
-    @objc public init(x: Double, shadowH: Double, shadowL: Double, open: Double, close: Double)
-    {
+    public init(x: Double, shadowH: Double, shadowL: Double, open: Double, middle: Double,
+                close: Double, lineColor: NSUIColor, backgroundColor: NSUIColor) {
         super.init(x: x, y: (shadowH + shadowL) / 2.0)
         
         self.high = shadowH
         self.low = shadowL
         self.open = open
         self.close = close
-    }
-
-    @objc public convenience init(x: Double, shadowH: Double, shadowL: Double, open: Double, close: Double, icon: NSUIImage?)
-    {
-        self.init(x: x, shadowH: shadowH, shadowL: shadowL, open: open, close: close)
-        self.icon = icon
-    }
-
-    @objc public convenience init(x: Double, shadowH: Double, shadowL: Double, open: Double, close: Double, data: Any?)
-    {
-        self.init(x: x, shadowH: shadowH, shadowL: shadowL, open: open, close: close)
-        self.data = data
-    }
-
-    @objc public convenience init(x: Double, shadowH: Double, shadowL: Double, open: Double, close: Double, icon: NSUIImage?, data: Any?)
-    {
-        self.init(x: x, shadowH: shadowH, shadowL: shadowL, open: open, close: close)
-        self.icon = icon
-        self.data = data
+        self.middle = middle
+        self.lineColor = lineColor
+        self.backgroundColor = backgroundColor
     }
     
-    /// The overall range (difference) between shadow-high and shadow-low.
-    @objc open var shadowRange: Double
+    public init(x: Double, shadowH: Double, shadowL: Double, open: Double, middle: Double,
+                close: Double, lineColor: NSUIColor, backgroundColor: NSUIColor, data: AnyObject?) {
+        super.init(x: x, y: (shadowH + shadowL) / 2.0, data: data)
+        
+        self.high = shadowH
+        self.low = shadowL
+        self.open = open
+        self.close = close
+        self.middle = middle
+        self.lineColor = lineColor
+        self.backgroundColor = backgroundColor
+    }
+    
+    public init(x: Double, shadowH: Double, shadowL: Double, open: Double, middle: Double,
+                close: Double, lineColor: NSUIColor, backgroundColor: NSUIColor, icon: NSUIImage?) {
+        super.init(x: x, y: (shadowH + shadowL) / 2.0, icon: icon)
+        
+        self.high = shadowH
+        self.low = shadowL
+        self.open = open
+        self.close = close
+        self.middle = middle
+        self.lineColor = lineColor
+        self.backgroundColor = backgroundColor
+    }
+    
+    public init(x: Double, shadowH: Double, shadowL: Double, open: Double, middle: Double, close: Double,
+                lineColor: NSUIColor, backgroundColor: NSUIColor, icon: NSUIImage?, data: AnyObject?) {
+        super.init(x: x, y: (shadowH + shadowL) / 2.0, icon: icon, data: data)
+        
+        self.high = shadowH
+        self.low = shadowL
+        self.open = open
+        self.close = close
+        self.middle = middle
+        self.lineColor = lineColor
+        self.backgroundColor = backgroundColor
+    }
+    
+    /// - returns: The overall range (difference) between shadow-high and shadow-low.
+    open var shadowRange: Double
     {
         return abs(high - low)
     }
     
-    /// The body size (difference between open and close).
-    @objc open var bodyRange: Double
+    /// - returns: The body size (difference between open and close).
+    open var bodyRange: Double
     {
         return abs(open - close)
     }
@@ -86,13 +118,15 @@ open class CandleChartDataEntry: ChartDataEntry
     
     // MARK: NSCopying
     
-    open override func copy(with zone: NSZone? = nil) -> Any
-    {
-        let copy = super.copy(with: zone) as! CandleChartDataEntry
+    open override func copyWithZone(_ zone: NSZone?) -> AnyObject {
+        let copy = super.copyWithZone(zone) as! CandleChartDataEntry
         copy.high = high
         copy.low = low
         copy.open = open
         copy.close = close
+        copy.middle = middle
+        copy.lineColor = lineColor
+        copy.backgroundColor = backgroundColor
         return copy
     }
 }

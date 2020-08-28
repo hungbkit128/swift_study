@@ -14,13 +14,13 @@ import Foundation
 open class ChartDataEntryBase: NSObject
 {
     /// the y value
-    @objc open var y = 0.0
+    @objc open var y = Double(0.0)
     
     /// optional spot for additional data this Entry represents
-    @objc open var data: Any?
+    @objc open var data: AnyObject?
     
     /// optional icon image
-    @objc open var icon: NSUIImage?
+    open var icon: NSUIImage?
     
     public override required init()
     {
@@ -28,51 +28,76 @@ open class ChartDataEntryBase: NSObject
     }
     
     /// An Entry represents one single entry in the chart.
-    ///
-    /// - Parameters:
-    ///   - y: the y value (the actual value of the entry)
-    @objc public init(y: Double)
+    /// - parameter y: the y value (the actual value of the entry)
+    public init(y: Double)
     {
         super.init()
         
         self.y = y
     }
     
-    /// - Parameters:
-    ///   - y: the y value (the actual value of the entry)
-    ///   - data: Space for additional data this Entry represents.
+    /// - parameter y: the y value (the actual value of the entry)
+    /// - parameter data: Space for additional data this Entry represents.
     
-    @objc public convenience init(y: Double, data: Any?)
+    public init(y: Double, data: AnyObject?)
     {
-        self.init(y: y)
+        super.init()
         
+        self.y = y
         self.data = data
     }
     
-    /// - Parameters:
-    ///   - y: the y value (the actual value of the entry)
-    ///   - icon: icon image
+    /// - parameter y: the y value (the actual value of the entry)
+    /// - parameter icon: icon image
     
-    @objc public convenience init(y: Double, icon: NSUIImage?)
+    public init(y: Double, icon: NSUIImage?)
     {
-        self.init(y: y)
-
+        super.init()
+        
+        self.y = y
         self.icon = icon
     }
     
-    /// - Parameters:
-    ///   - y: the y value (the actual value of the entry)
-    ///   - icon: icon image
-    ///   - data: Space for additional data this Entry represents.
+    /// - parameter y: the y value (the actual value of the entry)
+    /// - parameter icon: icon image
+    /// - parameter data: Space for additional data this Entry represents.
     
-    @objc public convenience init(y: Double, icon: NSUIImage?, data: Any?)
+    public init(y: Double, icon: NSUIImage?, data: AnyObject?)
     {
-        self.init(y: y)
-
+        super.init()
+        
+        self.y = y
         self.icon = icon
         self.data = data
     }
-
+    
+    // MARK: NSObject
+    
+    open override func isEqual(_ object: Any?) -> Bool
+    {
+        if object == nil
+        {
+            return false
+        }
+        
+        if !(object! as AnyObject).isKind(of: type(of: self))
+        {
+            return false
+        }
+        
+        if (object! as AnyObject).data !== data && !((object! as AnyObject).data??.isEqual(self.data))!
+        {
+            return false
+        }
+        
+        if fabs((object! as AnyObject).y - y) > Double.ulpOfOne
+        {
+            return false
+        }
+        
+        return true
+    }
+    
     // MARK: NSObject
     
     open override var description: String
@@ -81,16 +106,27 @@ open class ChartDataEntryBase: NSObject
     }
 }
 
-// MARK: Equatable
-extension ChartDataEntryBase/*: Equatable*/ {
-    open override func isEqual(_ object: Any?) -> Bool {
-        guard let object = object as? ChartDataEntryBase else { return false }
-
-        if self === object
-        {
-            return true
-        }
-
-        return y == object.y
+public func ==(lhs: ChartDataEntryBase, rhs: ChartDataEntryBase) -> Bool
+{
+    if lhs === rhs
+    {
+        return true
     }
+    
+    if !lhs.isKind(of: type(of: rhs))
+    {
+        return false
+    }
+    
+    if lhs.data !== rhs.data && !lhs.data!.isEqual(rhs.data)
+    {
+        return false
+    }
+    
+    if fabs(lhs.y - rhs.y) > Double.ulpOfOne
+    {
+        return false
+    }
+    
+    return true
 }

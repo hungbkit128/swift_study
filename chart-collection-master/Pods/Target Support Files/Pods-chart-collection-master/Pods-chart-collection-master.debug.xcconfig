@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON" "${PODS_CONFIGURATION_BUILD_DIR}/XLPagerTabStrip"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON" "${PODS_CONFIGURATION_BUILD_DIR}/WYPopoverController" "${PODS_CONFIGURATION_BUILD_DIR}/XLPagerTabStrip"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WYPopoverController/WYPopoverController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "Charts" -framework "Foundation" -framework "NVActivityIndicatorView" -framework "QuartzCore" -framework "SwiftyJSON" -framework "UIKit" -framework "XLPagerTabStrip"
+OTHER_LDFLAGS = $(inherited) -framework "Charts" -framework "CoreGraphics" -framework "Foundation" -framework "MBProgressHUD" -framework "NVActivityIndicatorView" -framework "QuartzCore" -framework "SnapKit" -framework "SwiftyJSON" -framework "UIKit" -framework "WYPopoverController" -framework "XLPagerTabStrip"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

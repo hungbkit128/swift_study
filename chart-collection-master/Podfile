@@ -3,8 +3,14 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'chart-collection-master' do
+  
+    pod 'Charts', :git => "https://github.com/hungbkit128/charts-mbi", :branch => "charts_sw4.2"
+    
+    pod 'SnapKit'
+    pod 'MBProgressHUD'
+    pod 'WYPopoverController'
+    
     pod 'NVActivityIndicatorView'
     pod 'XLPagerTabStrip'
     pod 'SwiftyJSON'
-    pod 'Charts'
 end

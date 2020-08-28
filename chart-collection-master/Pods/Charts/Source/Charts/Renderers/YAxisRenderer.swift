@@ -12,18 +12,14 @@
 import Foundation
 import CoreGraphics
 
-#if canImport(UIKit)
+#if !os(OSX)
     import UIKit
-#endif
-
-#if canImport(Cocoa)
-import Cocoa
 #endif
 
 @objc(ChartYAxisRenderer)
 open class YAxisRenderer: AxisRendererBase
 {
-    @objc public init(viewPortHandler: ViewPortHandler, yAxis: YAxis?, transformer: Transformer?)
+    public init(viewPortHandler: ViewPortHandler?, yAxis: YAxis?, transformer: Transformer?)
     {
         super.init(viewPortHandler: viewPortHandler, transformer: transformer, axis: yAxis)
     }
@@ -31,7 +27,10 @@ open class YAxisRenderer: AxisRendererBase
     /// draws the y-axis labels to the screen
     open override func renderAxisLabels(context: CGContext)
     {
-        guard let yAxis = self.axis as? YAxis else { return }
+        guard
+            let yAxis = self.axis as? YAxis,
+            let viewPortHandler = self.viewPortHandler
+            else { return }
         
         if !yAxis.isEnabled || !yAxis.isDrawLabelsEnabled
         {
@@ -86,7 +85,10 @@ open class YAxisRenderer: AxisRendererBase
     
     open override func renderAxisLine(context: CGContext)
     {
-        guard let yAxis = self.axis as? YAxis else { return }
+        guard
+            let yAxis = self.axis as? YAxis,
+            let viewPortHandler = self.viewPortHandler
+            else { return }
         
         if !yAxis.isEnabled || !yAxis.drawAxisLineEnabled
         {
@@ -125,13 +127,9 @@ open class YAxisRenderer: AxisRendererBase
     }
     
     /// draws the y-labels on the specified x-position
-    open func drawYLabels(
-        context: CGContext,
-        fixedPosition: CGFloat,
-        positions: [CGPoint],
-        offset: CGFloat,
-        textAlign: NSTextAlignment)
-    {
+    internal func drawYLabels( context: CGContext, fixedPosition: CGFloat,
+                            positions: [CGPoint], offset: CGFloat,
+                            textAlign: NSTextAlignment) {
         guard
             let yAxis = self.axis as? YAxis
             else { return }
@@ -142,8 +140,6 @@ open class YAxisRenderer: AxisRendererBase
         let from = yAxis.isDrawBottomYLabelEntryEnabled ? 0 : 1
         let to = yAxis.isDrawTopYLabelEntryEnabled ? yAxis.entryCount : (yAxis.entryCount - 1)
         
-        let xOffset = yAxis.labelXOffset
-        
         for i in stride(from: from, to: to, by: 1)
         {
             let text = yAxis.getFormattedLabel(i)
@@ -151,10 +147,9 @@ open class YAxisRenderer: AxisRendererBase
             ChartUtils.drawText(
                 context: context,
                 text: text,
-                point: CGPoint(x: fixedPosition + xOffset, y: positions[i].y + offset),
+                point: CGPoint(x: fixedPosition, y: positions[i].y + offset),
                 align: textAlign,
-                attributes: [.font: labelFont, .foregroundColor: labelTextColor]
-            )
+                attributes: [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): labelFont, NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): labelTextColor])
         }
     }
     
@@ -193,7 +188,10 @@ open class YAxisRenderer: AxisRendererBase
             }
             
             // draw the grid
-            positions.forEach { drawGridLine(context: context, position: $0) }
+            for i in 0 ..< positions.count
+            {
+                drawGridLine(context: context, position: positions[i])
+            }
         }
 
         if yAxis.drawZeroLineEnabled
@@ -203,26 +201,30 @@ open class YAxisRenderer: AxisRendererBase
         }
     }
     
-    @objc open var gridClippingRect: CGRect
+    open var gridClippingRect: CGRect
     {
-        var contentRect = viewPortHandler.contentRect
+        var contentRect = viewPortHandler?.contentRect ?? CGRect.zero
         let dy = self.axis?.gridLineWidth ?? 0.0
         contentRect.origin.y -= dy / 2.0
         contentRect.size.height += dy
         return contentRect
     }
     
-    @objc open func drawGridLine(
+    open func drawGridLine(
         context: CGContext,
         position: CGPoint)
     {
+        guard
+            let viewPortHandler = self.viewPortHandler
+            else { return }
+        
         context.beginPath()
         context.move(to: CGPoint(x: viewPortHandler.contentLeft, y: position.y))
         context.addLine(to: CGPoint(x: viewPortHandler.contentRight, y: position.y))
         context.strokePath()
     }
     
-    @objc open func transformedPositions() -> [CGPoint]
+    open func transformedPositions() -> [CGPoint]
     {
         guard
             let yAxis = self.axis as? YAxis,
@@ -245,10 +247,11 @@ open class YAxisRenderer: AxisRendererBase
     }
 
     /// Draws the zero line at the specified position.
-    @objc open func drawZeroLine(context: CGContext)
+    open func drawZeroLine(context: CGContext)
     {
         guard
             let yAxis = self.axis as? YAxis,
+            let viewPortHandler = self.viewPortHandler,
             let transformer = self.transformer,
             let zeroLineColor = yAxis.zeroLineColor
             else { return }
@@ -284,10 +287,11 @@ open class YAxisRenderer: AxisRendererBase
     {
         guard
             let yAxis = self.axis as? YAxis,
+            let viewPortHandler = self.viewPortHandler,
             let transformer = self.transformer
             else { return }
         
-        let limitLines = yAxis.limitLines
+        var limitLines = yAxis.limitLines
         
         if limitLines.count == 0
         {
@@ -348,7 +352,7 @@ open class YAxisRenderer: AxisRendererBase
                 let xOffset: CGFloat = 4.0 + l.xOffset
                 let yOffset: CGFloat = l.lineWidth + labelLineHeight + l.yOffset
                 
-                if l.labelPosition == .topRight
+                if l.labelPosition == .rightTop
                 {
                     ChartUtils.drawText(context: context,
                         text: label,
@@ -356,9 +360,9 @@ open class YAxisRenderer: AxisRendererBase
                             x: viewPortHandler.contentRight - xOffset,
                             y: position.y - yOffset),
                         align: .right,
-                        attributes: [NSAttributedString.Key.font: l.valueFont, NSAttributedString.Key.foregroundColor: l.valueTextColor])
+                        attributes: [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): l.valueFont, NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): l.valueTextColor])
                 }
-                else if l.labelPosition == .bottomRight
+                else if l.labelPosition == .rightBottom
                 {
                     ChartUtils.drawText(context: context,
                         text: label,
@@ -366,9 +370,9 @@ open class YAxisRenderer: AxisRendererBase
                             x: viewPortHandler.contentRight - xOffset,
                             y: position.y + yOffset - labelLineHeight),
                         align: .right,
-                        attributes: [NSAttributedString.Key.font: l.valueFont, NSAttributedString.Key.foregroundColor: l.valueTextColor])
+                        attributes: [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): l.valueFont, NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): l.valueTextColor])
                 }
-                else if l.labelPosition == .topLeft
+                else if l.labelPosition == .leftTop
                 {
                     ChartUtils.drawText(context: context,
                         text: label,
@@ -376,7 +380,7 @@ open class YAxisRenderer: AxisRendererBase
                             x: viewPortHandler.contentLeft + xOffset,
                             y: position.y - yOffset),
                         align: .left,
-                        attributes: [NSAttributedString.Key.font: l.valueFont, NSAttributedString.Key.foregroundColor: l.valueTextColor])
+                        attributes: [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): l.valueFont, NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): l.valueTextColor])
                 }
                 else
                 {
@@ -386,7 +390,7 @@ open class YAxisRenderer: AxisRendererBase
                             x: viewPortHandler.contentLeft + xOffset,
                             y: position.y + yOffset - labelLineHeight),
                         align: .left,
-                        attributes: [NSAttributedString.Key.font: l.valueFont, NSAttributedString.Key.foregroundColor: l.valueTextColor])
+                        attributes: [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): l.valueFont, NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): l.valueTextColor])
                 }
             }
         }

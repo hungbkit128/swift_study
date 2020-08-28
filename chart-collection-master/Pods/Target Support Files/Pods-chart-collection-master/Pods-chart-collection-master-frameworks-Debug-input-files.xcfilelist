@@ -1,5 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-chart-collection-master/Pods-chart-collection-master-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/WYPopoverController/WYPopoverController.framework
 ${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework

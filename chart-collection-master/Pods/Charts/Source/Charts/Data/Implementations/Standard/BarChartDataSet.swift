@@ -15,12 +15,12 @@ import CoreGraphics
 
 open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDataSet
 {
-    private func initialize()
+    fileprivate func initialize()
     {
         self.highlightColor = NSUIColor.black
         
-        self.calcStackSize(entries: entries as! [BarChartDataEntry])
-        self.calcEntryCountIncludingStacks(entries: entries as! [BarChartDataEntry])
+        self.calcStackSize(entries: values as! [BarChartDataEntry])
+        self.calcEntryCountIncludingStacks(entries: values as! [BarChartDataEntry])
     }
     
     public required init()
@@ -29,9 +29,9 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
         initialize()
     }
     
-    public override init(entries: [ChartDataEntry]?, label: String?)
+    public override init(values: [ChartDataEntry]?, label: String?)
     {
-        super.init(entries: entries, label: label)
+        super.init(values: values, label: label)
         initialize()
     }
 
@@ -39,14 +39,14 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
     
     /// the maximum number of bars that are stacked upon each other, this value
     /// is calculated from the Entries that are added to the DataSet
-    private var _stackSize = 1
+    fileprivate var _stackSize = 1
     
     /// the overall entry count, including counting each stack-value individually
-    private var _entryCountStacks = 0
+    fileprivate var _entryCountStacks = 0
     
     /// Calculates the total number of entries this DataSet represents, including
     /// stacks. All values belonging to a stack are calculated separately.
-    private func calcEntryCountIncludingStacks(entries: [BarChartDataEntry])
+    fileprivate func calcEntryCountIncludingStacks(entries: [BarChartDataEntry])
     {
         _entryCountStacks = 0
         
@@ -64,7 +64,7 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
     }
     
     /// calculates the maximum stacksize that occurs in the Entries array of this DataSet
-    private func calcStackSize(entries: [BarChartDataEntry])
+    fileprivate func calcStackSize(entries: [BarChartDataEntry])
     {
         for i in 0 ..< entries.count
         {
@@ -114,26 +114,26 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
         }
     }
     
-    /// The maximum number of bars that can be stacked upon another in this DataSet.
+    /// - returns: The maximum number of bars that can be stacked upon another in this DataSet.
     open var stackSize: Int
     {
         return _stackSize
     }
     
-    /// `true` if this DataSet is stacked (stacksize > 1) or not.
+    /// - returns: `true` if this DataSet is stacked (stacksize > 1) or not.
     open var isStacked: Bool
     {
         return _stackSize > 1 ? true : false
     }
     
-    /// The overall entry count, including counting each stack-value individually
-    @objc open var entryCountStacks: Int
+    /// - returns: The overall entry count, including counting each stack-value individually
+    open var entryCountStacks: Int
     {
         return _entryCountStacks
     }
     
     /// array of labels used to describe the different values of the stacked bars
-    open var stackLabels: [String] = []
+    open var stackLabels: [String] = ["Stack"]
     
     // MARK: - Styling functions and accessors
     
@@ -151,16 +151,14 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
     
     // MARK: - NSCopying
     
-    open override func copy(with zone: NSZone? = nil) -> Any
+    open override func copyWithZone(_ zone: NSZone?) -> AnyObject
     {
-        let copy = super.copy(with: zone) as! BarChartDataSet
+        let copy = super.copyWithZone(zone) as! BarChartDataSet
         copy._stackSize = _stackSize
         copy._entryCountStacks = _entryCountStacks
         copy.stackLabels = stackLabels
 
         copy.barShadowColor = barShadowColor
-        copy.barBorderWidth = barBorderWidth
-        copy.barBorderColor = barBorderColor
         copy.highlightAlpha = highlightAlpha
         return copy
     }
